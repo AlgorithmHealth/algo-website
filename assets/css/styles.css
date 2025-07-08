@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --primary-color: #031B4E;
+}
+body { font-family: 'Inter', sans-serif; }
+.hero-bg {
+    background: url('../images/Hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: fit-content;
+}
+.journery-bg {
+    background: url('../images/our-journery-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: fit-content;
+}
+.trusted-by-bg {
+    background: url('../images/trusted-by-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: fit-content;
+}
+.font-poppins{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.card-hover:hover { transform: translateY(-5px); transition: transform 0.3s ease; }
+.testimonial-card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
+
+    /* Infinite Carousel Animation */
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    .animate-scroll {
+        animation: scroll 30s linear infinite;
+    }
+    
+    .animate-scroll:hover {
+        animation-play-state: paused;
+    }
+    
+    .carousel-container {
+        mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+        -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+    }
+
+    .emr-bg > img.absolute {
+        opacity: 0;
+        transition: opacity 0.3s;
+   }
+   .emr-bg:hover > img.absolute {
+        opacity: 0.3;
+   }
