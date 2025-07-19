@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo Health - 21st Century Healthcare at your Fingertips</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <meta name="keywords"
+        content="Algo Health, AI Healthcare Solutions, EMR, Lab Reports, Insurance Claims, Healthcare Technology">
+    <meta name="author" content="Algo Health">
+    <meta name="description"
+        content="Algo Health is revolutionizing healthcare with AI-driven solutions for EMR, lab reports, insurance claims, and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+
+<body class="bg-gray-50">
+        <style>
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 200px;
+            transition: max-height 0.3s ease-in;
+        }
+        
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+        
+        .chevron.rotate {
+            transform: rotate(90deg);
+        }
+    </style>
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container flex justify-center gap-4 mx-auto px-4 py-4">
+            <div>
+                <a href="../index.html/#home" class="decoration-none"><img src="../assets/images/logo-blk.png"
+                        alt="Algohealth Logo" width="200"></a>
+            </div>
+            <div class="flex items-center font-poppins gap-4 justify-between">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="../index.html/#home" class="font-medium text-cyan-600 active">Home</a>
+                    <a href="../index.html/#about" class="font-medium hover:text-cyan-600">About Us</a>
+                    <div class="relative group">
+                        <a href="../index.html/#solutions" class="font-medium hover:text-cyan-600 flex items-center">
+                            Our Solutions
+                            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="./care-emr.html"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                    <div class="font-medium">Care AI EMR</div>
+                                </a>
+                                <a href="./ai-driven-reports.html"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                    <div class="font-medium">AI-Driven Intelligent Lab Reports</div>
+                                </a>
+                                <a href="./health-insurance.html"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                    <div class="font-medium">Auto adjudication for health insurance claims</div>
+                                </a>
+                                <a href="./"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                    <div class="font-medium">AI-Enabled EMR Solution</div>
+                                </a>
+                                <a href="#ehr-integration"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                    <div class="font-medium">CodeSync AI</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="..index.html#why-algo" class="font-medium hover:text-cyan-600">Why Algo</a>
+                    <a href="./pages/contact.html" class="font-medium hover:text-cyan-600">Contact Us</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition">
+                        Book a Demo
+                    </button>
+                    <button class="md:hidden">
+                        <i class="fas fa-bars text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section id="solutions-banner" class="bg-cover relative bg-center h-64 flex items-center justify-center">
+        <div class="text-center text-white">
+            <div class="absolute play-icon top-[35%]  left-20">
+                <img src="../assets/images/play-icon.svg" alt="Solutions Banner Play Icon" width="100">
+            </div>
+            <h1 class="text-6xl font-bold">Health Insurance Claims <br>
+                Auto Adjudication System</h1>
+        </div>
+        <div class="absolute bottom-[-30px] right-[7rem] p-4">
+            <a href="tel:+9144283600006" class="no-underline"><img src="../assets/images/call-icon-banner.svg"
+                    alt="Call Icon" width="300"></a> </button>
+        </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="ai-lab-hero-section">
+        <div class="container mx-auto px-20 py-12">
+            <div class="flex  items-start justify-between gap-8">
+                <div class="mt-20">
+                    <div class="">
+                        <h2 class="text-3xl text-[var(--primary-color)] mb-4 poppins-semibold">Revolutionizing Claims
+                            Processing with <br>
+                            AI-Powered Automation</h2>
+                        <p class="text-md text-justify text-[var(--primary-color)] poppins-medium mb-6">Algorithm
+                            Health's Health Insurance Claims Auto Adjudication System transforms how health insurers
+                            process claims by leveraging advanced artificial intelligence to automatically validate,
+                            analyze, and adjudicate claims with unprecedented accuracy and speed. Our comprehensive
+                            solution reduces manual review time while enhancing fraud detection and ensuring appropriate
+                            claim settlements.</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <img src="../assets/images/solutions/health-insurance-hero.png" alt="AI Driven Reports"
+                        class="h-auto !w-[80rem]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intelligent Document Analysis Section -->
+
+      <section id="whole-bg">
+        <div class="container mx-auto px-20 py-12">
+            <div class="grid grid-cols-2 gap-8">
+                <div class="flex items-center justify-center">
+                    <img src="../assets/images/solutions/document-analysis.png"
+                        alt="Intelligent Document Analysis" class="h-auto w-full max-w-md">
+
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Intelligent Document Analysis</h2>
+                     <p class="text-md text-justify text-[var(--primary-color)] poppins-medium mb-6">Our AI-powered system conducts thorough analysis across all critical claim components to deliver automated adjudication decisions</p>
+
+                      <!-- Accordion Container -->
+  <div class="shadow-sm border border-gray-200 overflow-hidden">
+            
+            <!-- First Accordion Item - Expanded -->
+            <div class="border-b my-2 shadow-md border-gray-200">
+                <button class="w-full px-6 py-4 text-left bg-[#ECF5FB] hover:bg-[#ECF5FB] transition-colors duration-200 flex items-center justify-between group" onclick="toggleMedicalAccordion(this)">
+                    <span class="text-lg poppins-medium text-[var(--primary-color)] text-gray-800 active-tab-title">Discharge Summary Analysis</span>
+                    <svg class="w-5 h-5 text-gray-500 chevron rotate" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content active bg-[#ECF5FB]">
+                    <div class="px-6 py-4">
+                        <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
+                            Validates treatment necessity and ensures alignment between patient diagnosis and prescribed procedures according to standard medical protocols.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Accordion Item -->
+            <div class="border-b border-gray-200">
+                <button class="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group" onclick="toggleMedicalAccordion(this)">
+                    <span class="text-lg font-medium text-[var(--primary-color)]">Hospital Bill Examination</span>
+                    <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-6 py-4">
+                        <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
+                            Comprehensive review of hospital charges, procedures, and services to ensure accuracy and compliance with insurance coverage policies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Third Accordion Item -->
+            <div class="border-b border-gray-200">
+                <button class="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group" onclick="toggleMedicalAccordion(this)">
+                    <span class="text-lg font-medium text-[var(--primary-color)] ">Pharmacy Bill Review</span>
+                    <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-6 py-4">
+                        <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
+                            Detailed analysis of pharmaceutical charges, medication appropriateness, and dosage verification against prescribed treatment plans.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fourth Accordion Item -->
+            <div>
+                <button class="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group" onclick="toggleMedicalAccordion(this)">
+                    <span class="text-lg font-medium text-[var(--primary-color)]">Lab Report Validation</span>
+                    <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="px-6 py-4">
+                        <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
+                            Verification of laboratory test results, cross-referencing with clinical indicators and ensuring diagnostic accuracy for proper treatment validation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+                </div>
+
+            </div>
+            </div>
+
+    </section>
+
+
+    <!-- Call to Action -->
+    <section id="call-to-action" class="flex gap-4 items-center justify-center">
+        <div>
+            <h1 class="uppercase teko-font text-5xl">Transform Your Claims Management Today</h1>
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-center mt-4">
+            <div
+                class="teko-font card rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[#4B4B4B] transition duration-300">
+                Request a Demo
+            </div>
+            <div
+                class="teko-font card rounded-md uppercase bg-[#222429] bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[#4B4B4B] transition duration-300">
+                Contact Our Team </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bg">
+        <section id="pre-footer" class="text-white py-6">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="flex justify-between items-center">
+                    <!-- Logo -->
+                    <div>
+                        <a href="../index.html#home" class="decoration-none"><img
+                                src="../assets/images/ALPLOGO-WHITE.png" alt="Algohealth Logo" width="200"></a>
+                    </div>
+                    <div>
+                        <p class="text-xl font-normal font-poppins">
+                            Powering Smarter Healthcare, Together
+                        </p>
+                    </div>
+                    <!-- Social Icons -->
+                    <div class="flex ">
+                        <a href="https://www.facebook.com/AlgoHealth" target="_blank" class="text-white mx-2">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/algorithm-health-ltd" target="_blank"
+                            class="text-white mx-2">
+                            <i class="fa-brands fa-linkedin text-2xl"></i> </a>
+                        <a href="https://www.instagram.com/AlgoHealth" target="_blank" class="text-white mx-2">
+                            <i class="fa-brands fa-instagram text-2xl"></i> </a>
+                    </div>
+
+                </div>
+                <hr class="border-gray-600 my-4">
+            </div>
+
+        </section>
+
+        <!-- Footer Main Content -->
+        <section class="flex justify-center space-x-8 items-center">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-white py-8 px-6 max-w-5xl">
+                <div class="space-y-4">
+                    <p>Algorithm Health serves as your trusted gateway to comprehensive healthcare solutions, delivering
+                        an array of services tailored to meet your health needs.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="../index.html#about"
+                                class="hover:text-cyan-500 text-[#8B9CC2]">About Us</a></li>
+                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a
+                                href="../index.html#trustedby" class="hover:text-cyan-500 text-[#8B9CC2]">Trusted By</a>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a
+                                href="../index.html#solutions"
+                                class="hover:text-cyan-500 text-[#8B9CC2]">Testimonial</a></li>
+                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a
+                                href="../index.html#why-algo" class="hover:text-cyan-500 text-[#8B9CC2]">Why
+                                AlgoHealth</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col space-y-2">
+                    <h3 class="text-lg font-semibold mb-4">Get In Touch</h3>
+                    <p><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="../contact.html"
+                            class="text-[#8B9CC2]">Contact us</a></p>
+                    <p><i class="fa-solid fa-phone-volume rotate-[320deg] text-cyan-500"></i> &nbsp; <span
+                            class="text-[#8B9CC2] text-normal">Call Us</span><br>
+                        <span class="font-normal text-white">Phone: </span><a href="tel:+914428360006"
+                            class="text-white"></a><span class="font-poppins"> +91-44-28360006</span> </a>
+                    </p>
+                    <hr class="border-gray-600 my-4">
+                    <p><i class="fa-solid fa-envelope text-cyan-500"></i>&nbsp; <span class="text-[#8B9CC2]">E
+                            MAIL</span> <br>
+                        <a href="mailto:contact@algohealthplus.com" class="text-white">contact@algohealthplus.com</a>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <!-- Copyrights Footer -->
+        <section id="post-footer" class="bg-[#001543] text-white py-4">
+            <div class="container mx-auto px-6 text-center">
+                <p class="text-sm font-lighter">Copyright &copy; <span id="year"></span> <a href="../index.html"
+                        class="text-cyan-500">Algorithm Health</a>. All rights reserved.</p>
+            </div>
+
+        </section>
+    </footer>
+    <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+        class="!fixed bottom-5 end-5 hidden rounded-full bg-[#031B4E] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-[#16284D] hover:shadow-lg focus:bg-[#16284D] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#031B4E] active:shadow-lg"
+        id="backToTopBtn" onclick="scrollToTop()">
+        <span class="[&>svg]:w-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>
+        </span>
+    </button>
+    <script src="../assets/js/script.js"></script>
+
+  <script>
+        function toggleMedicalAccordion(button) {
+            const accordionContainer = button.closest('.shadow-sm');
+            const content = button.nextElementSibling;
+            const chevron = button.querySelector('.chevron');
+            const titleSpan = button.querySelector('span');
+            const isActive = content.classList.contains('active');
+            
+            // Close all other accordion items within this specific accordion
+            accordionContainer.querySelectorAll('.accordion-content').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            accordionContainer.querySelectorAll('.chevron').forEach(icon => {
+                icon.classList.remove('rotate');
+            });
+            
+            accordionContainer.querySelectorAll('button').forEach(btn => {
+                btn.classList.remove('bg-[#ECF5FB]');
+                btn.classList.add('hover:bg-gray-50');
+                // Remove active title class from all titles
+                const span = btn.querySelector('span');
+                if (span) {
+                    span.classList.remove('active-tab-title');
+                }
+            });
+            
+            accordionContainer.querySelectorAll('.accordion-content').forEach(item => {
+                item.classList.remove('bg-[#ECF5FB]');
+            });
+            
+            // If the clicked item wasn't active, open it
+            if (!isActive) {
+                content.classList.add('active');
+                chevron.classList.add('rotate');
+                button.classList.add('bg-[#ECF5FB]');
+                button.classList.remove('hover:bg-gray-50');
+                content.classList.add('bg-[#ECF5FB]');
+                // Add active title class to the clicked title
+                titleSpan.classList.add('active-tab-title');
+            }
+        }
+    </script>
+</body>
+
+</html>
