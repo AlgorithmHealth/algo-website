@@ -410,3 +410,11 @@ body {
         .benefits-carousel-wrapper:hover .benefits-carousel-track {
             animation-play-state: paused;
         }
+
+#ai-emr-hero-section {
+    background-image: url('../images/solutions/bg-shape-vector2.svg');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: auto;
+}

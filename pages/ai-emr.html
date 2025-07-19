@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Intelligent Lab Reports - Algo Health</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <meta name="keywords"
+        content="Algo Health, AI Healthcare Solutions, EMR, Lab Reports, Insurance Claims, Healthcare Technology">
+    <meta name="author" content="Algo Health">
+    <meta name="description"
+        content="Algo Health is revolutionizing healthcare with AI-driven solutions for EMR, lab reports, insurance claims, and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+    <style>
+        .accordion-item {
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item.active {
+            transform: translateX(-10rem);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content.active {
+            max-height: 200px;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+    </style>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container flex justify-center gap-4 mx-auto px-4 py-4">
+            <div>
+                <a href="/" class="decoration-none"><img src="../assets/images/logo-blk.png" alt="Algohealth Logo"
+                        width="200"></a>
+            </div>
+            <div class="flex items-center gap-4 justify-between">
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium hover:text-cyan-600 active">Home</a>
+                    <a href="index.html#about" class="font-medium hover:text-cyan-600">About Us</a>
+                    <div class="relative group">
+                        <a href="index.html#solutions" class="font-medium hover:text-cyan-600 flex items-center">
+                            Our Solutions
+                            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="./care-emr.html"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:text-cyan-500 transition-colors">
+                                    <div class="font-medium">Care AI EMR</div>
+                                </a>
+                                <a href="./ai-driven-reports.html"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:bg-cyan-50 transition-colors">
+                                    <div class="font-medium">AI-Driven Intelligent Lab Reports</div>
+                                </a>
+                                <a href="./health-insurance.html"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:text-cyan-500 hover:text-cyan-600 transition-colors">
+                                    <div class="font-medium">Auto adjudication for health insurance claims</div>
+                                </a>
+                                <a href="./ai-emr.html"
+                                    class="block px-4 py-3 text-sm text-cyan-500 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                    <div class="font-medium">AI-Enabled EMR Solution</div>
+                                </a>
+                                <a href="#"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                    <div class="font-medium">CodeSync AI</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#why-algo" class="font-medium hover:text-cyan-600">Why Algo</a>
+                    <a href="../contact.html" class="font-medium hover:text-cyan-600">Contact Us</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition">
+                        Book a Demo
+                    </button>
+                    <button class="md:hidden">
+                        <i class="fas fa-bars text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section id="solutions-banner" class="bg-cover relative bg-center h-64 flex items-center justify-center">
+        <div class="text-center text-white">
+            <div class="absolute play-icon top-[35%]  left-20">
+                <img src="../assets/images/play-icon.svg" alt="Solutions Banner Play Icon" width="100">
+            </div>
+            <h1 class="text-6xl font-bold">AI-Enabled EMR Solutions</h1>
+        </div>
+        <div class="absolute bottom-[-30px] right-[7rem] p-4">
+            <a href="tel:+9144283600006" class="no-underline"><img src="../assets/images/call-icon-banner.svg"
+                    alt="Call Icon" width="300"></a> </button>
+        </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="ai-emr-hero-section">
+        <div class="container mx-auto px-20 py-12">
+            <div class="flex  items-start justify-between gap-8">
+                <div class="flex items-start gap-12">
+                    <div class="mt-20 flex flex-col gap-12">
+                        <div>
+                            <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Enhance Your Existing
+                                EMR System with Algorithm Health</h2>
+                            <p class="text-sm text-justify text-[var(--primary-color)] poppins-medium mb-6">Transform
+                                your current Electronic Medical Record (EMR) system with our cutting-edge AI technology.
+                                Don't lose your investment—enhance it.</p>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">The Smart Approach to
+                                <span class="text-cyan-500 text-3xl">EMR Modernization</span></h2>
+                            <p class="text-sm text-justify text-[var(--primary-color)] poppins-medium mb-6">Our
+                                AI-enabling service integrates seamlessly with your existing EMR system  and
+                                infrastructure, bringing advanced artificial intelligence capabilities to the systems
+                                your healthcare professionals already know and trust.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="../assets/images/solutions/emr-solutions-hero.png" alt="EMR Solutions Hero Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits for Healthcare Organizations Section -->
+
+    <section id="whole-bg">
+        <div class="container mx-auto px-20 py-12">
+            <h2 class="text-2xl font-semibold font-poppins text-[var(--primary-color)]">Benefits for Healthcare
+                Organizations</h2>
+            <div class="max-w-2xl mx-auto my-8">
+                <!-- Accordion Items -->
+                <div class="space-y-4">
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item rounded-lg shadow-md active" data-index="0">
+                        <button
+                            class="accordion-header w-full text-left p-4 flex justify-between items-center focus:outline-none bg-[#CDF6FF] rounded-lg">
+                            <span class="poppins-medium text-md text-[#274760]">Protect Your EMR Investment</span>
+                            <i class="fa-solid fa-circle-arrow-down accordion-icon text-[#274760]"></i>
+                        </button>
+                        <div class="accordion-content active bg-[#CDF6FF] rounded-lg">
+                            <div class="p-4">
+                                <p class="text-[#274760] poppins-regular">Add AI capabilities without system replacement
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item bg-[#CDF6FF]  rounded-lg shadow-md" data-index="1">
+                        <button
+                            class="accordion-header w-full text-left p-4 flex justify-between items-center focus:outline-none rounded-lg"
+                            style="background-color: #FFFEFE;">
+                            <span class="poppins-medium text-md text-[#274760]">Rapid Deployment</span>
+                            <i class="fa-solid fa-circle-arrow-up accordion-icon text-[#274760]"></i>
+                        </button>
+                        <div class="accordion-content bg-[#CDF6FF] rounded-lg">
+                            <div class="p-4">
+                                <p class="text-[#274760]  poppins-regular">Implementation in weeks, not months</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item bg-[#CDF6FF]  rounded-lg shadow-md" data-index="2">
+                        <button
+                            class="accordion-header w-full text-left p-4 flex justify-between items-center focus:outline-none rounded-lg"
+                            style="background-color: #FFFEFE;">
+                            <span class="poppins-medium text-md text-[#274760]">Seamless User Experience</span>
+                            <i class="fa-solid fa-circle-arrow-up accordion-icon text-[#274760]"></i>
+                        </button>
+                        <div class="accordion-content bg-[#CDF6FF]  rounded-lg">
+                            <div class="p-4">
+                                <p class="text-[#274760] poppins-regular">No extensive retraining required</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 4 -->
+                    <div class="accordion-item bg-[#CDF6FF] rounded-lg shadow-md" data-index="3">
+                        <button
+                            class="accordion-header w-full text-left p-4 flex justify-between items-center focus:outline-none rounded-lg"
+                            style="background-color: #FFFEFE;">
+                            <span class="poppins-medium text-md text-[#274760]">Enhanced Patient Care</span>
+                            <i class="fa-solid fa-circle-arrow-up accordion-icon text-[#274760]"></i>
+                        </button>
+                        <div class="accordion-content bg-[#CDF6FF]  rounded-lg">
+                            <div class="p-4">
+                                <p class="text-[#274760] poppins-regular">AI-driven clinical insights and decision
+                                    support</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 5 -->
+                    <div class="accordion-item bg-[#CDF6FF]  rounded-lg shadow-md" data-index="4">
+                        <button
+                            class="accordion-header w-full text-left p-4 flex justify-between items-center focus:outline-none rounded-lg"
+                            style="background-color: #FFFEFE;">
+                            <span class="poppins-medium text-md  text-gray-800">Cost-Effective Solution</span>
+                            <i class="fa-solid fa-circle-arrow-up accordion-icon text-[#274760]"></i>
+                        </button>
+                        <div class="accordion-content bg-[#CDF6FF]  rounded-lg">
+                            <div class="p-4">
+                                <p class="text-[#274760] poppins-regular">Significant savings compared to full system
+                                    replacement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works & what it provides Section -->
+
+    <!-- <section id="how-it-works" class="bg-white py-12">
+        <div class="container mx-auto px-20 text-center">
+            <h2 class="text-2xl mb-2"><span class="poppins-regular text-cyan-500">How It Works &</span> <span
+                    class="poppins-semibold text-[var(--primary-color)]">what it provides</span></h2>
+            <p class="text-md text-[var(--primary-color)] poppins-medium mb-6">Our proprietary AI layer works through an
+                API interface, behind the scenes to enhance your existing EMR with:</p>
+            <div class="grid grid-cols-2 gap-x-16 gap-y-12">
+                
+                <img src="../assets/images/solutions/how_it_works1.png" alt="EMR Icon 1" class="w-16 h-16">
+                <div class="flex items-center gap-4">
+                    <span class="text-6xl poppins-semibold text-[var(--primary-color)]">
+                        01
+                    </span>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-50  hover:text-[var(--primary-color)] poppins-semibold">Automated
+                            documentation and coding assistance</h3>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-[var(--primary-color)] poppins-semibold">Analytics for
+                            patient risk identification</h3>
+                    </div>
+                    <span class="text-6xl poppins-semibold text-[var(--primary-color)]">
+                        02
+                    </span>
+                </div>
+                <img src="../assets/images/solutions/how_it_works2.png" alt="EMR Icon 3" class="w-16 h-16">
+
+                                <img src="../assets/images/solutions/how_it_works3.png" alt="EMR Icon 3" class="w-16 h-16">
+                <div class="flex items-center gap-4">
+                    <span class="text-6xl poppins-semibold text-[var(--primary-color)]">
+                        03
+                    </span>
+                    <div>
+                        <h3 class="text-lg font-semibold text-[var(--primary-color)] poppins-semibold">Clinical decision support at the point of care including support for diagnosis, investigation and treatment</h3>
+                    </div>
+                </div>
+
+                                <div class="flex items-center gap-4">
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-[var(--primary-color)] poppins-semibold">Workflow optimization and administrative efficiency</h3>
+                    </div>
+                    <span class="text-6xl poppins-semibold text-[var(--primary-color)]">
+                        04
+                    </span>
+                </div>
+                <img src="../assets/images/solutions/how_it_works4.png" alt="EMR Icon 2" class="w-16 h-16">
+                
+                <img src="../assets/images/solutions/how_it_works5.png" alt="EMR Icon 2" class="w-16 h-16 text-right">
+                                <div class="flex items-center gap-4">
+                    <span class="text-6xl poppins-semibold text-[var(--primary-color)]">
+                        05
+                    </span>
+                    <div>
+                        <h3 class="text-lg font-semibold text-[var(--primary-color)] poppins-semibold">Improved data accessibility and reporting capabilities</h3>
+                    </div>
+                </div>
+                                                <div class="flex items-center gap-4">
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-[var(--primary-color)] poppins-semibold">Improved data accessibility and reporting capabilities</h3>
+                    </div>
+                                        <span class="text-6xl poppins-semibold text-[var(--primary-color)]">
+                        06
+                    </span>
+                </div>
+                                <img src="../assets/images/solutions/how_it_works6.png" alt="EMR Icon 2" class="w-16 h-16">
+
+
+            </div>
+
+
+    </section> -->
+
+    <!-- Call to Action -->
+    <section id="call-to-action" class="flex gap-4 items-center justify-center">
+        <div>
+            <h1 class="uppercase teko-font text-5xl">Experience the Algorithm Health Advantage</h1>
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-center mt-4">
+            <div
+                class="teko-font card rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[#4B4B4B] transition duration-300">
+                Request a Demo
+            </div>
+            <div
+                class="teko-font card rounded-md uppercase bg-[#222429] bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[#4B4B4B] transition duration-300">
+                Contact Our Team </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer-bg">
+        <section id="pre-footer" class="text-white py-6">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="flex justify-between items-center">
+                    <!-- Logo -->
+                    <div>
+                        <a href="#home" class="decoration-none"><img src="../assets/images/ALPLOGO-WHITE.png"
+                                alt="Algohealth Logo" width="200"></a>
+                    </div>
+                    <div>
+                        <p class="text-xl font-normal font-poppins">
+                            Powering Smarter Healthcare, Together
+                        </p>
+                    </div>
+                    <!-- Social Icons -->
+                    <div class="flex ">
+                        <a href="#" target="_blank" class="text-white mx-2">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/algorithm-health-ltd" target="_blank"
+                            class="text-white mx-2">
+                            <i class="fa-brands fa-linkedin text-2xl"></i> </a>
+                        <a href="#" target="_blank" class="text-white mx-2">
+                            <i class="fa-brands fa-instagram text-2xl"></i> </a>
+                    </div>
+
+                </div>
+                <hr class="border-gray-600 my-4">
+            </div>
+
+        </section>
+
+        <!-- Footer Main Content -->
+        <section class="flex justify-center space-x-8 items-center">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-white py-8 px-6 max-w-5xl">
+                <div class="space-y-4">
+                    <p>Algorithm Health serves as your trusted gateway to comprehensive healthcare solutions, delivering
+                        an array of services tailored to meet your health needs.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="../index.html#about"
+                                class="hover:text-cyan-500 text-[#8B9CC2]">About Us</a></li>
+                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a
+                                href="../index.html#trustedby" class="hover:text-cyan-500 text-[#8B9CC2]">Trusted By</a>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a
+                                href="../index.html#testimonial"
+                                class="hover:text-cyan-500 text-[#8B9CC2]">Testimonial</a></li>
+                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a
+                                href="../index.html#why-algo" class="hover:text-cyan-500 text-[#8B9CC2]">Why
+                                AlgoHealth</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col space-y-2">
+                    <h3 class="text-lg font-semibold mb-4">Get In Touch</h3>
+                    <p><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="../contact.html"
+                            class="text-[#8B9CC2]">Contact us</a></p>
+                    <p><i class="fa-solid fa-phone-volume rotate-[320deg] text-cyan-500"></i> &nbsp; <span
+                            class="text-[#8B9CC2] text-normal">Call Us</span><br>
+                        <span class="font-normal text-white">Phone: </span><a href="tel:+914428360006"
+                            class="text-white"><span class="font-poppins"> +91-44-28360006</span> </a>
+                    </p>
+                    <hr class="border-gray-600 my-4">
+                    <p><i class="fa-solid fa-envelope text-cyan-500"></i>&nbsp; <span class="text-[#8B9CC2]">E
+                            MAIL</span> <br>
+                        <a href="mailto:contact@algohealthplus.com" class="text-white">contact@algohealthplus.com</a>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <!-- Copyrights Footer -->
+        <section id="post-footer" class="bg-[#001543] text-white py-4">
+            <div class="container mx-auto px-6 text-center">
+                <p class="text-sm font-lighter">Copyright &copy; <span id="year"></span> <a href="../index.html"
+                        class="text-cyan-500">Algorithm Health</a>. All rights reserved.</p>
+            </div>
+
+        </section>
+    </footer>
+    <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+        class="!fixed bottom-5 end-5 hidden rounded-full bg-[#031B4E] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-[#16284D] hover:shadow-lg focus:bg-[#16284D] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#031B4E] active:shadow-lg"
+        id="backToTopBtn" onclick="scrollToTop()">
+        <span class="[&>svg]:w-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>
+        </span>
+    </button>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach((header, index) => {
+                header.addEventListener('click', function () {
+                    const currentItem = accordionItems[index];
+                    const currentContent = currentItem.querySelector('.accordion-content');
+                    const currentIcon = currentItem.querySelector('.accordion-icon');
+                    const isActive = currentItem.classList.contains('active');
+
+                    // Close all accordion items
+                    accordionItems.forEach((item, i) => {
+                        const content = item.querySelector('.accordion-content');
+                        const icon = item.querySelector('.accordion-icon');
+                        const headerBtn = item.querySelector('.accordion-header');
+
+                        item.classList.remove('active');
+                        content.classList.remove('active');
+
+                        // Reset to inactive state
+                        headerBtn.style.backgroundColor = '#FFFEFE';
+                        headerBtn.querySelector('span').classList.remove('text-white');
+                        headerBtn.querySelector('span').classList.add('text-[#274760]');
+                        icon.className = 'fa-solid fa-circle-arrow-up accordion-icon text-[#274760]';
+                    });
+
+                    // If the clicked item wasn't active, make it active
+                    if (!isActive) {
+                        currentItem.classList.add('active');
+                        currentContent.classList.add('active');
+
+                        // Set to active state
+                        header.style.backgroundColor = '';
+                        header.classList.add('bg-[#CDF6FF]');
+                        header.querySelector('span').classList.add('text-[#274760] poppins-medium');
+                        header.querySelector('span').classList.remove('text-[#274760] poppins-semibold');
+                        currentIcon.className = 'fa-solid fa-circle-arrow-down accordion-icon text-[#274760]';
+                    }
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
