@@ -42,7 +42,6 @@
         /* Tab Panel Animation */
         .tab-panel {
             display: none;
-
             opacity: 0;
             max-height: 0;
             overflow: hidden;
@@ -55,6 +54,7 @@
             opacity: 1;
             max-height: 200px;
             transform: translateY(0);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         /* Tab Button Active State */
@@ -692,10 +692,10 @@
 
 
     <!-- Call to Action -->
-    <section id="call-to-action" class="mx-auto px-6 py-12">
-        <div class="flex flex-col lg:flex-row gap-8 items-center justify-between">
+    <section id="call-to-action" class="mx-auto px-20 py-12">
+        <div class="flex flex-col lg:flex-row gap-16 items-center justify-center">
             <!-- Content Section -->
-            <div class="flex-1 text-center lg:text-left">
+            <div class="flex-2 text-center lg:text-left">
                 <h1 class="uppercase teko-font text-5xl leading-tight">
                     Transform Your Claims Management Today
                 </h1>
@@ -708,16 +708,21 @@
             </div>
 
             <!-- CTA Buttons Section -->
-            <div class="flex flex-col gap-4 items-center justify-center lg:items-end">
-                <div class="teko-font card rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[
-#4B4B4B] transition duration-300">
-                    Request a Demo
+            <div class="flex flex-col gap-4 items-center justify-start lg:items-end">
+                <div class="w-60">
+                    <div
+                        class="teko-font card w-full rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover:bg-[#4B4B4B] transition duration-300">
+                        Request a Demo
+                    </div>
                 </div>
-                <div class="teko-font card rounded-md uppercase bg-[
-#222429] bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[
-#4B4B4B] transition duration-300">
-                    Contact Our Team </div>
+                <div class="w-60">
+                    <div
+                        class="teko-font card w-full rounded-md uppercase bg-[#222429] bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover:bg-[#4B4B4B] transition duration-300">
+                        Contact Our Team
+                    </div>
+                </div>
             </div>
+
         </div>
         </div>
     </section>
