@@ -19,24 +19,64 @@
 
 
 <body class="bg-gray-50">
-        <style>
+    <style>
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
-        
+
         .accordion-content.active {
             max-height: 200px;
             transition: max-height 0.3s ease-in;
         }
-        
+
         .chevron {
             transition: transform 0.3s ease;
         }
-        
+
         .chevron.rotate {
             transform: rotate(90deg);
+        }
+
+        /* Tab Panel Animation */
+        .tab-panel {
+            display: none;
+
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            transform: translateY(-10px);
+        }
+
+        .tab-panel.active {
+            display: block;
+            opacity: 1;
+            max-height: 200px;
+            transform: translateY(0);
+        }
+
+        /* Tab Button Active State */
+        .tab-button {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tab-button.active {
+            color: #06b6d4;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
+        }
+
+        .tab-button.active p {
+            color: #06b6d4 !important;
+        }
+
+        .tab-button:not(.active):hover {
+            color: #06b6d4;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
     </style>
     <!-- Header -->
@@ -74,11 +114,11 @@
                                     class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
                                     <div class="font-medium">Auto adjudication for health insurance claims</div>
                                 </a>
-                                <a href="./"
+                                <a href="#"
                                     class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
                                     <div class="font-medium">AI-Enabled EMR Solution</div>
                                 </a>
-                                <a href="#ehr-integration"
+                                <a href="#"
                                     class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
                                     <div class="font-medium">CodeSync AI</div>
                                 </a>
@@ -143,113 +183,545 @@
 
     <!-- Intelligent Document Analysis Section -->
 
-      <section id="whole-bg">
+    <section id="whole-bg">
         <div class="container mx-auto px-20 py-12">
             <div class="grid grid-cols-2 gap-8">
                 <div class="flex items-center justify-center">
-                    <img src="../assets/images/solutions/document-analysis.png"
-                        alt="Intelligent Document Analysis" class="h-auto w-full max-w-md">
+                    <img src="../assets/images/solutions/document-analysis.png" alt="Intelligent Document Analysis"
+                        class="h-auto w-full max-w-md">
 
                 </div>
                 <div class="flex flex-col justify-center">
-                    <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Intelligent Document Analysis</h2>
-                     <p class="text-md text-justify text-[var(--primary-color)] poppins-medium mb-6">Our AI-powered system conducts thorough analysis across all critical claim components to deliver automated adjudication decisions</p>
+                    <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Intelligent Document Analysis
+                    </h2>
+                    <p class="text-md text-justify text-[var(--primary-color)] poppins-medium mb-6">Our AI-powered
+                        system conducts thorough analysis across all critical claim components to deliver automated
+                        adjudication decisions</p>
 
-                      <!-- Accordion Container -->
-  <div class="shadow-sm border border-gray-200 overflow-hidden">
-            
-            <!-- First Accordion Item - Expanded -->
-            <div class="border-b my-2 shadow-md border-gray-200">
-                <button class="w-full px-6 py-4 text-left bg-[#ECF5FB] hover:bg-[#ECF5FB] transition-colors duration-200 flex items-center justify-between group" onclick="toggleMedicalAccordion(this)">
-                    <span class="text-lg poppins-medium text-[var(--primary-color)] text-gray-800 active-tab-title">Discharge Summary Analysis</span>
-                    <svg class="w-5 h-5 text-gray-500 chevron rotate" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
-                <div class="accordion-content active bg-[#ECF5FB]">
-                    <div class="px-6 py-4">
-                        <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
-                            Validates treatment necessity and ensures alignment between patient diagnosis and prescribed procedures according to standard medical protocols.
-                        </p>
+                    <!-- Accordion Container -->
+                    <div class="shadow-sm border border-gray-200 overflow-hidden">
+
+                        <!-- First Accordion Item - Expanded -->
+                        <div class="border-b my-2 shadow-md border-gray-200">
+                            <button
+                                class="w-full px-6 py-4 text-left bg-[#ECF5FB] hover:bg-[#ECF5FB] transition-colors duration-200 flex items-center justify-between group"
+                                onclick="toggleMedicalAccordion(this)">
+                                <span
+                                    class="text-lg poppins-medium text-[var(--primary-color)] text-gray-800 active-tab-title">Discharge
+                                    Summary Analysis</span>
+                                <svg class="w-5 h-5 text-gray-500 chevron rotate" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content active bg-[#ECF5FB]">
+                                <div class="px-6 py-4">
+                                    <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
+                                        Validates treatment necessity and ensures alignment between patient diagnosis
+                                        and prescribed procedures according to standard medical protocols.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second Accordion Item -->
+                        <div class="border-b border-gray-200">
+                            <button
+                                class="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group"
+                                onclick="toggleMedicalAccordion(this)">
+                                <span class="text-lg font-medium text-[var(--primary-color)]">Hospital Bill
+                                    Examination</span>
+                                <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-6 py-4">
+                                    <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
+                                        Comprehensive review of hospital charges, procedures, and services to ensure
+                                        accuracy and compliance with insurance coverage policies.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Third Accordion Item -->
+                        <div class="border-b border-gray-200">
+                            <button
+                                class="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group"
+                                onclick="toggleMedicalAccordion(this)">
+                                <span class="text-lg font-medium text-[var(--primary-color)] ">Pharmacy Bill
+                                    Review</span>
+                                <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-6 py-4">
+                                    <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
+                                        Detailed analysis of pharmaceutical charges, medication appropriateness, and
+                                        dosage verification against prescribed treatment plans.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fourth Accordion Item -->
+                        <div>
+                            <button
+                                class="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group"
+                                onclick="toggleMedicalAccordion(this)">
+                                <span class="text-lg font-medium text-[var(--primary-color)]">Lab Report
+                                    Validation</span>
+                                <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-6 py-4">
+                                    <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
+                                        Verification of laboratory test results, cross-referencing with clinical
+                                        indicators and ensuring diagnostic accuracy for proper treatment validation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
             </div>
-            
-            <!-- Second Accordion Item -->
-            <div class="border-b border-gray-200">
-                <button class="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group" onclick="toggleMedicalAccordion(this)">
-                    <span class="text-lg font-medium text-[var(--primary-color)]">Hospital Bill Examination</span>
-                    <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-6 py-4">
-                        <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
-                            Comprehensive review of hospital charges, procedures, and services to ensure accuracy and compliance with insurance coverage policies.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Third Accordion Item -->
-            <div class="border-b border-gray-200">
-                <button class="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group" onclick="toggleMedicalAccordion(this)">
-                    <span class="text-lg font-medium text-[var(--primary-color)] ">Pharmacy Bill Review</span>
-                    <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-6 py-4">
-                        <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
-                            Detailed analysis of pharmaceutical charges, medication appropriateness, and dosage verification against prescribed treatment plans.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Fourth Accordion Item -->
-            <div>
-                <button class="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group" onclick="toggleMedicalAccordion(this)">
-                    <span class="text-lg font-medium text-[var(--primary-color)]">Lab Report Validation</span>
-                    <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
-                <div class="accordion-content">
-                    <div class="px-6 py-4">
-                        <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
-                            Verification of laboratory test results, cross-referencing with clinical indicators and ensuring diagnostic accuracy for proper treatment validation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
         </div>
+
+    </section>
+
+    <!-- Advanced Fraud Detection Capabilities -->
+    <section id="fraud-detection-section" class="bg-white py-12">
+        <div class="container mx-auto px-20">
+            <div class="grid grid-cols-5 gap-2">
+                <div class="col-span-2 flex items-center justify-center">
+                    <h2
+                        class="text-2xl hover:text-cyan-500 active:text-cyan-500 text-[var(--primary-color)] mb-4 poppins-semibold">
+                        Advanced Fraud <br> Detection Capabilities
+                    </h2>
+                </div>
+                <div class="col-span-3">
+                    <!-- Tab Buttons Container -->
+                    <div class="flex items-center justify-center gap-4">
+                        <!-- Tab Button 1-->
+                        <div class="tab-button active rounded-lg shadow-md p-6 active:text-cyan-500 bg-white w-64 h-32 flex items-center justify-center"
+                            data-tab-target="panel-1">
+                            <p class="text-md text-center text-[var(--primary-color)] poppins-medium">
+                                Unnecessary Medical Procedures
+                            </p>
+                        </div>
+
+                        <!-- Tab Button 2-->
+                        <div class="tab-button rounded-lg shadow-md p-6 bg-white w-64 h-32 flex items-center justify-center"
+                            data-tab-target="panel-2">
+                            <p
+                                class="text-md text-center active:text-cyan-500 text-[var(--primary-color)] poppins-medium">
+                                Medication Abuse Detection
+                            </p>
+                        </div>
+
+                        <!-- Tab Button 3-->
+                        <div class="tab-button rounded-lg shadow-md p-6 bg-white w-64 h-32 flex items-center justify-center"
+                            data-tab-target="panel-3">
+                            <p
+                                class="text-md text-center active:text-cyan-500 hover:text-cyan-500 text-[var(--primary-color)] poppins-medium">
+                                Length of Stay Optimization
+                            </p>
+                        </div>
+
+                        <!-- Tab Button 4 -->
+                        <div class="tab-button rounded-lg shadow-md p-6 bg-white w-64 h-32 flex items-center justify-center"
+                            data-tab-target="panel-4">
+                            <p
+                                class="text-md text-center active:text-cyan-500 hover:text-cyan-500 text-[var(--primary-color)] poppins-medium">
+                                Medical Inconsistency Detection
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tab Panels Container -->
+                    <div class="tab-panels-container mt-5">
+                        <!-- Panel 1 -->
+                        <div id="panel-1"
+                            class="tab-panel active border shadow-md bg-white rounded-xl border-cyan-500 p-4">
+                            <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular">
+                                Flags tests and treatments that don't align with patient diagnosis or standard care
+                                requirements.
+                            </p>
+                        </div>
+
+                        <!-- Panel 2-->
+                        <div id="panel-2" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-4">
+                            <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular">
+                                Identifies when prescribed quantities exceed normal usage patterns for specific medical
+                                conditions.
+                            </p>
+                        </div>
+
+                        <!-- Panel 3 -->
+                        <div id="panel-3" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-4">
+                            <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular">
+                                Assesses whether hospitalization duration matches standard recovery times for given
+                                diagnoses.
+                            </p>
+                        </div>
+
+                        <!-- Panel 4 -->
+                        <div id="panel-4" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-4">
+                            <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular">
+                                Cross-references all documents to identify discrepancies in diagnoses, treatments, or
+                                billed services.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits for Health Insurers Section -->
+
+    <section id="whole-bg">
+        <div class="container mx-auto px-20 py-12">
+            <div class="grid grid-cols-5 gap-8">
+                <div class="col-span-2 flex items-center justify-center">
+                    <h2
+                        class="text-2xl hover:text-cyan-500 active:text-cyan-500 text-[var(--primary-color)] mb-4 poppins-semibold">
+                        Benefits for <br>
+                        Health Insurers
+                    </h2>
+                </div>
+                <div class="col-span-3 rounded-lg text-white bg-gradient-to-b from-[#A1DBE6] to-[#A5BEF3] p-6">
+                    <div class="benefits-carousel-wrapper">
+                        <div class="benefits-carousel-track">
+                            <!-- First set of items -->
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/cost-reduction-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Dramatic
+                                        Cost
+                                        Reduction</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Prevent fraudulent and inflated claims from resulting in unnecessary payouts,
+                                        saving
+                                        millions annually
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/automated-processing-speed-icon.png"
+                                        alt="Automated Processing Speed Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Automated Processing Speed</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Process claims 10x faster than manual review, dramatically reducing operational
+                                        bottlenecks
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/enhanced-accuracy-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Enhanced Accuracy</h3>
+                                    <p class="poppins-medium text-sm">
+                                        AI-powered analysis eliminates human error and ensures consistent adjudication
+                                        standards
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/fraud-prevention-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Fraud
+                                        Prevention</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Prevent fraudulent and inflated claims from resulting in unnecessary payouts,
+                                        saving
+                                        millions annually
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/operational-efficeinecy-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Operational Efficiency</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Reduce manual review workload by up to 80%, allowing staff to focus on complex
+                                        cases
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/regulatory-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Regulatory Compliance</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Ensure all claims meet industry standards and regulatory requirements
+                                        automatically
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/real-time_analytics-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Real-Time Analytics</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Access comprehensive dashboards and reporting for immediate insights into claims
+                                        patterns
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/scalable-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Scalable Solution</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Handle increased claim volumes without proportional increases in staffing costs
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/risk-management-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Risk Management</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Identify high-risk providers and patterns to inform network management decisions
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/best-customer-experience_icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Customer Satisfaction</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Faster claim processing leads to improved policyholder experience and retention
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/audit-trail-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Audit Trail Transparency</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Complete documentation of adjudication decisions for regulatory and internal
+                                        auditing
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/custom-rule-engine.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Customizable Rules
+                                        Engine</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Adapt adjudication criteria to specific business policies and market
+                                        requirements
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Duplicate set for seamless loop -->
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/cost-reduction-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Dramatic
+                                        Cost
+                                        Reduction</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Prevent fraudulent and inflated claims from resulting in unnecessary payouts,
+                                        saving
+                                        millions annually
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/automated-processing-speed-icon.png"
+                                        alt="Automated Processing Speed Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Automated Processing Speed</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Process claims 10x faster than manual review, dramatically reducing operational
+                                        bottlenecks
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/enhanced-accuracy-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Enhanced Accuracy</h3>
+                                    <p class="poppins-medium text-sm">
+                                        AI-powered analysis eliminates human error and ensures consistent adjudication
+                                        standards
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/fraud-prevention-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Fraud
+                                        Prevention</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Prevent fraudulent and inflated claims from resulting in unnecessary payouts,
+                                        saving
+                                        millions annually
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/operational-efficeinecy-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Operational Efficiency</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Reduce manual review workload by up to 80%, allowing staff to focus on complex
+                                        cases
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/regulatory-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Regulatory Compliance</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Ensure all claims meet industry standards and regulatory requirements
+                                        automatically
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/real-time_analytics-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Real-Time Analytics</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Access comprehensive dashboards and reporting for immediate insights into claims
+                                        patterns
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/scalable-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Scalable Solution</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Handle increased claim volumes without proportional increases in staffing costs
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/risk-management-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Risk Management</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Identify high-risk providers and patterns to inform network management decisions
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/best-customer-experience_icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Customer Satisfaction</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Faster claim processing leads to improved policyholder experience and retention
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/audit-trail-icon.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Audit Trail Transparency</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Complete documentation of adjudication decisions for regulatory and internal
+                                        auditing
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefits-carousel-item">
+                                <div class="flex text-center items-center flex-col justify-center gap-4">
+                                    <img src="../assets/images/solutions/custom-rule-engine.png"
+                                        alt="Cost Reduction Chart Icon" width="50" height="50">
+                                    <h3 class="poppins-semibold">Customizable Rules
+                                        Engine</h3>
+                                    <p class="poppins-medium text-sm">
+                                        Adapt adjudication criteria to specific business policies and market
+                                        requirements
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-            </div>
+        </div>
+        </div>
+        </div>
 
     </section>
 
 
     <!-- Call to Action -->
-    <section id="call-to-action" class="flex gap-4 items-center justify-center">
-        <div>
-            <h1 class="uppercase teko-font text-5xl">Transform Your Claims Management Today</h1>
-        </div>
-        <div class="flex flex-col gap-2 items-center justify-center mt-4">
-            <div
-                class="teko-font card rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[#4B4B4B] transition duration-300">
-                Request a Demo
+    <section id="call-to-action" class="mx-auto px-6 py-12">
+        <div class="flex flex-col lg:flex-row gap-8 items-center justify-between">
+            <!-- Content Section -->
+            <div class="flex-1 text-center lg:text-left">
+                <h1 class="uppercase teko-font text-5xl leading-tight">
+                    Transform Your Claims Management Today
+                </h1>
+                <p class="poppins-medium text-md leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Algorithm Health's Auto Adjudication System empowers health insurers with intelligent automation
+                    that safeguards resources while optimizing claims processing efficiency. Experience smarter, faster,
+                    and more cost-effective claims management that protects your bottom line and enhances operational
+                    excellence.
+                </p>
             </div>
-            <div
-                class="teko-font card rounded-md uppercase bg-[#222429] bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[#4B4B4B] transition duration-300">
-                Contact Our Team </div>
+
+            <!-- CTA Buttons Section -->
+            <div class="flex flex-col gap-4 items-center justify-center lg:items-end">
+                <div class="teko-font card rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[
+#4B4B4B] transition duration-300">
+                    Request a Demo
+                </div>
+                <div class="teko-font card rounded-md uppercase bg-[
+#222429] bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[
+#4B4B4B] transition duration-300">
+                    Contact Our Team </div>
+            </div>
+        </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="footer-bg">
@@ -268,14 +740,14 @@
                     </div>
                     <!-- Social Icons -->
                     <div class="flex ">
-                        <a href="https://www.facebook.com/AlgoHealth" target="_blank" class="text-white mx-2">
+                        <a href="#" target="_blank" class="text-white mx-2">
                             <i class="fa-brands fa-facebook text-2xl"></i>
                         </a>
 
                         <a href="https://www.linkedin.com/company/algorithm-health-ltd" target="_blank"
                             class="text-white mx-2">
                             <i class="fa-brands fa-linkedin text-2xl"></i> </a>
-                        <a href="https://www.instagram.com/AlgoHealth" target="_blank" class="text-white mx-2">
+                        <a href="#" target="_blank" class="text-white mx-2">
                             <i class="fa-brands fa-instagram text-2xl"></i> </a>
                     </div>
 
@@ -312,15 +784,15 @@
                 <div class="flex flex-col space-y-2">
                     <h3 class="text-lg font-semibold mb-4">Get In Touch</h3>
                     <p><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="../contact.html"
-                            class="text-[#8B9CC2]">Contact us</a></p>
+                            class="hover:text-cyan-500 text-[#8B9CC2]">Contact us</a></p>
                     <p><i class="fa-solid fa-phone-volume rotate-[320deg] text-cyan-500"></i> &nbsp; <span
-                            class="text-[#8B9CC2] text-normal">Call Us</span><br>
+                            class="hover:text-cyan-500 text-[#8B9CC2] text-normal">Call Us</span><br>
                         <span class="font-normal text-white">Phone: </span><a href="tel:+914428360006"
                             class="text-white"></a><span class="font-poppins"> +91-44-28360006</span> </a>
                     </p>
                     <hr class="border-gray-600 my-4">
-                    <p><i class="fa-solid fa-envelope text-cyan-500"></i>&nbsp; <span class="text-[#8B9CC2]">E
-                            MAIL</span> <br>
+                    <p><i class="fa-solid fa-envelope text-cyan-500"></i>&nbsp; <span
+                            class="hover:text-cyan-500 text-[#8B9CC2]">EMAIL</span> <br>
                         <a href="mailto:contact@algohealthplus.com" class="text-white">contact@algohealthplus.com</a>
                     </p>
                 </div>
@@ -348,23 +820,23 @@
     </button>
     <script src="../assets/js/script.js"></script>
 
-  <script>
+    <script>
         function toggleMedicalAccordion(button) {
             const accordionContainer = button.closest('.shadow-sm');
             const content = button.nextElementSibling;
             const chevron = button.querySelector('.chevron');
             const titleSpan = button.querySelector('span');
             const isActive = content.classList.contains('active');
-            
+
             // Close all other accordion items within this specific accordion
             accordionContainer.querySelectorAll('.accordion-content').forEach(item => {
                 item.classList.remove('active');
             });
-            
+
             accordionContainer.querySelectorAll('.chevron').forEach(icon => {
                 icon.classList.remove('rotate');
             });
-            
+
             accordionContainer.querySelectorAll('button').forEach(btn => {
                 btn.classList.remove('bg-[#ECF5FB]');
                 btn.classList.add('hover:bg-gray-50');
@@ -374,11 +846,11 @@
                     span.classList.remove('active-tab-title');
                 }
             });
-            
+
             accordionContainer.querySelectorAll('.accordion-content').forEach(item => {
                 item.classList.remove('bg-[#ECF5FB]');
             });
-            
+
             // If the clicked item wasn't active, open it
             if (!isActive) {
                 content.classList.add('active');
@@ -390,6 +862,57 @@
                 titleSpan.classList.add('active-tab-title');
             }
         }
+    </script>
+
+    <script>
+        // Tab Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+
+            // Function to show specific panel
+            function showPanel(targetId) {
+                // Hide all panels
+                tabPanels.forEach(panel => {
+                    panel.classList.remove('active');
+                });
+
+                // Remove active class from all buttons
+                tabButtons.forEach(button => {
+                    button.classList.remove('active');
+                });
+
+                // Show target panel
+                const targetPanel = document.getElementById(targetId);
+                if (targetPanel) {
+                    targetPanel.classList.add('active');
+                }
+
+                // Add active class to clicked button
+                const activeButton = document.querySelector(`[data-tab-target="${targetId}"]`);
+                if (activeButton) {
+                    activeButton.classList.add('active');
+                }
+            }
+
+            // Add click event listeners to tab buttons
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const targetId = this.getAttribute('data-tab-target');
+
+                    // If clicking the same active tab, hide it
+                    if (this.classList.contains('active')) {
+                        tabPanels.forEach(panel => {
+                            panel.classList.remove('active');
+                        });
+                        this.classList.remove('active');
+                    } else {
+                        // Show the selected panel
+                        showPanel(targetId);
+                    }
+                });
+            });
+        });
     </script>
 </body>
 

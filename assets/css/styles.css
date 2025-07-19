@@ -383,3 +383,30 @@ body {
         .gradient-bg-light {
             background: linear-gradient(135deg, #38bdf8 0%, #22d3ee 100%);
         }
+.benefits-carousel-wrapper {
+            overflow: hidden;
+        }
+        
+        .benefits-carousel-track {
+            display: flex;
+            animation: benefitsScroll 60s linear infinite;
+        }
+        
+        .benefits-carousel-item {
+            flex: 0 0 25%; /* Each item takes 25% width to show 4 items */
+            padding: 0 8px;
+        }
+        
+        @keyframes benefitsScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        
+        /* Pause animation on hover */
+        .benefits-carousel-wrapper:hover .benefits-carousel-track {
+            animation-play-state: paused;
+        }
