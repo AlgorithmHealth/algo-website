@@ -1,0 +1,417 @@
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>AI-Powered Intelligent Lab Reports - Algo Health</title>
+            <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
+            <meta name="keywords"
+                content="Algo Health, AI Healthcare Solutions, EMR, Lab Reports, Insurance Claims, Healthcare Technology">
+            <meta name="author" content="Algo Health">
+            <meta name="description"
+                content="Algo Health is revolutionizing healthcare with AI-driven solutions for EMR, lab reports, insurance claims, and more.">
+            <script src="https://cdn.tailwindcss.com"></script>
+            <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+            <link rel="stylesheet" href="../assets/css/styles.css">
+        </head>
+
+        <body>
+
+        <style>
+        .tab-active {
+            background: #00BDE0;
+        }
+        .tab-inactive {
+            background: #fff;
+            color: #374151;
+        }
+        .tab-inactive:hover {
+            background: #f3f4f6;
+        }
+        .content-enter {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        .content-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+
+            <!-- Header -->
+            <header class="bg-white shadow-sm sticky top-0 z-50">
+                <div class="container flex justify-center gap-4 mx-auto px-4 py-4">
+                    <div>
+                        <a href="/" class="decoration-none"><img src="../assets/images/logo-blk.png" alt="Algohealth Logo"
+                                width="200"></a>
+                    </div>
+                    <div class="flex items-center gap-4 justify-between">
+
+                        <nav class="hidden md:flex space-x-8">
+                            <a href="index.html" class="font-medium hover:text-cyan-600 active">Home</a>
+                            <a href="index.html#about" class="font-medium hover:text-cyan-600">About Us</a>
+                            <div class="relative group">
+                                <a href="index.html#solutions" class="font-medium hover:text-cyan-600 flex items-center">
+                                    Our Solutions
+                                    <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </a>
+                                <div
+                                    class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                    <div class="py-2">
+                                        <a href="./care-emr.html"
+                                            class="block px-4 py-3 text-sm hover:text-cyan-500 transition-colors">
+                                            <div class="font-medium">Care AI EMR</div>
+                                        </a>
+                                        <a href="./ai-driven-reports.html"
+                                            class="block px-4 py-3 text-sm hover:bg-gray-50 text-cyan-600 transition-colors">
+                                            <div class="font-medium">AI-Driven Intelligent Lab Reports</div>
+                                        </a>
+                                        <a href="./health-insurance.html"
+                                            class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                            <div class="font-medium">Auto adjudication for health insurance claims</div>
+                                        </a>
+                                        <a href="./ai-emr.html"
+                                            class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                            <div class="font-medium">AI-Enabled EMR Solution</div>
+                                        </a>
+                                        <a href="./codesync.html"
+                                            class="block px-4 py-3 text-sm text-cyan-600 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                            <div class="font-medium">CodeSync AI</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="index.html#why-algo" class="font-medium hover:text-cyan-600">Why Algo</a>
+                            <a href="../contact.html" class="font-medium hover:text-cyan-600">Contact Us</a>
+                        </nav>
+                        <div class="flex items-center space-x-4">
+                            <button class="bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition">
+                                Book a Demo
+                            </button>
+                            <button class="md:hidden">
+                                <i class="fas fa-bars text-gray-600"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Banner -->
+            <section id="solutions-banner" class="bg-cover relative bg-center h-64 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <div class="absolute play-icon top-[35%]  left-20">
+                        <img src="../assets/images/play-icon.svg" alt="Solutions Banner Play Icon" width="100">
+                    </div>
+                    <h1 class="text-6xl font-bold">CodeSync AI</h1>
+                </div>
+                <div class="absolute bottom-[-30px] right-[7rem] p-4">
+                    <a href="tel:+9144283600006" class="no-underline"><img src="../assets/images/call-icon-banner.svg"
+                            alt="Call Icon" width="300"></a> </button>
+                </div>
+                </div>
+            </section>
+
+    <!-- Hero Section -->
+    <section id="codesync-hero" class="bg-white relative">
+    <!-- Gradient Overlay covering top 50% -->
+    <div class="absolute inset-0 h-1/2 w-full bg-[linear-gradient(to_right,_#C9F6FF_0%,_#FFFFFF_100%)] z-0"></div>
+
+    <div class="relative z-10 container mx-auto px-8 py-12">
+        <div class="flex mx-4 justify-center gap-8">
+        <img src="../assets/images/solutions/codesyc-hero.png" alt="Doctor in Hightech Lab" width="500">
+        <div class="flex flex-col justify-end items-center max-w-2xl gap-6">
+            <!-- content 1 -->
+            <div>
+            <h2 class="poppins-semibold text-[var(--primary-color)] text-xl">
+                Automated Medical Code Extraction & Mapping
+            </h2>
+            <p class="poppins-medium text-sm text-justify text-[var(--primary-color)]">
+                Transform your revenue cycle management with Algorithm Health's intelligent solution for accurate,
+                efficient medical coding and documentation processing.
+            </p>
+            </div>
+            <!-- content 2 -->
+            <div class="mt-4">
+            <h2 class="poppins-semibold text-[var(--primary-color)] text-xl">
+                Precision Coding for Maximum Reimbursement
+            </h2>
+            <p class="poppins-medium text-sm text-justify text-[var(--primary-color)]">
+                CodeSync AI leverages advanced artificial intelligence to extract and validate medical codes from
+                unstructured clinical documentation with unprecedented accuracy and speed. Our system seamlessly processes
+                ICD, CPT, HCPCS, and other coding standards while integrating directly with your existing RCM workflows.
+            </p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Dual-Direction Intelligence Section -->
+
+    <section id="whole-bg">
+        <div class="container mx-auto px-8 py-12">
+                                <h2
+                        class="text-3xl text-center hover:text-cyan-500 active:text-cyan-500 text-[var(--primary-color)] mb-4 poppins-semibold">
+                        Dual-Direction Intelligence
+                    </h2>
+                    <div class="max-w-4xl  mx-auto">
+        <!-- Tab Navigation -->
+        <div class="flex bg-whitw items-center space-x-0 mb-8 teko-font">
+            <button 
+                class="tab-button px-8 py-4 text-2xl uppercase tracking-wider rounded-l-md transition-all duration-300 tab-active text-white"
+                data-tab="extraction"
+            >
+                Document-to-Code Extraction
+            </button>
+            <button 
+                class="tab-button px-8 py-4 text-2xl uppercase tracking-wider transition-all duration-300 tab-inactive border-l border-gray-200"
+                data-tab="mapping"
+            >
+                Code-to-Clinical Mapping
+            </button>
+            <button 
+                class="tab-button px-8 py-4 text-2xl uppercase tracking-wider rounded-r-md transition-all duration-300 tab-inactive border-l border-gray-200"
+                data-tab="learning"
+            >
+                Continuous Learning
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="p-8">
+            <!-- Document Extraction Tab -->
+            <div id="extraction-content" class="tab-content">
+                <div class="flex items-start space-x-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <img src="../assets/images/solutions/codesync-1.png" alt="File" srcset="">
+                        </div>
+                    </div>
+                    <div>
+
+                        <h2 class="text-xl rubik-font text-cyan-500 mb-4">
+                            Automatically identify and extract relevant ICD, CPT, and other medical codes from unstructured clinical notes, reports, and documentation
+                        </h2>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Mapping Tab -->
+            <div id="mapping-content" class="tab-content hidden">
+                <div class="flex items-start space-x-6">
+                                        <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <img src="../assets/images/solutions/codesync-2.png" alt="File" srcset="">
+                        </div>
+                    </div>
+                    <div>
+
+                        <h2 class="text-xl rubik-font text-cyan-500 mb-4">
+                            Reverse-engineer from codes to extract relevant symptoms, signs, and clinical indicators that support coding decisions
+                        </h2>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continuous Learning Tab -->
+            <div id="learning-content" class="tab-content hidden">
+                <div class="flex items-start space-x-6">
+                                        <div class="flex-shrink-0">
+                        <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <img src="../assets/images/solutions/codesync-3.png" alt="File" srcset="">
+                        </div>
+                    </div>
+                    <div>
+
+                        <h2 class="text-xl rubik-font text-cyan-500 mb-4">
+                            System improves over time by adapting to your organization's documentation patterns and coding preferences
+                        </h2>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+
+    <!--  Transforming RCM Operations -->
+
+            <!-- Call to Action -->
+            <section id="call-to-action" class="flex gap-16 items-center justify-center">
+                <div>
+                    <h1 class="uppercase teko-font text-5xl">Optimize Your Revenue Cycle Today</h1>
+                </div>
+                <div class="flex flex-col gap-2 items-center justify-center">
+                    <div
+                        class="teko-font card rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[#4B4B4B] transition duration-300">
+                        Request a Demo
+                    </div>
+                </div>
+            </section>
+            <!-- Footer -->
+            <footer class="footer-bg">
+                <section id="pre-footer" class="text-white py-6">
+                    <div class="container mx-auto px-6 max-w-5xl">
+                        <div class="flex justify-between items-center">
+                            <!-- Logo -->
+                            <div>
+                                <a href="#home" class="decoration-none"><img src="../assets/images/ALPLOGO-WHITE.png"
+                                        alt="Algohealth Logo" width="200"></a>
+                            </div>
+                            <div>
+                                <p class="text-xl font-normal font-poppins">
+                                    Powering Smarter Healthcare, Together
+                                </p>
+                            </div>
+                            <!-- Social Icons -->
+                            <div class="flex ">
+                                <a href="#" target="_blank" class="text-white mx-2">
+                                    <i class="fa-brands fa-facebook text-2xl"></i>
+                                </a>
+
+                                <a href="https://www.linkedin.com/company/algorithm-health-ltd" target="_blank"
+                                    class="text-white mx-2">
+                                    <i class="fa-brands fa-linkedin text-2xl"></i> </a>
+                                <a href="#" target="_blank" class="text-white mx-2">
+                                    <i class="fa-brands fa-instagram text-2xl"></i> </a>
+                            </div>
+
+                        </div>
+                        <hr class="border-gray-600 my-4">
+                    </div>
+
+                </section>
+
+                <!-- Footer Main Content -->
+                <section class="flex justify-center space-x-8 items-center">
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-white py-8 px-6 max-w-5xl">
+                        <div class="space-y-4">
+                            <p>Algorithm Health serves as your trusted gateway to comprehensive healthcare solutions, delivering
+                                an array of services tailored to meet your health needs.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                            <ul class="space-y-2">
+                                <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="../index.html#about"
+                                        class="hover:text-cyan-500 text-[#8B9CC2]">About Us</a></li>
+                                <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="../index.html#trustedby"
+                                        class="hover:text-cyan-500 text-[#8B9CC2]">Trusted By</a></li>
+                                <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="../index.html#testimonial"
+                                        class="hover:text-cyan-500 text-[#8B9CC2]">Testimonial</a></li>
+                                <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="../index.html#why-algo"
+                                        class="hover:text-cyan-500 text-[#8B9CC2]">Why AlgoHealth</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <h3 class="text-lg font-semibold mb-4">Get In Touch</h3>
+                            <p><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="../contact.html"
+                                    class="text-[#8B9CC2]">Contact us</a></p>
+                            <p><i class="fa-solid fa-phone-volume rotate-[320deg] text-cyan-500"></i> &nbsp; <span
+                                    class="text-[#8B9CC2] text-normal">Call Us</span><br>
+                                <span class="font-normal text-white">Phone: </span><a href="tel:+914428360006"
+                                    class="text-white"><span class="font-poppins"> +91-44-28360006</span> </a>
+                            </p>
+                            <hr class="border-gray-600 my-4">
+                            <p><i class="fa-solid fa-envelope text-cyan-500"></i>&nbsp; <span class="text-[#8B9CC2]">E
+                                    MAIL</span> <br>
+                                <a href="mailto:contact@algohealthplus.com" class="text-white">contact@algohealthplus.com</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- Copyrights Footer -->
+                <section id="post-footer" class="bg-[#001543] text-white py-4">
+                    <div class="container mx-auto px-6 text-center">
+                        <p class="text-sm font-lighter">Copyright &copy; <span id="year"></span> <a href="../index.html"
+                                class="text-cyan-500">Algorithm Health</a>. All rights reserved.</p>
+                    </div>
+
+                </section>
+            </footer>
+            <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+                class="!fixed bottom-5 end-5 hidden rounded-full bg-[#031B4E] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-[#16284D] hover:shadow-lg focus:bg-[#16284D] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#031B4E] active:shadow-lg"
+                id="backToTopBtn" onclick="scrollToTop()">
+                <span class="[&>svg]:w-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+                    </svg>
+                </span>
+            </button>
+            <script src="../assets/js/script.js"></script>
+<script>
+        // Tab switching functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        function showTab(targetTab) {
+            // Hide all content
+            tabContents.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Remove active class from all buttons
+            tabButtons.forEach(button => {
+                button.classList.remove('tab-active', 'text-white');
+                button.classList.add('tab-inactive');
+            });
+
+            // Show target content with animation
+            const targetContent = document.getElementById(targetTab + '-content');
+            if (targetContent) {
+                targetContent.classList.add('content-enter');
+                targetContent.classList.remove('hidden');
+                
+                // Trigger animation
+                setTimeout(() => {
+                    targetContent.classList.add('content-enter-active');
+                    targetContent.classList.remove('content-enter');
+                }, 10);
+            }
+
+            // Add active class to clicked button
+            const activeButton = document.querySelector(`[data-tab="${targetTab}"]`);
+            if (activeButton) {
+                activeButton.classList.add('tab-active', 'text-white');
+                activeButton.classList.remove('tab-inactive');
+            }
+        }
+
+        // Add click event listeners to tab buttons
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.getAttribute('data-tab');
+                showTab(tabName);
+            });
+        });
+
+        // Add hover effects
+        tabButtons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                if (!button.classList.contains('tab-active')) {
+                    button.style.transform = 'translateY(-2px)';
+                }
+            });
+
+            button.addEventListener('mouseleave', () => {
+                if (!button.classList.contains('tab-active')) {
+                    button.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>        </body>
+
+        </html>
