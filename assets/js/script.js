@@ -178,13 +178,18 @@
         // Function to create a single card
         function createCard(card) {
             return `
-                <div class="flex cursor-pointer flex-col why-algo-card card bg-[#1C487D] justify-center rounded-2xl items-center px-4 py-6 mb-6 w-[40%]">
-                    <div class="flex justify-between items-center gap-6">
-                        <img src="./assets/images/${card.icon}" alt="${card.alt}" class="w-16 h-16">
-                        <h1 class="text-6xl text-[#275184] font-poppins font-bold number-val">${card.number}</h1>
-                    </div>
-                    <p class="text-white text-sm font-semibold">${card.text}</p>
-                </div>
+<div class="flex cursor-pointer flex-col bg-[#1C487D] justify-center rounded-2xl items-center px-4 py-6 mb-6 w-full sm:w-[80%] md:w-[60%] lg:w-[40%] mx-auto">
+  <div class="flex justify-between items-center gap-4 sm:gap-6 mb-4">
+    <img src="./assets/images/${card.icon}" alt="${card.alt}" class="w-14 h-14 sm:w-16 sm:h-16">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl text-[#275184] font-poppins font-bold number-val">
+      ${card.number}
+    </h1>
+  </div>
+  <p class="text-white text-sm sm:text-base text-center font-semibold">
+    ${card.text}
+  </p>
+</div>
+
             `;
         }
 
@@ -325,28 +330,37 @@
         // Function to create testimonial card
         function createTestimonialCard(testimonial, index) {
             return `
-                <div class="testimonial-carousel-item test-card-bg shadow-lg ${index === 0 ? 'active' : ''}" data-index="${index}">
-                    <div class="grid grid-flow-row-dense grid-cols-3">
-                        <div>
-                            <div class="bg-[#ECF5FB] flex flex-col rounded-tl-[25px] rounded-bl-[25px] rounded-tr-[0px] rounded-br-[0] label-section">
-                                <img src="${testimonial.image}" alt="${testimonial.name}" 
-                                     class="testi-img rounded-tl-[20px] rounded-tr-[0px] rounded-br-[0px] rounded-bl-[0px]">
-                                <div class="w-full flex flex-col items-center justify-center p-2">
-                                    <h3 class="text-sm text-[#031B4E] font-semibold font-poppins drop-shadow-sm">
-                                        ${testimonial.name}
-                                    </h3>
-                                    <p class="text-cyan-500 text-xs italic">${testimonial.title}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-span-2 p-8">
-                            <h3 class="text-cyan-500 text-md font-semibold mb-6">${testimonial.reviewTitle}</h3>
-                            <p class="text-[#031B4E] text-sm flex flex-wrap font-normal font-poppins">
-                                ${testimonial.review}
-                            </p>
-                        </div>
-                    </div>
-                </div>
+               <div class="testimonial-carousel-item test-card-bg shadow-lg ${index === 0 ? 'active' : ''}" data-index="${index}">
+  <div class="grid grid-cols-1 md:grid-cols-3">
+    
+    <!-- Image + Name Block -->
+    <div class="bg-[#ECF5FB] flex flex-col rounded-t-[20px] md:rounded-tl-[25px] md:rounded-bl-[25px] md:rounded-tr-none md:rounded-br-none">
+      <img 
+        src="${testimonial.image}" 
+        alt="${testimonial.name}" 
+        class="testi-img w-full h-auto rounded-t-[20px] md:rounded-tl-[20px] md:rounded-tr-none"
+      >
+      <div class="w-full flex flex-col items-center justify-center p-3">
+        <h3 class="text-sm text-[#031B4E] font-semibold font-poppins drop-shadow-sm text-center">
+          ${testimonial.name}
+        </h3>
+        <p class="text-cyan-500 text-xs italic text-center">${testimonial.title}</p>
+      </div>
+    </div>
+
+    <!-- Review Text Block -->
+    <div class="md:col-span-2 p-4 bg-white md:p-8">
+      <h3 class="text-cyan-500 text-md poppins-semibold mb-4 md:mb-6">
+        ${testimonial.reviewTitle}
+      </h3>
+      <p class="text-[#031B4E] text-sm poppins-regular leading-relaxed">
+        ${testimonial.review}
+      </p>
+    </div>
+
+  </div>
+</div>
+
             `;
         }
 

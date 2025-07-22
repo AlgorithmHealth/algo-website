@@ -57,10 +57,10 @@
                         </div>
                     </div>
                     <a href="#why-algo" class="font-medium hover:text-cyan-600">Why Algo</a>
-                    <a href="./pages/contact.html" class="font-medium hover:text-cyan-600">Contact Us</a>
+                    <a href="./contact.html" class="font-medium hover:text-cyan-600">Contact Us</a>
                 </nav>
                 <div class="flex items-center space-x-4">
-                    <button class="bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition">
+                    <button class="bg-cyan-500 poppins-semibold text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition">
                         Book a Demo
                     </button>
                     <button class="md:hidden">
@@ -96,60 +96,70 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 journery-bg">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <div class="flex justify-end space-x-4">
-                        <img src="./assets/images/our-journery-image.png" class="!w-[80vh]" alt="our-journery-image">
-                    </div>
-                </div>
-                <div class="space-y-6 mx-auto">
-                    <h2 class="text-4xl poppins-bold text-[var(--primary-color)]">
-                        Our Journey In<br>
-                        Revolutionizing Healthcare
-                    </h2>
-                    <p class="text-[#566593] font-[var(--primary-font)] !w-[80vh] text-wrap word-break">
-                        At Algorithm Health, we are committed to revolutionizing healthcare through innovative
-                        technology and compassionate care. Our mission is to provide accessible, accurate, and timely
-                        medical solutions that empower individuals and healthcare providers to make informed decisions
-                        <a href="./aboutus.html" class="text-cyan-500  font-[var(--primary-font)]  text-sm hover:text-cyan-600 transition">Learn
-                            more</a>.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div class="flex flex-col gap-2 justify-center">
-                                <div class="flex items-center space-x-3">
-                                    <span class="poppins-regular">Incubated By:</span>
-                                    <span class="text-sm font-semibold text-[#3369FF]"><a
-                                            href="http://respark.iitm.ac.in/" target="_blank" rel="noopener noreferrer"
-                                            class="no-underline"> IITM RESEARCH PARK</a></span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <span class="poppins-regular">Supported By:</span>
-                                    <span class="text-sm font-semibold text-[#3369FF] uppercase"><a
-                                            href="https://www.meity.gov.in/" target="_blank" rel="noopener noreferrer"
-                                            class="no-underline
-">MEITY, Govt of India</a></span>
-                                </div>
-                            </div>
-                            <div>
-                                <a href="http://respark.iitm.ac.in/" target="_blank" rel="noopener noreferrer"
-                                    class="no-underline"><img src="./assets/images/IITM-Research-Park-Logo.png"
-                                        alt="IITM Research Park Logo" width="100"></a>
-                            </div>
-                        </div>
+<!-- About Section -->
+<section id="about" class="py-20 journery-bg">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Image Section -->
+      <div class="flex justify-center md:justify-end">
+        <img 
+          src="./assets/images/our-journery-image.png" 
+          class="w-full max-w-[60vh] sm:max-w-[60vh] md:max-w-[70vh] lg:max-w-[80vh] h-auto" 
+          alt="our-journery-image"
+        >
+      </div>
 
-                    </div>
-                    <div class="flex space-x-4">
-                        <a href="https://www.hticiitm.org/" target="_blank" rel="noopener noreferrer"
-                            class="no-underline"> <img src="./assets/images/htic logo.png" alt="htic logo"></a>
-                    </div>
-                </div>
+      <!-- Text Content Section -->
+      <div class="space-y-6 mx-auto max-w-xl">
+        <h2 class="text-2xl sm:text-4xl poppins-bold text-[var(--primary-color)] leading-snug">
+          Our Journey In<br>
+          Revolutionizing Healthcare
+        </h2>
+        <p class="text-[#566593]  font-[var(--primary-font)] text-base sm:text-sm">
+          At Algorithm Health, we are committed to revolutionizing healthcare through innovative
+          technology and compassionate care. Our mission is to provide accessible, accurate, and timely
+          medical solutions that empower individuals and healthcare providers to make informed decisions.
+          <a href="./aboutus.html" class="text-cyan-500 font-[var(--primary-font)] text-sm hover:text-cyan-600 transition">
+            Learn more
+          </a>
+        </p>
+
+        <!-- Info Grid -->
+        <div class="space-y-4">
+          <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center space-x-2">
+                <span class="poppins-regular">Incubated By:</span>
+                <a href="http://respark.iitm.ac.in/" target="_blank" class="text-sm font-semibold text-[#3369FF] no-underline">
+                  IITM RESEARCH PARK
+                </a>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span class="poppins-regular">Supported By:</span>
+                <a href="https://www.meity.gov.in/" target="_blank" class="text-sm font-semibold text-[#3369FF] uppercase no-underline">
+                  MEITY, Govt of India
+                </a>
+              </div>
             </div>
+            <div class="flex justify-start md:justify-end">
+              <a href="http://respark.iitm.ac.in/" target="_blank">
+                <img src="./assets/images/IITM-Research-Park-Logo.png" alt="IITM Research Park Logo" class="w-24 md:w-28">
+              </a>
+            </div>
+          </div>
         </div>
-    </section>
+
+        <!-- Logo Section -->
+        <div class="flex justify-start md:justify-start">
+          <a href="https://www.hticiitm.org/" target="_blank" class="no-underline">
+            <img src="./assets/images/htic logo.png" alt="htic logo" class="w-30 md:w-50">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Trusted By Section -->
     <section id="trustedby" class="py-8 bg-gray-50 overflow-hidden trusted-by-bg">
@@ -432,65 +442,99 @@
             </div>
     </section>
 
-    <!-- Why Algohealth -->
-    <section id="why-algo" class="why-algo-bg p-8">
-        <div class="grid-cols-2 grid gap-4">
-            <div class="flex justify-center items-center">
-                <img src="./assets/images/why-algohealth.svg" alt="Doctors and Nurses" class="w[50%]">
-            </div>
+<!-- Why Algohealth -->
+<section id="why-algo" class="why-algo-bg px-4 py-12 sm:px-6 lg:px-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
+    
+    <!-- Image Section -->
+    <div class="flex justify-center items-center hidden sm:block">
+      <img 
+        src="./assets/images/why-algohealth.svg" 
+        alt="Doctors and Nurses" 
+        class="w-[100%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[100%] h-auto"
+      >
+    </div>
 
-            <div>
-                <div class="flex items-center justify-start space-x-2 mb-4">
-                    <div class="w-6 h-6 flex items-center justify-center">
-                        <img src="./assets/images/why-algo-icon.svg" alt="Health Shield Icon">
-                    </div>
-                    <h2 class="text-cyan-500 text-xl font-semibold">WHY ALGOHEALTH</h2>
-                </div>
-                <h1 class="mb-8 text-white text-4xl font-poppins">
-                    The Perfect Convergence of <br /> Medical Excellence and AI Innovation
-                </h1>
-
-                <!-- Dynamic Card Sets Container -->
-                <div id="card-sets-container" class="overflow-hidden"></div>
-            </div>
+    <!-- Text Content -->
+    <div>
+      <div class="flex items-center justify-start space-x-2 mb-4">
+        <div class="w-6 h-6 flex items-center justify-center">
+          <img src="./assets/images/why-algo-icon.svg" alt="Health Shield Icon" class="h-full w-full object-contain">
         </div>
-    </section>
+        <h2 class="text-cyan-500 text-base sm:text-lg font-semibold">
+          WHY ALGOHEALTH
+        </h2>
+      </div>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="bg-[#16284D] mt-[-1px]">
-        <div class="container mx-auto px-4 pt-20">
-            <div class="grid grid-cols-2 col-2 gap-4">
-                <div class="flex justify-center items-center">
-                    <img src="./assets/images/testimonial-doc.svg" alt="Testimonial Image" class="w-[70%]">
-                </div>
-                <div>
-                    <div class="space-y-2">
-                        <div class="flex items-center justify-start space-x-2">
-                            <div class="w-6 h-6 flex items-center justify-center">
-                                <img src="./assets/images/why-algo-icon.svg" alt="Health Shield Icon">
-                            </div>
-                            <h2 class="text-cyan-500 text-xl font-semibold uppercase">Testimonials</h2>
-                        </div>
-                        <h1 class="text-white text-4xl font-poppins">Hear from Our Clients</h1>
-                    </div>
-                    <div class="mt-6 flex items-center gap-4">
-                        <button id="prevBtn" class="nav-button">
-                            <i class="fa-solid fa-arrow-left text-4xl text-white"></i>
-                        </button>
+      <h1 class="mb-6 text-white text-2xl sm:text-3xl lg:text-4xl font-poppins leading-snug">
+        The Perfect Convergence of <br />
+        Medical Excellence and AI Innovation
+      </h1>
 
-                        <!-- Carousel Container -->
-                        <div class="carousel-container w-[70%]">
-                            <div id="testimonial-carousel"></div>
-                        </div>
+      <!-- Dynamic Card Sets Container -->
+      <div id="card-sets-container" class="overflow-hidden"></div>
+    </div>
+        <!-- Image Section -->
+    <div class="flex justify-center items-center block sm:hidden">
+      <img 
+        src="./assets/images/why-algohealth.svg" 
+        alt="Doctors and Nurses" 
+        class="w-[100%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[100%] h-auto"
+      >
+    </div>
+  </div>
+</section>
 
-                        <button id="nextBtn" class="nav-button">
-                            <i class="fa-solid fa-arrow-right text-4xl text-white"></i>
-                        </button>
-                    </div>
-                </div>
+
+<!-- Testimonials -->
+<section id="testimonials" class="bg-[#16284D] mt-[-1px]">
+  <div class="container mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      
+      <!-- Image Section -->
+      <div class="flex justify-center items-center hidden sm:block">
+        <img 
+          src="./assets/images/testimonial-doc.svg" 
+          alt="Testimonial Image" 
+          class="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] h-auto"
+        >
+      </div>
+
+      <!-- Content Section -->
+      <div class="space-y-6">
+        <!-- Title Section -->
+        <div class="space-y-2">
+          <div class="flex items-center space-x-2">
+            <div class="w-6 h-6 flex items-center justify-center">
+              <img src="./assets/images/why-algo-icon.svg" alt="Health Shield Icon" class="h-full w-full object-contain">
             </div>
+            <h2 class="text-cyan-500 text-base sm:text-lg font-semibold uppercase">Testimonials</h2>
+          </div>
+          <h1 class="text-white text-2xl sm:text-3xl lg:text-4xl font-poppins">
+            Hear from Our Clients
+          </h1>
         </div>
-    </section>
+
+        <!-- Carousel Section -->
+        <div class="mt-4 flex flex-col sm:flex-row items-center gap-4">
+          <button id="prevBtn" class="nav-button">
+            <i class="fa-solid fa-arrow-left text-3xl sm:text-4xl text-white"></i>
+          </button>
+
+          <!-- Carousel Container -->
+          <div class="carousel-container w-full sm:w-[80%] md:w-[70%]">
+            <div id="testimonial-carousel"></div>
+          </div>
+
+          <button id="nextBtn" class="nav-button">
+            <i class="fa-solid fa-arrow-right text-3xl sm:text-4xl text-white"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -498,7 +542,7 @@
     <footer class="footer-bg">
         <section id="pre-footer" class="text-white py-6">
             <div class="container mx-auto px-6 max-w-5xl">
-                <div class="flex justify-between items-center">
+                <div class="flex flex-wrap gap-4 justify-between items-center">
                     <!-- Logo -->
                     <div>
                         <a href="#home" class="decoration-none"><img src="./assets/images/ALPLOGO-WHITE.png"
@@ -529,44 +573,60 @@
         </section>
 
         <!-- Footer Main Content -->
-        <section class="flex justify-center space-x-8 items-center">
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-white py-8 px-6 max-w-5xl">
-                <div class="space-y-4">
-                    <p>Algorithm Health serves as your trusted gateway to comprehensive healthcare solutions, delivering
-                        an array of services tailored to meet your health needs.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="#about"
-                                class="hover:text-cyan-500 text-[#8B9CC2]">About Us</a></li>
-                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="#trustedby"
-                                class="hover:text-cyan-500 text-[#8B9CC2]">Trusted By</a></li>
-                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="#testimonial"
-                                class="hover:text-cyan-500 text-[#8B9CC2]">Testimonial</a></li>
-                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href="#why-algo"
-                                class="hover:text-cyan-500 text-[#8B9CC2]">Why AlgoHealth</a></li>
-                    </ul>
-                </div>
+<section class="bg-[#16284D] text-white py-8 px-4">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-                <div class="flex flex-col space-y-2">
-                    <h3 class="text-lg font-semibold mb-4">Get In Touch</h3>
-                    <p><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp; <a href=".contact.html"
-                            class="text-[#8B9CC2]">Contact us</a></p>
-                    <p><i class="fa-solid fa-phone-volume rotate-[320deg] text-cyan-500"></i> &nbsp; <span
-                            class="text-[#8B9CC2] text-normal">Call Us</span><br>
-                        <span class="font-normal text-white">Phone: </span><a href="tel:+914428360006"
-                            class="text-white"></a><span class="font-poppins"> +91-44-28360006</span> </a>
-                    </p>
-                    <hr class="border-gray-600 my-4">
-                    <p><i class="fa-solid fa-envelope text-cyan-500"></i>&nbsp; <span class="text-[#8B9CC2]">E
-                            MAIL</span> <br>
-                        <a href="mailto:contact@algohealthplus.com" class="text-white">contact@algohealthplus.com</a>
-                    </p>
-                </div>
+    <!-- Description -->
+    <div class="space-y-4">
+      <p>
+        Algorithm Health serves as your trusted gateway to comprehensive healthcare solutions,
+        delivering an array of services tailored to meet your health needs.
+      </p>
+    </div>
 
-            </div>
-        </section>
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg poppins-semi mb-4">Quick Links</h3>
+      <ul class="space-y-2 poppins-regular text-sm">
+        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
+          <a href="#about" class="hover:text-cyan-500 text-[#8B9CC2]">About Us</a></li>
+        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
+          <a href="#trustedby" class="hover:text-cyan-500 text-[#8B9CC2]">Trusted By</a></li>
+        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
+          <a href="#testimonial" class="hover:text-cyan-500 text-[#8B9CC2]">Testimonial</a></li>
+        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
+          <a href="#why-algo" class="hover:text-cyan-500 text-[#8B9CC2]">Why AlgoHealth</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="flex flex-col space-y-2">
+      <h3 class="text-lg poppins-semibold mb-4">Get In Touch</h3>
+
+      <p>
+        <i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
+        <a href="./contact.html" class="text-[#8B9CC2]">Contact Us</a>
+      </p>
+
+      <p>
+        <i class="fa-solid fa-phone-volume rotate-[320deg] text-cyan-500"></i> &nbsp;
+        <span class="text-[#8B9CC2]">Call Us</span><br>
+        <span class="font-normal text-white">Phone: </span>
+        <a href="tel:+914428360006" class="text-white font-poppins">+91-44-28360006</a>
+      </p>
+
+      <hr class="border-gray-600 my-4">
+
+      <p>
+        <i class="fa-solid fa-envelope text-cyan-500"></i> &nbsp;
+        <span class="text-[#8B9CC2]">EMAIL</span><br>
+        <a href="mailto:contact@algohealthplus.com" class="text-white">contact@algohealthplus.com</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
         <!-- Copyrights Footer -->
         <section id="post-footer" class="bg-[#001543] text-white py-4">
             <div class="container mx-auto px-6 text-center">
