@@ -80,129 +80,185 @@
             </div>
         </header>
 
-        <!-- Page Banner -->
-        <section id="solutions-banner" class="bg-cover relative bg-center h-64 flex items-center justify-center">
-            <div class="text-center text-white">
-                <div class="absolute play-icon top-[35%]  left-20">
-                    <img src="../assets/images/play-icon.svg" alt="Solutions Banner Play Icon" width="100">
-                </div>
-                <h1 class="text-6xl font-bold">Care AI EMR</h1>
-            </div>
-            <div class="absolute bottom-[-30px] right-[7rem] p-4">
-                <a href="tel:+9144283600006" class="no-underline"><img src="../assets/images/call-icon-banner.svg"
-                        alt="Call Icon" width="300"></a> </button>
-            </div>
-            </div>
-        </section>
-
-        <!-- Hero Section -->
-        <section id="whole-bg">
-            <div class="container mx-auto p-16 flex items-end gap-4 ">
-                <img src="../assets/images/solutions/care-ai-hero.png" class="relative" alt="Doctors" width="500">
-                <div class="absolute top-[100%] left-[25%]">
-                    <h2 class="text-lg font-semibold font-poppins text-[#031B4E]">The Next Generation of Intelligent
-                        Healthcare Solutions</h2>
-                    <p class="text-sm font-medium text-[#274760] mb-8">Transform your healthcare delivery with Algorithm
-                        Health's comprehensive Native AI Electronic Medical Record <br>system - designed from the ground up
-                        with artificial intelligence at its core.</p>
-                </div>
-                <div class="">
-                    <h2 class="text-lg font-semibold font-poppins text-[var(--primary-color)]">Redefining Patient Care with
-                        Intelligent Technology</h2>
-                    <p class="text-sm font-medium text-[#274760] mb-8">Care AI EMR doesn't just store medical records—it
-                        actively enhances clinical decision-making, automates routine tasks, and creates personalized care
-                        pathways that align with best practice protocols. Our system represents the future of healthcare
-                        information management.</p>
-                </div>
-            </div>
-
-<!-- Comprehensive AI -->
-<div class="container mx-auto px-4 py-8 sm:p-8 md:p-12 lg:p-16 gap-4">
-    <h2 class="text-xl sm:text-2xl font-semibold font-poppins text-[var(--primary-color)]">Comprehensive AI-Powered Capabilities</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-6 gap-6 md:gap-8 lg:gap-10">
-        <!-- Left Column -->
-        <div class="flex flex-col gap-6">
-            <div class="w-full max-w-md mx-auto">
-                <img src="../assets/images/solutions/comprehensive-ai.png" alt="Comprehensive AI Vector" 
-                     class="w-full h-auto" loading="lazy">
-            </div>
-            
-            <div class="flex flex-col sm:flex-row items-start gap-4">
-                <img src="../assets/images/solutions/inteligent-diagnostics.png" 
-                     alt="Intelligent Diagnostics Vector Icon" 
-                     class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
-                <div>
-                    <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Intelligent Diagnostics</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">AI-suggested diagnoses based on patient history, symptoms, and latest medical research</p>
-                </div>
-            </div>
-            
-            <div class="flex flex-col sm:flex-row items-start gap-4">
-                <img src="../assets/images/solutions/automate-care-icon.png" 
-                     alt="Automated Care Pathways Vector Icon" 
-                     class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
-                <div>
-                    <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Automated Care Pathways</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">Evidence-based treatment plans customized to patient profiles</p>
-                </div>
-            </div>
+    <!-- Page Banner -->
+<section id="solutions-banner" class="bg-cover relative bg-center h-48 md:h-64 flex items-center justify-center">
+    <div class="text-center text-white w-full">
+        <!-- Play Icon - hidden on mobile, visible on md+ screens -->
+        <div class="absolute play-icon top-[35%] left-4 md:left-20 hidden md:block">
+            <img src="../assets/images/play-icon.svg" alt="Solutions Banner Play Icon" class="w-16 md:w-24 lg:w-32">
         </div>
         
-        <!-- Right Column -->
-        <div class="flex flex-col gap-6">
-            <div class="flex flex-col sm:flex-row items-start gap-4">
-                <img src="../assets/images/solutions/smart-doc-icon.png" 
-                     alt="Smart Documentation Vector Icon" 
-                     class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
-                <div>
-                    <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Smart Documentation</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">Automatic generation of clinical notes, summaries, and insurance documents</p>
+        <h1 class="text-4xl md:text-6xl font-bold">Care AI EMR</h1>
+    </div>
+    
+    <!-- Call Icon - adjusted for mobile -->
+    <div class="absolute bottom-[-20px] md:bottom-[-30px] right-4 md:right-[7rem] p-2 md:p-4">
+        <a href="tel:+9144283600006" class="no-underline">
+            <img src="../assets/images/call-icon-banner.svg" alt="Call Icon" class="w-40 md:w-64 lg:w-80">
+        </a>
+    </div>
+</section>
+
+        <!-- Hero Section -->
+<!-- Desktop/Laptop Version (hidden on mobile) -->
+<section id="whole-bg" class="hidden md:block">
+    <!-- Your original code exactly as provided -->
+    <div class="container mx-auto p-16 flex items-end gap-4">
+        <img src="../assets/images/solutions/care-ai-hero.png" class="relative" alt="Doctors" width="500">
+        <div class="absolute top-[100%] left-[25%]">
+            <h2 class="text-lg font-semibold font-poppins text-[#031B4E]">The Next Generation of Intelligent Healthcare Solutions</h2>
+            <p class="text-sm font-medium text-[#274760] mb-8">Transform your healthcare delivery with Algorithm Health's comprehensive Native AI Electronic Medical Record <br>system - designed from the ground up with artificial intelligence at its core.</p>
+        </div>
+        <div class="">
+            <h2 class="text-lg font-semibold font-poppins text-[var(--primary-color)]">Redefining Patient Care with Intelligent Technology</h2>
+            <p class="text-sm font-medium text-[#274760] mb-8">Care AI EMR doesn't just store medical records—it actively enhances clinical decision-making, automates routine tasks, and creates personalized care pathways that align with best practice protocols. Our system represents the future of healthcare information management.</p>
+        </div>
+    </div>
+
+    <!-- Comprehensive AI -->
+    <div class="container mx-auto px-4 py-8 sm:p-8 md:p-12 lg:p-16 gap-4">
+        <h2 class="text-xl sm:text-2xl font-semibold font-poppins text-[var(--primary-color)]">Comprehensive AI-Powered Capabilities</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 mt-6 gap-6 md:gap-8 lg:gap-10">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-6">
+                <div class="w-full max-w-md mx-auto">
+                    <img src="../assets/images/solutions/comprehensive-ai.png" alt="Comprehensive AI Vector" class="w-full h-auto" loading="lazy">
+                </div>
+                
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <img src="../assets/images/solutions/inteligent-diagnostics.png" alt="Intelligent Diagnostics Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
+                    <div>
+                        <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Intelligent Diagnostics</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">AI-suggested diagnoses based on patient history, symptoms, and latest medical research</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <img src="../assets/images/solutions/automate-care-icon.png" alt="Automated Care Pathways Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
+                    <div>
+                        <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Automated Care Pathways</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Evidence-based treatment plans customized to patient profiles</p>
+                    </div>
                 </div>
             </div>
             
-            <div class="flex flex-col sm:flex-row items-start gap-4">
-                <img src="../assets/images/solutions/multilingual-icon.png" 
-                     alt="Multilingual Patient Communication Vector Icon" 
-                     class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
-                <div>
-                    <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Multilingual Patient Communication</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">Summaries generated in patient-friendly language and translated to their native tongue</p>
+            <!-- Right Column -->
+            <div class="flex flex-col gap-6">
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <img src="../assets/images/solutions/smart-doc-icon.png" alt="Smart Documentation Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
+                    <div>
+                        <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Smart Documentation</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Automatic generation of clinical notes, summaries, and insurance documents</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="flex flex-col sm:flex-row items-start gap-4">
-                <img src="../assets/images/solutions/predictive-analysis-icon.png" 
-                     alt="Predictive Analytics Vector Icon" 
-                     class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
-                <div>
-                    <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Predictive Analytics</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">Early identification of health risks and trends across patient populations</p>
+                
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <img src="../assets/images/solutions/multilingual-icon.png" alt="Multilingual Patient Communication Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
+                    <div>
+                        <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Multilingual Patient Communication</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Summaries generated in patient-friendly language and translated to their native tongue</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="flex flex-col sm:flex-row items-start gap-4">
-                <img src="../assets/images/solutions/enhanced-triage-icon.png" 
-                     alt="Enhanced Triage Vector Icon" 
-                     class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
-                <div>
-                    <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Enhanced Triage</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">Supporting nurses and physician assistants with AI-guided patient prioritization</p>
+                
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <img src="../assets/images/solutions/predictive-analysis-icon.png" alt="Predictive Analytics Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
+                    <div>
+                        <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Predictive Analytics</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Early identification of health risks and trends across patient populations</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
-                <img src="../assets/images/solutions/comprehensive-patient-view-icon.png" 
-                     alt="Comprehensive Patient View Vector Icon" 
-                     class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
-                <div>
-                    <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Comprehensive Patient View</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">360-degree patient profiles with automated lab analysis and integrated data</p>
+                
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <img src="../assets/images/solutions/enhanced-triage-icon.png" alt="Enhanced Triage Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
+                    <div>
+                        <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Enhanced Triage</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Supporting nurses and physician assistants with AI-guided patient prioritization</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <img src="../assets/images/solutions/comprehensive-patient-view-icon.png" alt="Comprehensive Patient View Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
+                    <div>
+                        <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Comprehensive Patient View</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">360-degree patient profiles with automated lab analysis and integrated data</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-        </section>
+</section>
+
+<!-- Mobile Version (hidden on desktop) -->
+<section id="whole-bg-mobile" class="block md:hidden">
+    <!-- Hero Section -->
+    <div class="container mx-auto px-4 py-8">
+        <img src="../assets/images/solutions/care-ai-hero.png" class="w-full mb-6" alt="Doctors">
+        
+        <div class="space-y-6">
+            <div>
+                <h2 class="text-lg font-semibold font-poppins text-[#031B4E]">The Next Generation of Intelligent Healthcare Solutions</h2>
+                <p class="text-sm font-medium text-[#274760]">Transform your healthcare delivery with Algorithm Health's comprehensive Native AI Electronic Medical Record system - designed from the ground up with artificial intelligence at its core.</p>
+            </div>
+            
+            <div>
+                <h2 class="text-lg font-semibold font-poppins text-[var(--primary-color)]">Redefining Patient Care with Intelligent Technology</h2>
+                <p class="text-sm font-medium text-[#274760]">Care AI EMR doesn't just store medical records—it actively enhances clinical decision-making, automates routine tasks, and creates personalized care pathways that align with best practice protocols.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comprehensive AI -->
+    <div class="container mx-auto px-4 py-8">
+        <h2 class="text-xl font-semibold font-poppins text-[var(--primary-color)] mb-6">Comprehensive AI-Powered Capabilities</h2>
+        
+        <div class="flex flex-col gap-6">
+            <img src="../assets/images/solutions/comprehensive-ai.png" alt="Comprehensive AI" class="w-full">
+            
+            <!-- Feature Items -->
+            <div class="space-y-6">
+                <div class="flex items-start gap-4 p-3 bg-white rounded-lg shadow-sm">
+                    <img src="../assets/images/solutions/inteligent-diagnostics.png" alt="Intelligent Diagnostics" class="w-12 h-12">
+                    <div>
+                        <h3 class="text-cyan-500 font-poppins">Intelligent Diagnostics</h3>
+                        <p class="text-gray-600 text-sm">AI-suggested diagnoses based on patient history and symptoms</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-4 p-3 bg-white rounded-lg shadow-sm">
+                    <img src="../assets/images/solutions/automate-care-icon.png" alt="Automated Care" class="w-12 h-12">
+                    <div>
+                        <h3 class="text-cyan-500 font-poppins">Automated Care Pathways</h3>
+                        <p class="text-gray-600 text-sm">Evidence-based treatment plans customized to patients</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-4 p-3 bg-white rounded-lg shadow-sm">
+                    <img src="../assets/images/solutions/smart-doc-icon.png" alt="Smart Documentation" class="w-12 h-12">
+                    <div>
+                        <h3 class="text-cyan-500 font-poppins">Smart Documentation</h3>
+                        <p class="text-gray-600 text-sm">Automatic generation of clinical notes and summaries</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-4 p-3 bg-white rounded-lg shadow-sm">
+                    <img src="../assets/images/solutions/multilingual-icon.png" alt="Multilingual" class="w-12 h-12">
+                    <div>
+                        <h3 class="text-cyan-500 font-poppins">Multilingual Communication</h3>
+                        <p class="text-gray-600 text-sm">Summaries translated to patient's native language</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-4 p-3 bg-white rounded-lg shadow-sm">
+                    <img src="../assets/images/solutions/predictive-analysis-icon.png" alt="Predictive Analytics" class="w-12 h-12">
+                    <div>
+                        <h3 class="text-cyan-500 font-poppins">Predictive Analytics</h3>
+                        <p class="text-gray-600 text-sm">Early identification of health risks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Elevating Healthcare -->
 <section>
