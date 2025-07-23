@@ -41,6 +41,53 @@
         .accordion-icon {
             transition: transform 0.3s ease;
         }
+        #call-to-action {
+    background-image: url('../assets//images/callout-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px; /* Default mobile height */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    #call-to-action {
+        height: 250px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #call-to-action {
+        height: 300px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #call-to-action {
+        height: 300px !important;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #call-to-action {
+        height: 300px !important;
+    }
+}
+
+
+        @media screen and (max-width: 768px) {
+            .accordion-item.active {
+                transform: translateX(0);
+            }
+
+            .accordion-content.active {
+                max-height: 300px;
+            }
+            
+        }
     </style>
 
     <!-- Header -->
@@ -121,35 +168,53 @@
     </section>
 
     <!-- Hero Section -->
-    <section id="ai-emr-hero-section">
-        <div class="container mx-auto px-20 py-12">
-            <div class="flex  items-start justify-between gap-8">
-                <div class="flex items-start gap-12">
-                    <div class="mt-20 flex flex-col gap-12">
-                        <div>
-                            <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Enhance Your Existing
-                                EMR System with Algorithm Health</h2>
-                            <p class="text-sm text-justify text-[var(--primary-color)] poppins-medium mb-6">Transform
-                                your current Electronic Medical Record (EMR) system with our cutting-edge AI technology.
-                                Don't lose your investment—enhance it.</p>
-                        </div>
-                        <div>
-                            <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">The Smart Approach to
-                                <span class="text-cyan-500 text-3xl">EMR Modernization</span>
-                            </h2>
-                            <p class="text-sm text-justify text-[var(--primary-color)] poppins-medium mb-6">Our
-                                AI-enabling service integrates seamlessly with your existing EMR system  and
-                                infrastructure, bringing advanced artificial intelligence capabilities to the systems
-                                your healthcare professionals already know and trust.</p>
-                        </div>
+<!-- Desktop/Laptop Version (hidden on mobile) -->
+<section id="ai-emr-hero-section" class="hidden md:block">
+    <div class="container mx-auto px-12 lg:px-20 py-12">
+        <div class="flex items-start justify-between gap-8">
+            <div class="flex items-start gap-8 lg:gap-12">
+                <div class="mt-12 lg:mt-20 flex flex-col gap-8 lg:gap-12">
+                    <div>
+                        <h2 class="text-xl lg:text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Enhance Your Existing EMR System with Algorithm Health</h2>
+                        <p class="text-xs lg:text-sm text-justify text-[var(--primary-color)] poppins-medium mb-6">Transform your current Electronic Medical Record (EMR) system with our cutting-edge AI technology. Don't lose your investment—enhance it.</p>
                     </div>
                     <div>
-                        <img src="../assets/images/solutions/emr-solutions-hero.png" alt="EMR Solutions Hero Image">
+                        <h2 class="text-xl lg:text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">The Smart Approach to <span class="text-cyan-500 text-2xl lg:text-3xl">EMR Modernization</span></h2>
+                        <p class="text-xs lg:text-sm text-justify text-[var(--primary-color)] poppins-medium mb-6">Our AI-enabling service integrates seamlessly with your existing EMR system and infrastructure, bringing advanced artificial intelligence capabilities to the systems your healthcare professionals already know and trust.</p>
                     </div>
+                </div>
+                <div>
+                    <img src="../assets/images/solutions/emr-solutions-hero.png" alt="EMR Solutions Hero Image" class="w-full max-w-lg">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Mobile Version (hidden on desktop) -->
+<section id="ai-emr-hero-section-mobile" class="block md:hidden">
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col gap-6">
+            <!-- Image first on mobile -->
+            <div class="order-1">
+                <img src="../assets/images/solutions/emr-solutions-hero.png" alt="EMR Solutions Hero Image" class="w-full">
+            </div>
+            
+            <!-- Content second on mobile -->
+            <div class="order-2 space-y-6">
+                <div>
+                    <h2 class="text-xl text-[var(--primary-color)] mb-3 poppins-semibold">Enhance Your EMR System</h2>
+                    <p class="text-sm text-[var(--primary-color)] poppins-medium">Transform your current EMR with our AI technology without losing your existing investment.</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <h2 class="text-xl text-[var(--primary-color)] mb-3 poppins-semibold">Smart <span class="text-cyan-500">EMR Modernization</span></h2>
+                    <p class="text-sm text-[var(--primary-color)] poppins-medium">Seamless AI integration with your existing EMR system that healthcare professionals already trust.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Benefits for Healthcare Organizations Section -->
 
@@ -243,164 +308,239 @@
 
     <!-- How It Works & what it provides Section -->
 
-    <section id="how-it-works" class="bg-white py-12">
-        <div class="container mx-auto px-20 text-center">
-            <h2 class="text-2xl mb-2"><span class="poppins-regular text-cyan-500">How It Works &</span> <span
-                    class="poppins-semibold text-[var(--primary-color)]">what it provides</span></h2>
-            <p class="text-md text-[var(--primary-color)] poppins-medium mb-6">Our proprietary AI layer works through an
-                API interface, behind the scenes to enhance your existing EMR with:</p>
+<!-- Desktop/Laptop Version (hidden on mobile) -->
+<section id="how-it-works" class="hidden md:block bg-white py-12">
+    <div class="container mx-auto px-8 lg:px-20 text-center">
+        <h2 class="text-xl lg:text-2xl mb-2">
+            <span class="poppins-regular text-cyan-500">How It Works &</span> 
+            <span class="poppins-semibold text-[var(--primary-color)]">what it provides</span>
+        </h2>
+        <p class="text-sm lg:text-base text-[var(--primary-color)] poppins-medium mb-6">
+            Our proprietary AI layer works through an API interface, behind the scenes to enhance your existing EMR with:
+        </p>
 
-            <!-- Container with vertical line -->
-            <div class="relative group-tracker">
-                <!-- Vertical line with tracker -->
-                <div
-                    class="absolute left-1/2 top-0 bottom-0 w-px bg-gray-300 transform -translate-x-1/2 transition-colors duration-300">
-                    <div class="absolute w-px h-20 bg-cyan-500 left-1/2 transform -translate-x-1/2 opacity-0 transition-all duration-300"
-                        id="tracker"></div>
+        <!-- Container with vertical line -->
+        <div class="relative group-tracker">
+            <!-- Vertical line with tracker -->
+            <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gray-300 transform -translate-x-1/2 transition-colors duration-300">
+                <div class="absolute w-px h-20 bg-cyan-500 left-1/2 transform -translate-x-1/2 opacity-0 transition-all duration-300" id="tracker"></div>
+            </div>
+
+            <!-- Groups -->
+            <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-8 lg:gap-y-12">
+                <!-- group 1 -->
+                <div class="group contents">
+                    <div class="w-12 lg:w-16 h-12 lg:h-16 flex justify-self-end">
+                        <img src="../assets/images/solutions/how_it_works1.png" alt="EMR Icon 1"
+                            class="w-12 lg:w-16 h-12 lg:h-16 flex justify-self-end filter grayscale hover:grayscale-0 transition duration-300">
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-4xl lg:text-6xl poppins-semibold text-gray-700 group-hover:text-cyan-500 transition duration-300">
+                            01
+                        </span>
+                        <div>
+                            <h3 class="text-base lg:text-lg text-gray-700 group-hover:text-[var(--primary-color)] poppins-semibold transition duration-300">
+                                Automated documentation and coding assistance
+                            </h3>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Groups -->
-                <div class="grid grid-cols-2 gap-x-16 gap-y-12">
-                    <!-- group 1 -->
-                    <div class="group contents">
-                        <div class="w-16 h-16 flex justify-self-end">
-                            <img src="../assets/images/solutions/how_it_works1.png" alt="EMR Icon 1"
-                                class="w-16 h-16 flex justify-self-end filter grayscale  hover:grayscale-0 transition duration-300">
+                <!-- group 2 -->
+                <div class="group contents">
+                    <div class="flex items-center justify-end gap-4">
+                        <div>
+                            <h3 class="text-base lg:text-lg text-gray-700 group-hover:text-[var(--primary-color)] poppins-semibold transition duration-300">
+                                Analytics for patient risk identification
+                            </h3>
                         </div>
-                        <div class="flex items-center gap-4">
-                            <span
-                                class="text-6xl poppins-semibold text-gray-700 group-hover:text-cyan-500 transition duration-300">
-                                01
-                            </span>
-                            <div>
-                                <h3
-                                    class="text-lg text-gray-700 group-hover:text-[var(--primary-color)] poppins-semibold transition duration-300">
-                                    Automated documentation and coding assistance
-                                </h3>
-                            </div>
+                        <span class="text-4xl lg:text-6xl poppins-semibold text-gray-700 group-hover:text-cyan-500 transition duration-300">
+                            02
+                        </span>
+                    </div>
+                    <div class="w-12 lg:w-16 h-12 lg:h-16">
+                        <img src="../assets/images/solutions/how_it_works2.png" alt="EMR Icon 2"
+                            class="w-12 lg:w-16 h-12 lg:h-16 filter grayscale hover:grayscale-0 transition duration-300">
+                    </div>
+                </div>
+
+                <!-- group 3 -->
+                <div class="group contents">
+                    <div class="w-12 lg:w-16 h-12 lg:h-16 flex justify-self-end">
+                        <img src="../assets/images/solutions/how_it_works3.png" alt="EMR Icon 3"
+                            class="w-12 lg:w-16 h-12 lg:h-16 flex justify-self-end filter grayscale hover:grayscale-0 transition duration-300">
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-4xl lg:text-6xl poppins-semibold text-gray-700 group-hover:text-cyan-500 transition duration-300">
+                            03
+                        </span>
+                        <div>
+                            <h3 class="text-base lg:text-lg text-gray-700 group-hover:text-[var(--primary-color)] poppins-semibold transition duration-300">
+                                Clinical decision support at the point of care including support for diagnosis, investigation and treatment
+                            </h3>
                         </div>
                     </div>
+                </div>
 
-                    <!-- group 2 -->
-                    <div class="group contents">
-                        <div class="flex items-center justify-end gap-4">
-                            <div>
-                                <h3
-                                    class="text-lg text-gray-700 group-hover:text-[var(--primary-color)] poppins-semibold transition duration-300">
-                                    Analytics for patient risk identification
-                                </h3>
-                            </div>
-                            <span
-                                class="text-6xl poppins-semibold text-gray-700 group-hover:text-cyan-500 transition duration-300">
-                                02
-                            </span>
+                <!-- group 4 -->
+                <div class="group contents">
+                    <div class="flex items-center justify-end gap-4">
+                        <div>
+                            <h3 class="text-base lg:text-lg text-gray-700 group-hover:text-[var(--primary-color)] poppins-semibold transition duration-300">
+                                Workflow optimization and administrative efficiency
+                            </h3>
                         </div>
-                        <div class="w-16 h-16">
-                            <img src="../assets/images/solutions/how_it_works2.png" alt="EMR Icon 3"
-                                class="w-16 h-16 filter grayscale  hover:grayscale-0 transition duration-300">
+                        <span class="text-4xl lg:text-6xl poppins-semibold text-gray-700 group-hover:text-cyan-500 transition duration-300">
+                            04
+                        </span>
+                    </div>
+                    <div class="w-12 lg:w-16 h-12 lg:h-16">
+                        <img src="../assets/images/solutions/how_it_works4.png" alt="EMR Icon 4"
+                            class="w-12 lg:w-16 h-12 lg:h-16 filter grayscale hover:grayscale-0 transition duration-300">
+                    </div>
+                </div>
+
+                <!-- group 5 -->
+                <div class="group contents">
+                    <div class="w-12 lg:w-16 h-12 lg:h-16 flex justify-self-end">
+                        <img src="../assets/images/solutions/how_it_works5.png" alt="EMR Icon 5"
+                            class="w-12 lg:w-16 h-12 lg:h-16 flex justify-self-end filter grayscale hover:grayscale-0 transition duration-300">
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-4xl lg:text-6xl poppins-semibold text-gray-700 group-hover:text-cyan-500 transition duration-300">
+                            05
+                        </span>
+                        <div>
+                            <h3 class="text-base lg:text-lg text-gray-700 group-hover:text-[var(--primary-color)] poppins-semibold transition duration-300">
+                                Improved data accessibility and reporting capabilities
+                            </h3>
                         </div>
                     </div>
+                </div>
 
-                    <!-- group 3 -->
-                    <div class="group contents">
-                        <div class="w-16 h-16 flex justify-self-end">
-                            <img src="../assets/images/solutions/how_it_works3.png" alt="EMR Icon 3"
-                                class="w-16 h-16 flex justify-self-end filter grayscale  hover:grayscale-0 transition duration-300">
+                <!-- group 6 -->
+                <div class="group contents">
+                    <div class="flex items-center justify-end gap-4">
+                        <div>
+                            <h3 class="text-base lg:text-lg poppins-semibold text-gray-700 group-hover:text-[var(--primary-color)] transition duration-300">
+                                Enhanced patient engagement and communication
+                            </h3>
                         </div>
-                        <div class="flex items-center gap-4">
-                            <span
-                                class="text-6xl poppins-semibold text-gray-700 group-hover:text-cyan-500 transition duration-300">
-                                03
-                            </span>
-                            <div>
-                                <h3
-                                    class="text-lg text-gray-700 group-hover:text-[var(--primary-color)] poppins-semibold transition duration-300">
-                                    Clinical decision support at the point of care including support for diagnosis,
-                                    investigation and treatment
-                                </h3>
-                            </div>
-                        </div>
+                        <span class="text-4xl lg:text-6xl poppins-semibold text-gray-600 group-hover:text-cyan-500 transition duration-300">
+                            06
+                        </span>
                     </div>
-
-                    <!-- group 4 -->
-                    <div class="group contents">
-                        <div class="flex items-center justify-end gap-4">
-                            <div>
-                                <h3
-                                    class="text-lg text-gray-700 group-hover:text-[var(--primary-color)] poppins-semibold transition duration-300">
-                                    Workflow optimization and administrative efficiency
-                                </h3>
-                            </div>
-                            <span
-                                class="text-6xl poppins-semibold text-gray-700 group-hover:text-cyan-500 transition duration-300">
-                                04
-                            </span>
-                        </div>
-                        <div class="w-16 h-16">
-                            <img src="../assets/images/solutions/how_it_works4.png" alt="EMR Icon 2"
-                                class="w-16 h-16 filter grayscale  hover:grayscale-0 transition duration-300">
-                        </div>
-                    </div>
-
-                    <!-- group 5 -->
-                    <div class="group contents">
-                        <div class="w-16 h-16 flex justify-self-end">
-                            <img src="../assets/images/solutions/how_it_works5.png" alt="EMR Icon 2"
-                                class="w-16 h-16 flex justify-self-end  filter grayscale  hover:grayscale-0 transition duration-300">
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <span
-                                class="text-6xl poppins-semibold text-gray-700 group-hover:text-cyan-500 transition duration-300">
-                                05
-                            </span>
-                            <div>
-                                <h3
-                                    class="text-lg text-gray-700 group-hover:text-[var(--primary-color)] poppins-semibold transition duration-300">
-                                    Improved data accessibility and reporting capabilities
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- group 6 -->
-                    <div class="group contents">
-                        <div class="flex items-center justify-end gap-4">
-                            <div>
-                                <h3
-                                    class="text-lg poppins-semibold text-gray-700 group-hover:text-[var(--primary-color)] transition duration-300">
-                                    Enhanced patient engagement and communication
-                                </h3>
-                            </div>
-                            <span
-                                class="text-6xl poppins-semibold text-gray-600 group-hover:text-cyan-500 transition duration-300">
-                                06
-                            </span>
-                        </div>
-                        <div class="w-16 h-16">
-                            <img src="../assets/images/solutions/how_it_works6.png" alt="EMR Icon 2"
-                                class="w-16 h-16 filter grayscale hover:grayscale-0 transition duration-300">
-                        </div>
+                    <div class="w-12 lg:w-16 h-12 lg:h-16">
+                        <img src="../assets/images/solutions/how_it_works6.png" alt="EMR Icon 6"
+                            class="w-12 lg:w-16 h-12 lg:h-16 filter grayscale hover:grayscale-0 transition duration-300">
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Mobile Version (hidden on desktop) -->
+<section id="how-it-works-mobile" class="block md:hidden bg-white py-8">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-xl mb-3">
+            <span class="poppins-regular text-cyan-500">How It Works</span> 
+            <span class="poppins-semibold text-[var(--primary-color)]">& What It Provides</span>
+        </h2>
+        <p class="text-sm text-[var(--primary-color)] poppins-medium mb-6">
+            Our AI enhances your existing EMR through an API interface:
+        </p>
+
+        <!-- Mobile Timeline -->
+        <div class="space-y-6">
+            <!-- Mobile Item 1 -->
+            <div class="flex flex-col items-center text-center bg-gray-50 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-2xl poppins-semibold text-cyan-500">01</span>
+                    <img src="../assets/images/solutions/how_it_works1.png" alt="EMR Icon 1" class="w-10 h-10">
+                </div>
+                <h3 class="text-base poppins-semibold text-[var(--primary-color)]">
+                    Automated documentation and coding assistance
+                </h3>
+            </div>
+
+            <!-- Mobile Item 2 -->
+            <div class="flex flex-col items-center text-center bg-gray-50 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-2xl poppins-semibold text-cyan-500">02</span>
+                    <img src="../assets/images/solutions/how_it_works2.png" alt="EMR Icon 2" class="w-10 h-10">
+                </div>
+                <h3 class="text-base poppins-semibold text-[var(--primary-color)]">
+                    Analytics for patient risk identification
+                </h3>
+            </div>
+
+            <!-- Mobile Item 3 -->
+            <div class="flex flex-col items-center text-center bg-gray-50 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-2xl poppins-semibold text-cyan-500">03</span>
+                    <img src="../assets/images/solutions/how_it_works3.png" alt="EMR Icon 3" class="w-10 h-10">
+                </div>
+                <h3 class="text-base poppins-semibold text-[var(--primary-color)]">
+                    Clinical decision support at point of care
+                </h3>
+            </div>
+
+            <!-- Mobile Item 4 -->
+            <div class="flex flex-col items-center text-center bg-gray-50 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-2xl poppins-semibold text-cyan-500">04</span>
+                    <img src="../assets/images/solutions/how_it_works4.png" alt="EMR Icon 4" class="w-10 h-10">
+                </div>
+                <h3 class="text-base poppins-semibold text-[var(--primary-color)]">
+                    Workflow optimization and efficiency
+                </h3>
+            </div>
+
+            <!-- Mobile Item 5 -->
+            <div class="flex flex-col items-center text-center bg-gray-50 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-2xl poppins-semibold text-cyan-500">05</span>
+                    <img src="../assets/images/solutions/how_it_works5.png" alt="EMR Icon 5" class="w-10 h-10">
+                </div>
+                <h3 class="text-base poppins-semibold text-[var(--primary-color)]">
+                    Improved data accessibility
+                </h3>
+            </div>
+
+            <!-- Mobile Item 6 -->
+            <div class="flex flex-col items-center text-center bg-gray-50 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-2xl poppins-semibold text-cyan-500">06</span>
+                    <img src="../assets/images/solutions/how_it_works6.png" alt="EMR Icon 6" class="w-10 h-10">
+                </div>
+                <h3 class="text-base poppins-semibold text-[var(--primary-color)]">
+                    Enhanced patient engagement
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Call to Action -->
-    <section id="call-to-action" class="flex gap-4 items-center justify-center">
-        <div>
-            <h1 class="uppercase teko-font text-5xl">Experience the Algorithm Health Advantage</h1>
-        </div>
-        <div class="flex flex-col gap-2 items-center justify-center mt-4">
-            <div
-                class="teko-font card rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[#4B4B4B] transition duration-300">
-                Request a Demo
-            </div>
-            <div
-                class="teko-font card rounded-md uppercase bg-[#222429] bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[#4B4B4B] transition duration-300">
-                Contact Our Team </div>
-        </div>
-    </section>
+<section id="call-to-action" class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-12 items-center justify-center px-4 sm:px-8 py-8 sm:py-12">
+    <!-- Heading -->
+    <div class="text-center md:text-left">
+        <h1 class="uppercase teko-font text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
+            Experience the Algorithm Health Advantage
+        </h1>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row md:flex-col gap-3 sm:gap-4 md:gap-2 w-full sm:w-auto">
+        <a href="#" class="teko-font rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg hover:bg-[#4B4B4B] transition duration-300 text-center">
+            Request a Demo
+        </a>
+        <a href="#" class="teko-font rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg hover:bg-[#4B4B4B] transition duration-300 text-center">
+            Contact Our Team
+        </a>
+    </div>
+</section>
     <!-- Footer -->
     <footer class="footer-bg">
         <section id="pre-footer" class="text-white py-6">
