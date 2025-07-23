@@ -97,76 +97,90 @@
     </section>
 
     <!-- Hero Section -->
-    <section id="ai-lab-hero-section">
-        <div class="container mx-auto px-20 py-12">
-            <div class="flex  items-start justify-between gap-8">
-                <div class="flex items-start gap-4">
-                    <div class="mt-20">
-                        <div>
-                            <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Transforming Lab
-                                Results into Actionable Healthcare Insights</h2>
-                            <p class="text-sm text-justify text-[var(--primary-color)] poppins-medium mb-6">Algorithm
-                                Health's AI-Powered Intelligent Lab Reports solution revolutionizes how laboratory data
-                                is interpreted and communicated. Our advanced artificial intelligence analyzes
-                                comprehensive lab profiles to deliver accurate interpretations, clear patient
-                                presentations, and actionable medical insights that enhance care quality and patient
-                                understanding.</p>
-                        </div>
-                        <div>
-                            <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">How It Works</h2>
-                            <p class="text-sm text-justify text-[var(--primary-color)] poppins-medium mb-6">Our
-                                intelligent system processes laboratory results across multiple profiles, providing
-                                comprehensive analysis that goes beyond raw numbers. The AI generates accurate
-                                interpretations, suggests differential diagnoses, recommends further investigations, and
-                                assesses critical health risks including cardiovascular and diabetes complications. Each
-                                report includes a patient-friendly summary with personalized lifestyle modification
-                                recommendations.</p>
-                        </div>
+<!-- Desktop/Laptop Version (hidden on mobile) -->
+<section id="ai-lab-hero-section" class="hidden md:block">
+    <div class="container mx-auto px-20 py-12">
+        <div class="flex items-start justify-between gap-8">
+            <div class="flex items-start gap-4">
+                <div class="mt-20">
+                    <div>
+                        <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Transforming Lab Results into Actionable Healthcare Insights</h2>
+                        <p class="text-sm text-justify text-[var(--primary-color)] poppins-medium mb-6">Algorithm Health's AI-Powered Intelligent Lab Reports solution revolutionizes how laboratory data is interpreted and communicated. Our advanced artificial intelligence analyzes comprehensive lab profiles to deliver accurate interpretations, clear patient presentations, and actionable medical insights that enhance care quality and patient understanding.</p>
                     </div>
                     <div>
-                        <img src="../assets/images/solutions/ai-lab-hero.png" alt="AI Driven Reports"
-                            class="h-auto !w-[80rem]">
+                        <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">How It Works</h2>
+                        <p class="text-sm text-justify text-[var(--primary-color)] poppins-medium mb-6">Our intelligent system processes laboratory results across multiple profiles, providing comprehensive analysis that goes beyond raw numbers. The AI generates accurate interpretations, suggests differential diagnoses, recommends further investigations, and assesses critical health risks including cardiovascular and diabetes complications. Each report includes a patient-friendly summary with personalized lifestyle modification recommendations.</p>
                     </div>
+                </div>
+                <div>
+                    <img src="../assets/images/solutions/ai-lab-hero.png" alt="AI Driven Reports" class="h-auto !w-[80rem]">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Mobile Version (hidden on desktop) -->
+<section id="ai-lab-hero-section-mobile" class="block md:hidden">
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col gap-8">
+            <!-- Image first on mobile -->
+            <div class="order-1">
+                <img src="../assets/images/solutions/ai-lab-hero.png" alt="AI Driven Reports" class="w-full h-auto">
+            </div>
+            
+            <!-- Content second on mobile -->
+            <div class="order-2 space-y-6">
+                <div>
+                    <h2 class="text-xl text-[var(--primary-color)] mb-3 poppins-semibold">Transforming Lab Results into Actionable Healthcare Insights</h2>
+                    <p class="text-sm text-[var(--primary-color)] poppins-medium">Algorithm Health's AI-Powered Intelligent Lab Reports solution revolutionizes how laboratory data is interpreted and communicated. Our advanced artificial intelligence analyzes comprehensive lab profiles to deliver accurate interpretations and actionable medical insights.</p>
+                </div>
+                
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <h2 class="text-xl text-[var(--primary-color)] mb-3 poppins-semibold">How It Works</h2>
+                    <p class="text-sm text-[var(--primary-color)] poppins-medium">Our intelligent system processes laboratory results across multiple profiles, providing comprehensive analysis that goes beyond raw numbers. The AI generates accurate interpretations and assesses critical health risks with personalized recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Benefits for Laboratories -->
-
-    <section id="whole-bg">
-        <div class="container mx-auto px-20 py-12">
-            <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Benefits for Laboratories</h2>
-            <div class="grid grid-cols-2 gap-6">
-                <div>
-                    <!-- Accordion Items -->
-                    <div class="accordion">
-                        <!-- Item 1 -->
-                        <div class="accordion-item border-b border-gray-200">
-                            <button
-                                class="accordion-header w-full rounded-xl gradient-bg text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity"
-                                onclick="toggleAccordion(1)" style="display: none;">
-                                <span class="poppins-semibold">Enhanced Diagnostic Accuracy</span>
-                                <div class="flex items-center">
-                                    <span class="text-5xl itim-regular font-bold opacity-60 mr-3">01</span>
+    <!-- Desktop/Laptop Version (hidden on mobile) -->
+<section id="whole-bg" class="hidden md:block">
+    <div class="container mx-auto px-20 py-12">
+        <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Benefits for Laboratories</h2>
+        <div class="grid grid-cols-2 gap-6">
+            <div>
+                <!-- Accordion Items -->
+                <div class="accordion">
+                    <!-- Your original accordion items exactly as provided -->
+                    <!-- Item 1 -->
+                    <div class="accordion-item border-b border-gray-200">
+                        <button
+                            class="accordion-header w-full rounded-xl gradient-bg text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity"
+                            onclick="toggleAccordion(1)" style="display: none;">
+                            <span class="poppins-semibold">Enhanced Diagnostic Accuracy</span>
+                            <div class="flex items-center">
+                                <span class="text-5xl itim-regular font-bold opacity-60 mr-3">01</span>
+                            </div>
+                        </button>
+                        <div class="accordion-content active  my-2 rounded-lg" id="content-1"
+                            onclick="toggleAccordion(1)">
+                            <div
+                                class="flex border-2 border-cyan-500 rounded-lg justify-between items-center p-4 cursor-pointer">
+                                <div class="flex flex-col">
+                                    <span class="font-medium text-lg text-cyan-500">Enhanced Diagnostic
+                                        Accuracy</span>
+                                    <p class="text-[var(--primary-color)] poppins-regular">AI-powered analysis
+                                        reduces interpretation errors and identifies patterns human reviewers might
+                                        miss</p>
                                 </div>
-                            </button>
-                            <div class="accordion-content active  my-2 rounded-lg" id="content-1"
-                                onclick="toggleAccordion(1)">
-                                <div
-                                    class="flex border-2 border-cyan-500 rounded-lg justify-between items-center p-4 cursor-pointer">
-                                    <div class="flex flex-col">
-                                        <span class="font-medium text-lg text-cyan-500">Enhanced Diagnostic
-                                            Accuracy</span>
-                                        <p class="text-[var(--primary-color)] poppins-regular">AI-powered analysis
-                                            reduces interpretation errors and identifies patterns human reviewers might
-                                            miss</p>
-                                    </div>
-                                    <img src="../assets/images/solutions/accordian-1.png"
-                                        alt="Doctor Standing in a High tech Lab" width="100" class="rounded-lg">
-                                </div>
+                                <img src="../assets/images/solutions/accordian-1.png"
+                                    alt="Doctor Standing in a High tech Lab" width="100" class="rounded-lg">
                             </div>
                         </div>
+                    </div>
 
                         <!-- Item 2 -->
                         <div class="accordion-item border-b border-gray-200">
@@ -311,77 +325,183 @@
                                 </div>
                             </div>
                         </div>
+                    
+                </div>
+            </div>
+            <div class="flex items-center justify-end">
+                <img src="../assets/images/solutions/benifits-of-labs-img.png"
+                    alt="Collage of Images Portraying Doctors and Tech Labs" class="!w-[70%]">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mobile Version (hidden on desktop) -->
+<section id="whole-bg-mobile" class="block md:hidden">
+    <div class="container mx-auto px-4 py-8">
+        <h2 class="text-xl text-[var(--primary-color)] mb-6 poppins-semibold">Benefits for Laboratories</h2>
+        
+        <!-- Image first on mobile -->
+        <div class="mb-8">
+            <img src="../assets/images/solutions/benifits-of-labs-img.png" 
+                 alt="Collage of Images Portraying Doctors and Tech Labs" 
+                 class="w-full rounded-lg">
+        </div>
+        
+        <!-- Accordion - simplified for mobile -->
+        <div class="space-y-4">
+            <!-- Item 1 -->
+            <div class="border-2 border-cyan-500 rounded-lg p-4">
+                <div class="flex items-start gap-4">
+                    <span class="text-cyan-500 text-xl font-bold">01</span>
+                    <div>
+                        <h3 class="text-lg text-cyan-500 poppins-semibold mb-2">Enhanced Diagnostic Accuracy</h3>
+                        <p class="text-sm text-[var(--primary-color)]">AI-powered analysis reduces interpretation errors and identifies patterns human reviewers might miss</p>
                     </div>
                 </div>
-                <div class="flex items-center justify-end">
-                    <img src="../assets/images/solutions/benifits-of-labs-img.png"
-                        alt="Collage of Images Portraying Doctors and Tech Labs" class="!w-[70%]">
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="border-2 border-cyan-500 rounded-lg p-4">
+                <div class="flex items-start gap-4">
+                    <span class="text-cyan-500 text-xl font-bold">02</span>
+                    <div>
+                        <h3 class="text-lg text-cyan-500 poppins-semibold mb-2">Increased Efficiency</h3>
+                        <p class="text-sm text-[var(--primary-color)]">Automated report generation and analysis significantly reduces turnaround times</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="border-2 border-cyan-500 rounded-lg p-4">
+                <div class="flex items-start gap-4">
+                    <span class="text-cyan-500 text-xl font-bold">03</span>
+                    <div>
+                        <h3 class="text-lg text-cyan-500 poppins-semibold mb-2">Standardized Quality</h3>
+                        <p class="text-sm text-[var(--primary-color)]">Consistent, high-quality interpretations regardless of staff workload or experience level</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 4 -->
+            <div class="border-2 border-cyan-500 rounded-lg p-4">
+                <div class="flex items-start gap-4">
+                    <span class="text-cyan-500 text-xl font-bold">04</span>
+                    <div>
+                        <h3 class="text-lg text-cyan-500 poppins-semibold mb-2">Competitive Advantage</h3>
+                        <p class="text-sm text-[var(--primary-color)]">Offer value-added services that differentiate your lab from competitors</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 5 -->
+            <div class="border-2 border-cyan-500 rounded-lg p-4">
+                <div class="flex items-start gap-4">
+                    <span class="text-cyan-500 text-xl font-bold">05</span>
+                    <div>
+                        <h3 class="text-lg text-cyan-500 poppins-semibold mb-2">Reduced Liability</h3>
+                        <p class="text-sm text-[var(--primary-color)]">Comprehensive analysis helps identify critical findings and reduces risk of missed diagnoses</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 6 -->
+            <div class="border-2 border-cyan-500 rounded-lg p-4">
+                <div class="flex items-start gap-4">
+                    <span class="text-cyan-500 text-xl font-bold">06</span>
+                    <div>
+                        <h3 class="text-lg text-cyan-500 poppins-semibold mb-2">Cost Optimization</h3>
+                        <p class="text-sm text-[var(--primary-color)]">Streamlined workflow reduces manual review time and associated labor costs</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 7 -->
+            <div class="border-2 border-cyan-500 rounded-lg p-4">
+                <div class="flex items-start gap-4">
+                    <span class="text-cyan-500 text-xl font-bold">07</span>
+                    <div>
+                        <h3 class="text-lg text-cyan-500 poppins-semibold mb-2">Professional Development</h3>
+                        <p class="text-sm text-[var(--primary-color)]">Staff learn from AI-generated insights and recommendations</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Benefits for Patients -->
-    <section class="bg-white py-12">
-        <div class="container mx-auto px-20">
-            <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Benefits for Patients</h2>
-            <div class="grid grid-cols-4 gap-6">
-                <!-- Clear Understanding -->
-                <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)]
- rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[##ECFCFF]">
-                    <h2 class="text-lg poppins-medium text-gray-900 mb-3">Clear Understanding</h2>
-                    <p class="text-[var(--primary-color)] poppins-regular text-sm leading-relaxed">
-                        Complex lab results translated into easy-to-understand language and visual presentations </p>
-                </div>
-                <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)]
- rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[##ECFCFF]">
-                    <h2 class="text-lg poppins-medium text-gray-900 mb-3">Comprehensive Health Picture</h2>
-                    <p class="text-[var(--primary-color)] poppins-regular text-sm leading-relaxed">
-                        Integrated analysis across multiple test parameters provides holistic health assessment </p>
-                </div>
-                <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)]
- rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[##ECFCFF]">
-                    <h2 class="text-lg poppins-medium text-gray-900 mb-3">Personalized Insights</h2>
-                    <p class="text-[var(--primary-color)] poppins-regular text-sm leading-relaxed">
-                        Tailored cardiovascular and diabetes risk assessments specific to individual profiles </p>
-                </div>
-                <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)]
- rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[##ECFCFF]">
-                    <h2 class="text-lg poppins-medium text-gray-900 mb-3">Actionable Recommendations</h2>
-                    <p class="text-[var(--primary-color)] poppins-regular text-sm leading-relaxed">
-                        Specific lifestyle modifications and next steps clearly outlined </p>
-                </div>
-                <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)]
- rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[##ECFCFF]">
-                    <h2 class="text-lg poppins-medium text-gray-900 mb-3">Early Detection</h2>
-                    <p class="text-[var(--primary-color)] poppins-regular text-sm leading-relaxed">
-                        Advanced pattern recognition helps identify potential health issues before they become critical
-                    </p>
-                </div>
-                <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)]
- rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[##ECFCFF]">
-                    <h2 class="text-lg poppins-medium text-gray-900 mb-3">Informed Decision-Making</h2>
-                    <p class="text-[var(--primary-color)] poppins-regular text-sm leading-relaxed">
-                        Better understanding of results empowers patients to take control of their health </p>
-                </div>
-                <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)]
- rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[##ECFCFF]">
-                    <h2 class="text-lg poppins-medium text-gray-900 mb-3">Reduced Anxiety</h2>
-                    <p class="text-[var(--primary-color)] poppins-regular text-sm leading-relaxed">
-                        Clear explanations and context help patients understand what results mean for their wellbeing
-                    </p>
-                </div>
-                <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)]
- rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[##ECFCFF]">
-                    <h2 class="text-lg poppins-medium text-gray-900 mb-3">Continuity of Care</h2>
-                    <p class="text-[var(--primary-color)] poppins-regular text-sm leading-relaxed">
-                        Detailed recommendations for further investigations ensure appropriate follow-up care </p>
-                </div>
+<!-- Benefits for Patients -->
+<section class="bg-white py-8 md:py-12">
+    <div class="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
+        <h2 class="text-xl md:text-2xl text-[var(--primary-color)] mb-4 md:mb-6 poppins-semibold">Benefits for Patients</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <!-- Clear Understanding -->
+            <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)] rounded-lg p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[#ECFCFF]">
+                <h2 class="text-base md:text-lg poppins-medium text-gray-900 mb-2 md:mb-3">Clear Understanding</h2>
+                <p class="text-[var(--primary-color)] poppins-regular text-xs md:text-sm leading-relaxed">
+                    Complex lab results translated into easy-to-understand language and visual presentations
+                </p>
+            </div>
+            
+            <!-- Comprehensive Health Picture -->
+            <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)] rounded-lg p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[#ECFCFF]">
+                <h2 class="text-base md:text-lg poppins-medium text-gray-900 mb-2 md:mb-3">Comprehensive Health Picture</h2>
+                <p class="text-[var(--primary-color)] poppins-regular text-xs md:text-sm leading-relaxed">
+                    Integrated analysis across multiple test parameters provides holistic health assessment
+                </p>
+            </div>
+            
+            <!-- Personalized Insights -->
+            <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)] rounded-lg p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[#ECFCFF]">
+                <h2 class="text-base md:text-lg poppins-medium text-gray-900 mb-2 md:mb-3">Personalized Insights</h2>
+                <p class="text-[var(--primary-color)] poppins-regular text-xs md:text-sm leading-relaxed">
+                    Tailored cardiovascular and diabetes risk assessments specific to individual profiles
+                </p>
+            </div>
+            
+            <!-- Actionable Recommendations -->
+            <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)] rounded-lg p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[#ECFCFF]">
+                <h2 class="text-base md:text-lg poppins-medium text-gray-900 mb-2 md:mb-3">Actionable Recommendations</h2>
+                <p class="text-[var(--primary-color)] poppins-regular text-xs md:text-sm leading-relaxed">
+                    Specific lifestyle modifications and next steps clearly outlined
+                </p>
+            </div>
+            
+            <!-- Early Detection -->
+            <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)] rounded-lg p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[#ECFCFF]">
+                <h2 class="text-base md:text-lg poppins-medium text-gray-900 mb-2 md:mb-3">Early Detection</h2>
+                <p class="text-[var(--primary-color)] poppins-regular text-xs md:text-sm leading-relaxed">
+                    Advanced pattern recognition helps identify potential health issues before they become critical
+                </p>
+            </div>
+            
+            <!-- Informed Decision-Making -->
+            <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)] rounded-lg p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[#ECFCFF]">
+                <h2 class="text-base md:text-lg poppins-medium text-gray-900 mb-2 md:mb-3">Informed Decision-Making</h2>
+                <p class="text-[var(--primary-color)] poppins-regular text-xs md:text-sm leading-relaxed">
+                    Better understanding of results empowers patients to take control of their health
+                </p>
+            </div>
+            
+            <!-- Reduced Anxiety -->
+            <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)] rounded-lg p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[#ECFCFF]">
+                <h2 class="text-base md:text-lg poppins-medium text-gray-900 mb-2 md:mb-3">Reduced Anxiety</h2>
+                <p class="text-[var(--primary-color)] poppins-regular text-xs md:text-sm leading-relaxed">
+                    Clear explanations and context help patients understand what results mean for their wellbeing
+                </p>
+            </div>
+            
+            <!-- Continuity of Care -->
+            <div class="bg-[linear-gradient(to_right,_#ECFCFF_30%,_#FFFFFF)] rounded-lg p-4 md:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-[#ECFCFF]">
+                <h2 class="text-base md:text-lg poppins-medium text-gray-900 mb-2 md:mb-3">Continuity of Care</h2>
+                <p class="text-[var(--primary-color)] poppins-regular text-xs md:text-sm leading-relaxed">
+                    Detailed recommendations for further investigations ensure appropriate follow-up care
+                </p>
             </div>
         </div>
-
-    </section>
-
+    </div>
+</section>
     <!-- Call to Action -->
     <section id="call-to-action" class="flex gap-4 items-center justify-center">
         <div>
