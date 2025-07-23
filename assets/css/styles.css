@@ -216,9 +216,36 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 500px; /* Default mobile height */
 }
 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    #call-to-action {
+        height: 250px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #call-to-action {
+        height: 300px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #call-to-action {
+        height: 300px !important;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #call-to-action {
+        height: 300px !important;
+    }
+}
 
 .teko-font {
     font-family: "Teko", sans-serif;

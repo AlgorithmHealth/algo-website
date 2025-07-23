@@ -157,245 +157,233 @@
     </section>
 
     <!-- Hero Section -->
-    <section id="ai-lab-hero-section">
-        <div class="container mx-auto px-20 py-12">
-            <div class="flex  items-start justify-between gap-8">
-                <div class="mt-20">
-                    <div class="">
-                        <h2 class="text-3xl text-[var(--primary-color)] mb-4 poppins-semibold">Revolutionizing Claims
-                            Processing with <br>
-                            AI-Powered Automation</h2>
-                        <p class="text-md text-justify text-[var(--primary-color)] poppins-medium mb-6">Algorithm
-                            Health's Health Insurance Claims Auto Adjudication System transforms how health insurers
-                            process claims by leveraging advanced artificial intelligence to automatically validate,
-                            analyze, and adjudicate claims with unprecedented accuracy and speed. Our comprehensive
-                            solution reduces manual review time while enhancing fraud detection and ensuring appropriate
-                            claim settlements.</p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-center">
-                    <img src="../assets/images/solutions/health-insurance-hero.png" alt="AI Driven Reports"
-                        class="h-auto !w-[80rem]">
+<section id="ai-lab-hero-section">
+    <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-8 md:py-12">
+        <div class="flex flex-col lg:flex-row items-start justify-between gap-6 md:gap-8">
+            <!-- Text Content -->
+            <div class="order-2 lg:order-1 mt-0 lg:mt-20 w-full lg:w-1/2">
+                <div>
+                    <h2 class="text-2xl md:text-3xl text-[var(--primary-color)] mb-4 poppins-semibold">
+                        Revolutionizing Claims Processing with 
+                        <span class="block md:inline">AI-Powered Automation</span>
+                    </h2>
+                    <p class="text-sm md:text-base text-[var(--primary-color)] poppins-medium mb-6">
+                        Algorithm Health's Health Insurance Claims Auto Adjudication System transforms how health insurers 
+                        process claims by leveraging advanced artificial intelligence to automatically validate, analyze, 
+                        and adjudicate claims with unprecedented accuracy and speed. Our comprehensive solution reduces 
+                        manual review time while enhancing fraud detection and ensuring appropriate claim settlements.
+                    </p>
                 </div>
             </div>
+            
+            <!-- Image -->
+            <div class="order-1 lg:order-2 flex items-center justify-center w-full lg:w-1/2">
+                <img src="../assets/images/solutions/health-insurance-hero.png" 
+                     alt="AI Driven Reports"
+                     class="h-auto w-full max-w-md lg:!w-[60rem]">
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Intelligent Document Analysis Section -->
 
-    <section id="whole-bg">
-        <div class="container mx-auto px-20 py-12">
-            <div class="grid grid-cols-2 gap-8">
-                <div class="flex items-center justify-center">
-                    <img src="../assets/images/solutions/document-analysis.png" alt="Intelligent Document Analysis"
-                        class="h-auto w-full max-w-md">
-
-                </div>
-                <div class="flex flex-col justify-center">
-                    <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Intelligent Document Analysis
-                    </h2>
-                    <p class="text-md text-justify text-[var(--primary-color)] poppins-medium mb-6">Our AI-powered
-                        system conducts thorough analysis across all critical claim components to deliver automated
-                        adjudication decisions</p>
-
-                    <!-- Accordion Container -->
-                    <div class="shadow-sm border border-gray-200 overflow-hidden">
-
-                        <!-- First Accordion Item - Expanded -->
-                        <div class="border-b my-2 shadow-md border-gray-200">
-                            <button
-                                class="w-full px-6 py-4 text-left bg-[#ECF5FB] hover:bg-[#ECF5FB] transition-colors duration-200 flex items-center justify-between group"
-                                onclick="toggleMedicalAccordion(this)">
-                                <span
-                                    class="text-lg poppins-medium text-[var(--primary-color)] text-gray-800 active-tab-title">Discharge
-                                    Summary Analysis</span>
-                                <svg class="w-5 h-5 text-gray-500 chevron rotate" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                            <div class="accordion-content active bg-[#ECF5FB]">
-                                <div class="px-6 py-4">
-                                    <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
-                                        Validates treatment necessity and ensures alignment between patient diagnosis
-                                        and prescribed procedures according to standard medical protocols.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Second Accordion Item -->
-                        <div class="border-b border-gray-200">
-                            <button
-                                class="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group"
-                                onclick="toggleMedicalAccordion(this)">
-                                <span class="text-lg font-medium text-[var(--primary-color)]">Hospital Bill
-                                    Examination</span>
-                                <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="px-6 py-4">
-                                    <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
-                                        Comprehensive review of hospital charges, procedures, and services to ensure
-                                        accuracy and compliance with insurance coverage policies.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Third Accordion Item -->
-                        <div class="border-b border-gray-200">
-                            <button
-                                class="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group"
-                                onclick="toggleMedicalAccordion(this)">
-                                <span class="text-lg font-medium text-[var(--primary-color)] ">Pharmacy Bill
-                                    Review</span>
-                                <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="px-6 py-4">
-                                    <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
-                                        Detailed analysis of pharmaceutical charges, medication appropriateness, and
-                                        dosage verification against prescribed treatment plans.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Fourth Accordion Item -->
-                        <div>
-                            <button
-                                class="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group"
-                                onclick="toggleMedicalAccordion(this)">
-                                <span class="text-lg font-medium text-[var(--primary-color)]">Lab Report
-                                    Validation</span>
-                                <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="px-6 py-4">
-                                    <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed">
-                                        Verification of laboratory test results, cross-referencing with clinical
-                                        indicators and ensuring diagnostic accuracy for proper treatment validation.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+<section id="whole-bg">
+    <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-8 md:py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+            <!-- Image Column - Order changes for mobile -->
+            <div class="order-1 lg:order-1 flex items-center justify-center">
+                <img src="../assets/images/solutions/document-analysis.png" 
+                     alt="Intelligent Document Analysis"
+                     class="h-auto w-full max-w-md lg:w-[60rem]">
             </div>
-        </div>
 
-    </section>
+            <!-- Content Column -->
+            <div class="order-2 lg:order-2 flex flex-col justify-center">
+                <h2 class="text-xl md:text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">
+                    Intelligent Document Analysis
+                </h2>
+                <p class="text-sm md:text-base text-[var(--primary-color)] poppins-medium mb-6">
+                    Our AI-powered system conducts thorough analysis across all critical claim components to deliver automated adjudication decisions
+                </p>
 
-    <!-- Advanced Fraud Detection Capabilities -->
-    <section id="fraud-detection-section" class="bg-white py-12">
-        <div class="container mx-auto px-20">
-            <div class="grid grid-cols-5 gap-2">
-                <div class="col-span-2 flex items-center justify-center">
-                    <h2
-                        class="text-2xl hover:text-cyan-500 active:text-cyan-500 text-[var(--primary-color)] mb-4 poppins-semibold">
-                        Advanced Fraud <br> Detection Capabilities
-                    </h2>
-                </div>
-                <div class="col-span-3">
-                    <!-- Tab Buttons Container -->
-                    <div class="flex items-center justify-center gap-4">
-                        <!-- Tab Button 1-->
-                        <div class="tab-button active rounded-lg shadow-md p-6 active:text-cyan-500 bg-white w-64 h-32 flex items-center justify-center"
-                            data-tab-target="panel-1">
-                            <p class="text-md text-center text-[var(--primary-color)] poppins-medium">
-                                Unnecessary Medical Procedures
-                            </p>
-                        </div>
+                <!-- Accordion Container -->
+                <div class="shadow-sm border border-gray-200 overflow-hidden">
 
-                        <!-- Tab Button 2-->
-                        <div class="tab-button rounded-lg shadow-md p-6 bg-white w-64 h-32 flex items-center justify-center"
-                            data-tab-target="panel-2">
-                            <p
-                                class="text-md text-center active:text-cyan-500 text-[var(--primary-color)] poppins-medium">
-                                Medication Abuse Detection
-                            </p>
-                        </div>
-
-                        <!-- Tab Button 3-->
-                        <div class="tab-button rounded-lg shadow-md p-6 bg-white w-64 h-32 flex items-center justify-center"
-                            data-tab-target="panel-3">
-                            <p
-                                class="text-md text-center active:text-cyan-500 hover:text-cyan-500 text-[var(--primary-color)] poppins-medium">
-                                Length of Stay Optimization
-                            </p>
-                        </div>
-
-                        <!-- Tab Button 4 -->
-                        <div class="tab-button rounded-lg shadow-md p-6 bg-white w-64 h-32 flex items-center justify-center"
-                            data-tab-target="panel-4">
-                            <p
-                                class="text-md text-center active:text-cyan-500 hover:text-cyan-500 text-[var(--primary-color)] poppins-medium">
-                                Medical Inconsistency Detection
-                            </p>
+                    <!-- First Accordion Item - Expanded -->
+                    <div class="border-b my-2 shadow-md border-gray-200">
+                        <button class="w-full px-4 md:px-6 py-3 md:py-4 text-left bg-[#ECF5FB] hover:bg-[#ECF5FB] transition-colors duration-200 flex items-center justify-between group"
+                                onclick="toggleMedicalAccordion(this)">
+                            <span class="text-base md:text-lg poppins-medium text-[var(--primary-color)] text-gray-800 active-tab-title">
+                                Discharge Summary Analysis
+                            </span>
+                            <svg class="w-5 h-5 text-gray-500 chevron rotate" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content active bg-[#ECF5FB]">
+                            <div class="px-4 md:px-6 py-3 md:py-4">
+                                <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed text-sm md:text-base">
+                                    Validates treatment necessity and ensures alignment between patient diagnosis and prescribed procedures according to standard medical protocols.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Tab Panels Container -->
-                    <div class="tab-panels-container mt-5">
-                        <!-- Panel 1 -->
-                        <div id="panel-1"
-                            class="tab-panel active border shadow-md bg-white rounded-xl border-cyan-500 p-4">
-                            <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular">
-                                Flags tests and treatments that don't align with patient diagnosis or standard care
-                                requirements.
-                            </p>
+                    <!-- Second Accordion Item -->
+                    <div class="border-b border-gray-200">
+                        <button class="w-full px-4 md:px-6 py-3 md:py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group"
+                                onclick="toggleMedicalAccordion(this)">
+                            <span class="text-base md:text-lg font-medium text-[var(--primary-color)]">
+                                Hospital Bill Examination
+                            </span>
+                            <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="px-4 md:px-6 py-3 md:py-4">
+                                <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed text-sm md:text-base">
+                                    Comprehensive review of hospital charges, procedures, and services to ensure accuracy and compliance with insurance coverage policies.
+                                </p>
+                            </div>
                         </div>
+                    </div>
 
-                        <!-- Panel 2-->
-                        <div id="panel-2" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-4">
-                            <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular">
-                                Identifies when prescribed quantities exceed normal usage patterns for specific medical
-                                conditions.
-                            </p>
+                    <!-- Third Accordion Item -->
+                    <div class="border-b border-gray-200">
+                        <button class="w-full px-4 md:px-6 py-3 md:py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group"
+                                onclick="toggleMedicalAccordion(this)">
+                            <span class="text-base md:text-lg font-medium text-[var(--primary-color)]">
+                                Pharmacy Bill Review
+                            </span>
+                            <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="px-4 md:px-6 py-3 md:py-4">
+                                <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed text-sm md:text-base">
+                                    Detailed analysis of pharmaceutical charges, medication appropriateness, and dosage verification against prescribed treatment plans.
+                                </p>
+                            </div>
                         </div>
+                    </div>
 
-                        <!-- Panel 3 -->
-                        <div id="panel-3" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-4">
-                            <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular">
-                                Assesses whether hospitalization duration matches standard recovery times for given
-                                diagnoses.
-                            </p>
-                        </div>
-
-                        <!-- Panel 4 -->
-                        <div id="panel-4" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-4">
-                            <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular">
-                                Cross-references all documents to identify discrepancies in diagnoses, treatments, or
-                                billed services.
-                            </p>
+                    <!-- Fourth Accordion Item -->
+                    <div>
+                        <button class="w-full px-4 md:px-6 py-3 md:py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group"
+                                onclick="toggleMedicalAccordion(this)">
+                            <span class="text-base md:text-lg font-medium text-[var(--primary-color)]">
+                                Lab Report Validation
+                            </span>
+                            <svg class="w-5 h-5 text-gray-500 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="px-4 md:px-6 py-3 md:py-4">
+                                <p class="text-[var(--primary-color)] poppins-extralight leading-relaxed text-sm md:text-base">
+                                    Verification of laboratory test results, cross-referencing with clinical indicators and ensuring diagnostic accuracy for proper treatment validation.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Advanced Fraud Detection Capabilities -->
+<section id="fraud-detection-section" class="bg-white py-8 md:py-12">
+    <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-20">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-2">
+            <!-- Title Column -->
+            <div class="lg:col-span-2 flex items-center justify-center lg:justify-start">
+                <h2 class="text-xl md:text-2xl text-[var(--primary-color)] hover:text-cyan-500 active:text-cyan-500 poppins-semibold mb-4 lg:mb-0">
+                    Advanced Fraud <br class="hidden lg:block"> Detection Capabilities
+                </h2>
+            </div>
+
+            <!-- Tabs Column -->
+            <div class="lg:col-span-3">
+                <!-- Tab Buttons Container - Horizontal scroll on mobile -->
+                <div class="flex overflow-x-auto pb-4 lg:pb-0 lg:overflow-visible gap-3 md:gap-4 lg:items-center lg:justify-center">
+                    <!-- Tab Button 1-->
+                    <div class="tab-button active rounded-lg shadow-md p-4 md:p-6 active:text-cyan-500 bg-white w-56 md:w-52 h-28 md:h-32 flex-shrink-0 flex items-center justify-center"
+                        data-tab-target="panel-1">
+                        <p class="text-sm md:text-base text-center text-[var(--primary-color)] poppins-medium">
+                            Unnecessary Medical Procedures
+                        </p>
+                    </div>
+
+                    <!-- Tab Button 2-->
+                    <div class="tab-button rounded-lg shadow-md p-4 md:p-6 bg-white w-56 md:w-52 h-28 md:h-32 flex-shrink-0 flex items-center justify-center"
+                        data-tab-target="panel-2">
+                        <p class="text-sm md:text-base text-center active:text-cyan-500 text-[var(--primary-color)] poppins-medium">
+                            Medication Abuse Detection
+                        </p>
+                    </div>
+
+                    <!-- Tab Button 3-->
+                    <div class="tab-button rounded-lg shadow-md p-4 md:p-6 bg-white w-56 md:w-52 h-28 md:h-32 flex-shrink-0 flex items-center justify-center"
+                        data-tab-target="panel-3">
+                        <p class="text-sm md:text-base text-center active:text-cyan-500 hover:text-cyan-500 text-[var(--primary-color)] poppins-medium">
+                            Length of Stay Optimization
+                        </p>
+                    </div>
+
+                    <!-- Tab Button 4 -->
+                    <div class="tab-button rounded-lg shadow-md p-4 md:p-6 bg-white w-56 md:w-52 h-28 md:h-32 flex-shrink-0 flex items-center justify-center"
+                        data-tab-target="panel-4">
+                        <p class="text-sm md:text-base text-center active:text-cyan-500 hover:text-cyan-500 text-[var(--primary-color)] poppins-medium">
+                            Medical Inconsistency Detection
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tab Panels Container -->
+                <div class="tab-panels-container mt-4 md:mt-5">
+                    <!-- Panel 1 -->
+                    <div id="panel-1"
+                        class="tab-panel active border shadow-md bg-white rounded-xl border-cyan-500 p-3 md:p-4">
+                        <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular text-sm md:text-base">
+                            Flags tests and treatments that don't align with patient diagnosis or standard care requirements.
+                        </p>
+                    </div>
+
+                    <!-- Panel 2-->
+                    <div id="panel-2" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-3 md:p-4">
+                        <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular text-sm md:text-base">
+                            Identifies when prescribed quantities exceed normal usage patterns for specific medical conditions.
+                        </p>
+                    </div>
+
+                    <!-- Panel 3 -->
+                    <div id="panel-3" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-3 md:p-4">
+                        <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular text-sm md:text-base">
+                            Assesses whether hospitalization duration matches standard recovery times for given diagnoses.
+                        </p>
+                    </div>
+
+                    <!-- Panel 4 -->
+                    <div id="panel-4" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-3 md:p-4">
+                        <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular text-sm md:text-base">
+                            Cross-references all documents to identify discrepancies in diagnoses, treatments, or billed services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Benefits for Health Insurers Section -->
 
     <section id="whole-bg">
-        <div class="container mx-auto px-20 py-12">
-            <div class="grid grid-cols-5 gap-8">
+        <div class="container mx-auto md:px-20 p-6 py-12">
+            <div class="grid md:grid-cols-5 grid-cols-1 gap-8">
                 <div class="col-span-2 flex items-center justify-center">
                     <h2
                         class="text-2xl hover:text-cyan-500 active:text-cyan-500 text-[var(--primary-color)] mb-4 poppins-semibold">
@@ -692,40 +680,38 @@
 
 
     <!-- Call to Action -->
-    <section id="call-to-action" class="mx-auto px-20 py-12">
-        <div class="flex flex-col lg:flex-row gap-16 items-center justify-center">
-            <!-- Content Section -->
-            <div class="flex-2 text-center lg:text-left">
-                <h1 class="uppercase teko-font text-5xl leading-tight">
-                    Transform Your Claims Management Today
-                </h1>
-                <p class="poppins-medium text-md leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                    Algorithm Health's Auto Adjudication System empowers health insurers with intelligent automation
-                    that safeguards resources while optimizing claims processing efficiency. Experience smarter, faster,
-                    and more cost-effective claims management that protects your bottom line and enhances operational
-                    excellence.
-                </p>
-            </div>
-
-            <!-- CTA Buttons Section -->
-            <div class="flex flex-col gap-4 items-center justify-start lg:items-end">
-                <div class="w-60">
-                    <div
-                        class="teko-font card w-full rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover:bg-[#4B4B4B] transition duration-300">
-                        Request a Demo
-                    </div>
-                </div>
-                <div class="w-60">
-                    <div
-                        class="teko-font card w-full rounded-md uppercase bg-[#222429] bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover:bg-[#4B4B4B] transition duration-300">
-                        Contact Our Team
-                    </div>
-                </div>
-            </div>
-
+<section id="call-to-action" class="mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-8 md:py-12">
+    <div class="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-center justify-center">
+        <!-- Content Section -->
+        <div class="flex-1 text-center lg:text-left">
+            <h1 class="uppercase teko-font text-3xl sm:text-4xl md:text-5xl leading-tight">
+                Transform Your Claims Management Today
+            </h1>
+            <p class="poppins-medium text-sm sm:text-base md:text-md leading-relaxed max-w-2xl mx-auto lg:mx-0 mt-4 md:mt-6">
+                Algorithm Health's Auto Adjudication System empowers health insurers with intelligent automation
+                that safeguards resources while optimizing claims processing efficiency. Experience smarter, faster,
+                and more cost-effective claims management that protects your bottom line and enhances operational
+                excellence.
+            </p>
         </div>
+
+        <!-- CTA Buttons Section -->
+        <div class="flex flex-col gap-3 sm:gap-4 w-full sm:w-auto items-center justify-start lg:items-end mt-6 lg:mt-0">
+            <div class="w-full sm:w-48 md:w-60">
+                <a href="#"
+                   class="block teko-font w-full rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg hover:bg-[#4B4B4B] transition duration-300 text-center">
+                    Request a Demo
+                </a>
+            </div>
+            <div class="w-full sm:w-48 md:w-60">
+                <a href="#"
+                   class="block teko-font w-full rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base md:text-lg hover:bg-[#4B4B4B] transition duration-300 text-center">
+                    Contact Our Team
+                </a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
     <!-- Footer -->
