@@ -45,173 +45,243 @@
         }
 
         /*  */
+ /* Original Timeline Styles (for desktop) */
+    .timeline-container {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 3px 1fr;
+        gap: 40px;
+        align-items: start;
+    }
 
+    .timeline-line {
+        position: relative;
+        width: 3px;
+        min-height: 800px;
+        background: linear-gradient(to bottom, #e5e7eb, #06b6d4, #e5e7eb);
+        justify-self: center;
+    }
+
+    .left-column {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-self: start;
+        padding-top: 60px;
+    }
+
+    .timeline-item {
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #06b6d4;
+        border: 4px solid white;
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px #e0f2fe;
+        z-index: 10;
+        transition: all 0.3s ease;
+        top: 25px;
+    }
+
+    .card-header {
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .timeline-item:hover .card-header {
+        box-shadow: 0 8px 30px rgba(6, 182, 212, 0.2);
+        border-color: #06b6d4;
+        transform: translateY(-2px);
+    }
+
+    .card-header img {
+        transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover .card-header img {
+        transform: scale(1.1);
+        filter: drop-shadow(0 5px 10px rgba(6, 182, 212, 0.3));
+    }
+
+    .content-area {
+        padding: 20px;
+        border-radius: 12px;
+        border-left: 4px solid #06b6d4;
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        max-width: 400px;
+    }
+
+    /* Arrow pointing to center line */
+    .content-area::after {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: -12px;
+        width: 0;
+        height: 0;
+        border: 12px solid transparent;
+        border-right-color: rgba(255, 255, 255, 0.9);
+        z-index: 11;
+    }
+
+    /* Positioning for different timeline items */
+    .timeline-item:nth-child(1) {
+        left: 0rem;
+    }
+
+    .timeline-item:nth-child(2) {
+        left: 5rem;
+    }
+
+    .timeline-item:nth-child(3) {
+        left: 8rem;
+    }
+
+    .timeline-item:nth-child(4) {
+        left: 5rem;
+    }
+
+    .timeline-item:nth-child(5) {
+        left: 0rem;
+    }
+
+    .timeline-item:nth-child(1) .timeline-dot,
+    .timeline-item:nth-child(5) .timeline-dot {
+        right: -52px;
+    }
+
+    .timeline-item:nth-child(2) .timeline-dot,
+    .timeline-item:nth-child(4) .timeline-dot {
+        right: 28px;
+    }
+
+    .timeline-item:nth-child(3) .timeline-dot {
+        right: 76px;
+    }
+
+    .timeline-item:nth-child(1):hover .timeline-dot,
+    .timeline-item:nth-child(5):hover .timeline-dot {
+        width: 28px;
+        height: 28px;
+        background: #0891b2;
+        box-shadow: 0 0 0 5px #06b6d4, 0 0 20px rgba(8, 145, 178, 0.5);
+        animation: pulse 2s infinite;
+        right: -56px;
+        top: 21px;
+    }
+
+    .timeline-item:nth-child(2):hover .timeline-dot,
+    .timeline-item:nth-child(4):hover .timeline-dot {
+        width: 28px;
+        height: 28px;
+        background: #0891b2;
+        box-shadow: 0 0 0 5px #06b6d4, 0 0 20px rgba(8, 145, 178, 0.5);
+        animation: pulse 2s infinite;
+        top: 21px;
+    }
+
+    .timeline-item:nth-child(3):hover .timeline-dot {
+        width: 28px;
+        height: 28px;
+        background: #0891b2;
+        box-shadow: 0 0 0 5px #06b6d4, 0 0 20px rgba(8, 145, 178, 0.5);
+        animation: pulse 2s infinite;
+        top: 21px;
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 5px #06b6d4, 0 0 20px rgba(8, 145, 178, 0.5);
+        }
+
+        50% {
+            box-shadow: 0 0 0 10px rgba(6, 182, 212, 0.4), 0 0 30px rgba(8, 145, 178, 0.7);
+        }
+
+        100% {
+            box-shadow: 0 0 0 5px #06b6d4, 0 0 20px rgba(8, 145, 178, 0.5);
+        }
+    }
+
+    /* Mobile Timeline Styles */
+    .mobile-timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .mobile-timeline-item {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-timeline-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px rgba(6, 182, 212, 0.1);
+    }
+
+    .mobile-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px;
+        background-color: #f8fafc;
+        border-bottom: 2px solid #e2e8f0;
+    }
+
+    .mobile-card-header img {
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-timeline-item:hover .mobile-card-header img {
+        transform: scale(1.1);
+    }
+
+    .mobile-content-area {
+        padding: 16px;
+        border-top: 3px solid #06b6d4;
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 768px) {
+        .mobile-timeline {
+            display: none;
+        }
+    }
+
+    @media (max-width: 767px) {
         .timeline-container {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 3px 1fr;
-            gap: 40px;
-            align-items: start;
+            display: none;
         }
-
-        .timeline-line {
-            position: relative;
-            width: 3px;
-            min-height: 800px;
-            background: linear-gradient(to bottom, #e5e7eb, #06b6d4, #e5e7eb);
-            justify-self: center;
-        }
-
-        .left-column {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        .right-column {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            justify-self: start;
-            padding-top: 60px;
-        }
-
-        .timeline-item {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: #06b6d4;
-            border: 4px solid white;
-            border-radius: 50%;
-            box-shadow: 0 0 0 3px #e0f2fe;
-            z-index: 10;
-            transition: all 0.3s ease;
-            top: 25px;
-        }
-
-        .card-header {
-            padding: 20px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .timeline-item:hover .card-header {
-            box-shadow: 0 8px 30px rgba(6, 182, 212, 0.2);
-            border-color: #06b6d4;
-            transform: translateY(-2px);
-        }
-
-        .card-header img {
-            transition: all 0.3s ease;
-        }
-
-        .timeline-item:hover .card-header img {
-            transform: scale(1.1);
-            filter: drop-shadow(0 5px 10px rgba(6, 182, 212, 0.3));
-        }
-
-        .content-area {
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 4px solid #06b6d4;
-            backdrop-filter: blur(10px);
-            opacity: 0;
-            transform: translateX(20px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            max-width: 400px;
-        }
-
-        /* Arrow pointing to center line */
-        .content-area::after {
-            content: '';
-            position: absolute;
-            top: 30px;
-            left: -12px;
-            width: 0;
-            height: 0;
-            border: 12px solid transparent;
-            border-right-color: rgba(255, 255, 255, 0.9);
-            z-index: 11;
-        }
-
-        /* Positioning for different timeline items */
-        .timeline-item:nth-child(1) {
-            left: 0rem;
-        }
-
-        .timeline-item:nth-child(2) {
-            left: 5rem;
-        }
-
-        .timeline-item:nth-child(3) {
-            left: 8rem;
-        }
-
-        .timeline-item:nth-child(4) {
-            left: 5rem;
-        }
-
-        .timeline-item:nth-child(5) {
-            left: 0rem;
-        }
-
-        .timeline-item:nth-child(1) .timeline-dot,
-        .timeline-item:nth-child(5) .timeline-dot {
-            right: -52px;
-        }
-
-        .timeline-item:nth-child(2) .timeline-dot,
-        .timeline-item:nth-child(4) .timeline-dot {
-            right: 28px;
-        }
-
-        .timeline-item:nth-child(3) .timeline-dot {
-            right: 76px;
-        }
-
-        .timeline-item:nth-child(1):hover .timeline-dot,
-        .timeline-item:nth-child(5):hover .timeline-dot {
-            width: 28px;
-            height: 28px;
-            background: #0891b2;
-            box-shadow: 0 0 0 5px #06b6d4, 0 0 20px rgba(8, 145, 178, 0.5);
-            animation: pulse 2s infinite;
-            right: -56px;
-            top: 21px;
-        }
-
-        .timeline-item:nth-child(2):hover .timeline-dot,
-        .timeline-item:nth-child(4):hover .timeline-dot {
-            width: 28px;
-            height: 28px;
-            background: #0891b2;
-            box-shadow: 0 0 0 5px #06b6d4, 0 0 20px rgba(8, 145, 178, 0.5);
-            animation: pulse 2s infinite;
-            top: 21px;
-        }
-
-        .timeline-item:nth-child(3):hover .timeline-dot {
-            width: 28px;
-            height: 28px;
-            background: #0891b2;
-            box-shadow: 0 0 0 5px #06b6d4, 0 0 20px rgba(8, 145, 178, 0.5);
-            animation: pulse 2s infinite;
-            top: 21px;
-        }
+    }
 
         @keyframes pulse {
             0% {
@@ -288,6 +358,44 @@
                 display: none;
             }
         }
+        
+        #call-to-action {
+    background-image: url('../assets/images/callout-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px; /* Default mobile height */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    #call-to-action {
+        height: 250px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #call-to-action {
+        height: 300px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #call-to-action {
+        height: 300px !important;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #call-to-action {
+        height: 300px !important;
+    }
+}
+
+        
     </style>
 
     <!-- Header -->
@@ -319,7 +427,7 @@
                                     <div class="font-medium">Care AI EMR</div>
                                 </a>
                                 <a href="./ai-driven-reports.html"
-                                    class="block px-4 py-3 text-sm hover:bg-gray-50 text-cyan-600 transition-colors">
+                                    class="block px-4 py-3 text-sm bg-gray-50 hover:text-cyan-600 transition-colors">
                                     <div class="font-medium">AI-Driven Intelligent Lab Reports</div>
                                 </a>
                                 <a href="./health-insurance.html"
@@ -352,383 +460,316 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <section id="solutions-banner" class="bg-cover relative bg-center h-64 flex items-center justify-center">
-        <div class="text-center text-white">
-            <div class="absolute play-icon top-[35%]  left-20">
-                <img src="../assets/images/play-icon.svg" alt="Solutions Banner Play Icon" width="100">
-            </div>
-            <h1 class="text-6xl font-bold">CodeSync AI</h1>
+                <!-- Page Banner -->
+<section id="solutions-banner" class="bg-cover relative bg-center h-48 md:h-64 flex items-center justify-center">
+    <div class="text-center text-white w-full">
+        <!-- Play Icon - hidden on mobile, visible on md+ screens -->
+        <div class="absolute play-icon top-[35%] left-4 md:left-20 hidden md:block">
+            <img src="../assets/images/play-icon.svg" alt="Solutions Banner Play Icon" class="w-16 md:w-24 lg:w-32">
         </div>
-        <div class="absolute bottom-[-30px] right-[7rem] p-4">
-            <a href="tel:+9144283600006" class="no-underline"><img src="../assets/images/call-icon-banner.svg"
-                    alt="Call Icon" width="300"></a> </button>
-        </div>
-        </div>
-    </section>
+        
+            <h1 class="text-4xl md:text-6xl font-bold">CodeSync AI</h1>    </div>
+    
+    <!-- Call Icon - adjusted for mobile -->
+    <div class="absolute bottom-[-20px] md:bottom-[-30px] right-4 md:right-[7rem] p-2 md:p-4">
+        <a href="tel:+9144283600006" class="no-underline">
+            <img src="../assets/images/call-icon-banner.svg" alt="Call Icon" class="w-40 md:w-64 lg:w-80">
+        </a>
+    </div>
+</section>
 
     <!-- Hero Section -->
-    <section id="codesync-hero" class="bg-white relative">
-        <!-- Gradient Overlay covering top 50% -->
-        <div class="absolute inset-0 h-1/2 w-full bg-[linear-gradient(to_right,_#C9F6FF_0%,_#FFFFFF_100%)] z-0"></div>
+<section id="codesync-hero" class="bg-white relative">
+    <!-- Gradient Overlay covering top 50% -->
+    <div class="absolute inset-0 h-1/2 w-full bg-[linear-gradient(to_right,_#C9F6FF_0%,_#FFFFFF_100%)] z-0"></div>
 
-        <div class="relative z-10 container mx-auto px-8 py-12">
-            <div class="flex mx-4 justify-center gap-8">
-                <img src="../assets/images/solutions/codesyc-hero.png" alt="Doctor in Hightech Lab" width="500">
-                <div class="flex flex-col justify-end items-center max-w-2xl gap-6">
-                    <!-- content 1 -->
-                    <div>
-                        <h2 class="poppins-semibold text-[var(--primary-color)] text-xl">
-                            Automated Medical Code Extraction & Mapping
-                        </h2>
-                        <p class="poppins-medium text-sm text-justify text-[var(--primary-color)]">
-                            Transform your revenue cycle management with Algorithm Health's intelligent solution for
-                            accurate,
-                            efficient medical coding and documentation processing.
-                        </p>
-                    </div>
-                    <!-- content 2 -->
-                    <div class="mt-4">
-                        <h2 class="poppins-semibold text-[var(--primary-color)] text-xl">
-                            Precision Coding for Maximum Reimbursement
-                        </h2>
-                        <p class="poppins-medium text-sm text-justify text-[var(--primary-color)]">
-                            CodeSync AI leverages advanced artificial intelligence to extract and validate medical codes
-                            from
-                            unstructured clinical documentation with unprecedented accuracy and speed. Our system
-                            seamlessly processes
-                            ICD, CPT, HCPCS, and other coding standards while integrating directly with your existing
-                            RCM workflows.
-                        </p>
-                    </div>
+    <div class="relative z-10 container mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12">
+        <div class="flex flex-col lg:flex-row justify-center gap-6 md:gap-8">
+            <!-- Image - order changes for mobile -->
+            <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+                <img src="../assets/images/solutions/codesyc-hero.png" 
+                     alt="Doctor in Hightech Lab" 
+                     class="w-full max-w-md lg:max-w-none lg:w-[500px] h-auto">
+            </div>
+
+            <!-- Content - order changes for mobile -->
+            <div class="order-1 lg:order-2 flex flex-col justify-end items-center lg:items-start max-w-2xl gap-4 md:gap-6">
+                <!-- content 1 -->
+                <div class="p-4 md:p-0 rounded-lg shadow-sm md:shadow-none md:bg-none">
+                    <h2 class="poppins-semibold text-[var(--primary-color)] text-lg md:text-xl">
+                        Automated Medical Code Extraction & Mapping
+                    </h2>
+                    <p class="poppins-medium text-xs md:text-sm text-justify text-[var(--primary-color)] mt-2">
+                        Transform your revenue cycle management with Algorithm Health's intelligent solution for
+                        accurate, efficient medical coding and documentation processing.
+                    </p>
+                </div>
+
+                <!-- content 2 -->
+                <div class="bg-white p-4 md:p-0 rounded-lg shadow-sm md:shadow-none mt-2 md:mt-4">
+                    <h2 class="poppins-semibold text-[var(--primary-color)] text-lg md:text-xl">
+                        Precision Coding for Maximum Reimbursement
+                    </h2>
+                    <p class="poppins-medium text-xs md:text-sm text-justify text-[var(--primary-color)] mt-2">
+                        CodeSync AI leverages advanced artificial intelligence to extract and validate medical codes
+                        from unstructured clinical documentation with unprecedented accuracy and speed. Our system
+                        seamlessly processes ICD, CPT, HCPCS, and other coding standards while integrating directly
+                        with your existing RCM workflows.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Dual-Direction Intelligence Section -->
 
-    <section id="whole-bg">
-        <div class="container mx-auto px-8 py-12">
-            <h2
-                class="text-3xl text-center hover:text-cyan-500 active:text-cyan-500 text-[var(--primary-color)] mb-4 poppins-semibold">
-                Dual-Direction Intelligence
-            </h2>
-            <div class="max-w-4xl  mx-auto">
-                <!-- Tab Navigation -->
-                <div class="flex bg-whitw items-center space-x-0 mb-8 teko-font">
-                    <button
-                        class="tab-button px-8 py-4 text-2xl uppercase tracking-wider rounded-l-md transition-all duration-300 tab-active text-white"
-                        data-tab="extraction">
-                        Document-to-Code Extraction
-                    </button>
-                    <button
-                        class="tab-button px-8 py-4 text-2xl uppercase tracking-wider transition-all duration-300 tab-inactive border-l border-gray-200"
-                        data-tab="mapping">
-                        Code-to-Clinical Mapping
-                    </button>
-                    <button
-                        class="tab-button px-8 py-4 text-2xl uppercase tracking-wider rounded-r-md transition-all duration-300 tab-inactive border-l border-gray-200"
-                        data-tab="learning">
-                        Continuous Learning
-                    </button>
+<section id="whole-bg">
+    <div class="container mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12">
+        <h2 class="text-2xl md:text-3xl text-center hover:text-cyan-500 active:text-cyan-500 text-[var(--primary-color)] mb-4 md:mb-6 poppins-semibold">
+            Dual-Direction Intelligence
+        </h2>
+        <div class="max-w-2xl mx-auto">
+            <!-- Tab Navigation -->
+            <div class="flex flex-col sm:flex-row bg-white items-stretch sm:items-center space-y-2 sm:space-y-0 sm:space-x-2 mb-6 md:mb-8 teko-font overflow-hidden rounded-md">
+                <button class="tab-button px-4 py-3 sm:px-6 sm:py-4 text-lg sm:text-xl md:text-2xl uppercase tracking-wider transition-all duration-300 tab-active text-white"
+                    data-tab="extraction">
+                    Document-to-Code
+                </button>
+                <button class="tab-button px-4 py-3 sm:px-6 sm:py-4 text-lg sm:text-xl md:text-2xl uppercase tracking-wider transition-all duration-300 tab-inactive sm:border-l border-gray-200"
+                    data-tab="mapping">
+                    Code-to-Clinical
+                </button>
+                <button class="tab-button px-4 py-3 sm:px-6 sm:py-4 text-lg sm:text-xl md:text-2xl uppercase tracking-wider transition-all duration-300 tab-inactive sm:border-l border-gray-200"
+                    data-tab="learning">
+                    Continuous Learning
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="p-4 sm:p-6 md:p-8">
+                <!-- Document Extraction Tab -->
+                <div id="extraction-content" class="tab-content">
+                    <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <img src="../assets/images/solutions/codesync-1.png" alt="File" class="w-8 sm:w-10">
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="text-base sm:text-lg md:text-xl rubik-font text-cyan-500 mb-2 sm:mb-4">
+                                Automatically identify and extract relevant ICD, CPT, and other medical codes from
+                                unstructured clinical notes, reports, and documentation
+                            </h2>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Tab Content -->
-                <div class="p-8">
-                    <!-- Document Extraction Tab -->
-                    <div id="extraction-content" class="tab-content">
-                        <div class="flex items-start space-x-6">
-                            <div class="flex-shrink-0">
-                                <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
-                                    <img src="../assets/images/solutions/codesync-1.png" alt="File" srcset="">
-                                </div>
-                            </div>
-                            <div>
-
-                                <h2 class="text-xl rubik-font text-cyan-500 mb-4">
-                                    Automatically identify and extract relevant ICD, CPT, and other medical codes from
-                                    unstructured clinical notes, reports, and documentation
-                                </h2>
-
+                <!-- Code Mapping Tab -->
+                <div id="mapping-content" class="tab-content hidden">
+                    <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <img src="../assets/images/solutions/codesync-2.png" alt="File" class="w-8 sm:w-10">
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Code Mapping Tab -->
-                    <div id="mapping-content" class="tab-content hidden">
-                        <div class="flex items-start space-x-6">
-                            <div class="flex-shrink-0">
-                                <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
-                                    <img src="../assets/images/solutions/codesync-2.png" alt="File" srcset="">
-                                </div>
-                            </div>
-                            <div>
-
-                                <h2 class="text-xl rubik-font text-cyan-500 mb-4">
-                                    Reverse-engineer from codes to extract relevant symptoms, signs, and clinical
-                                    indicators that support coding decisions
-                                </h2>
-
-                            </div>
+                        <div>
+                            <h2 class="text-base sm:text-lg md:text-xl rubik-font text-cyan-500 mb-2 sm:mb-4">
+                                Reverse-engineer from codes to extract relevant symptoms, signs, and clinical
+                                indicators that support coding decisions
+                            </h2>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Continuous Learning Tab -->
-                    <div id="learning-content" class="tab-content hidden">
-                        <div class="flex items-start space-x-6">
-                            <div class="flex-shrink-0">
-                                <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
-                                    <img src="../assets/images/solutions/codesync-3.png" alt="File" srcset="">
-                                </div>
+                <!-- Continuous Learning Tab -->
+                <div id="learning-content" class="tab-content hidden">
+                    <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <img src="../assets/images/solutions/codesync-3.png" alt="File" class="w-8 sm:w-10">
                             </div>
-                            <div>
-
-                                <h2 class="text-xl rubik-font text-cyan-500 mb-4">
-                                    System improves over time by adapting to your organization's documentation patterns
-                                    and coding preferences
-                                </h2>
-
-                            </div>
+                        </div>
+                        <div>
+                            <h2 class="text-base sm:text-lg md:text-xl rubik-font text-cyan-500 mb-2 sm:mb-4">
+                                System improves over time by adapting to your organization's documentation patterns
+                                and coding preferences
+                            </h2>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-    </section>
+    </div>
+</section>
 
     <!--  Transforming RCM Operations -->
 
-    <section id="transform-rcm" class="py-16">
-        <div class="container mx-auto px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl mb-4">
-                    <span class="poppins-semibold" style="color: var(--primary-color)">Transforming </span>
-                    <span class="poppins-regular text-cyan-500">RCM Operations</span>
-                </h2>
-            </div>
-
-            <div class="timeline-container" id="timeline">
-                <!-- Left Column - All Headings -->
-                <div class="left-column">
-                    <div class="timeline-item" data-item="1">
-                        <div class="timeline-dot"></div>
-                        <div class="card-header">
-                            <img src="../assets/images/solutions/transforming-rcm1.png"
-                                alt="Accelerated Processing Icon" width="50">
-                            <h3 class="poppins-medium text-xl" style="color: var(--primary-color)">Accelerated
-                                Processing</h3>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-item="2">
-                        <div class="timeline-dot"></div>
-                        <div class="card-header">
-                            <img src="../assets/images/solutions/transforming-rcm2.png" alt="Enhanced Accuracy Icon"
-                                width="50">
-                            <h3 class="poppins-medium text-xl" style="color: var(--primary-color)">Enhanced Accuracy
-                            </h3>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-item="3">
-                        <div class="timeline-dot"></div>
-                        <div class="card-header">
-                            <img src="../assets/images/solutions/transforming-rcm3.png" alt="Seamless Integration Icon"
-                                width="50">
-                            <h3 class="poppins-medium text-xl" style="color: var(--primary-color)">Seamless Integration
-                            </h3>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-item="4">
-                        <div class="timeline-dot"></div>
-                        <div class="card-header">
-                            <img src="../assets/images/solutions/transforming-rcm4.png" alt="Rapid Implementation Icon"
-                                width="50">
-                            <h3 class="poppins-medium text-xl" style="color: var(--primary-color)">Rapid Implementation
-                            </h3>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-item="5">
-                        <div class="timeline-dot"></div>
-                        <div class="card-header">
-                            <img src="../assets/images/solutions/transforming-rcm5.png" alt="Significant ROI Icon"
-                                width="50">
-                            <h3 class="poppins-medium text-xl" style="color: var(--primary-color)">Significant ROI</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Timeline Line -->
-                <div class="timeline-line"></div>
-
-                <!-- Right Column - All Content -->
-                <div class="right-column">
-                    <div class="timeline-item" data-content="1">
-                        <div class="content-area">
-                            <p class="poppins-regular text-md text-cyan-600">Reduce claim processing time by up to 80%
-                                through intelligent automation</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-content="2">
-                        <div class="content-area">
-                            <p class="poppins-regular text-md text-cyan-600">Minimize coding errors and maximize
-                                appropriate reimbursement</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-content="3">
-                        <div class="content-area">
-                            <p class="poppins-regular text-md text-cyan-600">Works within your existing RCM systems with
-                                minimal disruption</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-content="4">
-                        <div class="content-area">
-                            <p class="poppins-regular text-md text-cyan-600">Quick deployment with no extensive
-                                retraining required</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item" data-content="5">
-                        <div class="content-area">
-                            <p class="poppins-regular text-md text-cyan-600">Achieve measurable returns on investment
-                                with improved efficiency and reduced operational costs</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
 
     <!-- How It Works Section -->
 
-    <section id="whole-bg" class="py-16">
-        <div class="container mx-auto px-8">
-            <!-- How It Works Part -->
-            <div class="text-center mb-16 px-8">
-                <h2 class="text-3xl mb-4">
-                    <span class="poppins-regular text-cyan-500">How It Works</span>
-                </h2>
-                <p class="poppins-medium text-xl text-center text-[var(--primary-color)]">Our AI technology analyzes
-                    clinical documentation in real-time, identifying relevant medical conditions, procedures, and
-                    services. The system then matches these findings to the appropriate codes according to current
-                    standards and guidelines. Simultaneously, it can work in reverse—starting with codes and extracting
-                    the necessary clinical evidence to support claims.</p>
+    <section id="transform-rcm" class="py-16">
+    <div class="container mx-auto px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl mb-4">
+                <span class="poppins-semibold" style="color: var(--primary-color)">Transforming </span>
+                <span class="poppins-regular text-cyan-500">RCM Operations</span>
+            </h2>
+        </div>
+
+        <!-- Desktop/Laptop Timeline (hidden on mobile) -->
+        <div class="timeline-container hidden md:block" id="timeline">
+            <!-- Left Column - All Headings -->
+            <div class="left-column">
+                <div class="timeline-item" data-item="1">
+                    <div class="timeline-dot"></div>
+                    <div class="card-header">
+                        <img src="../assets/images/solutions/transforming-rcm1.png" alt="Accelerated Processing Icon" width="50">
+                        <h3 class="poppins-medium text-xl" style="color: var(--primary-color)">Accelerated Processing</h3>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-item="2">
+                    <div class="timeline-dot"></div>
+                    <div class="card-header">
+                        <img src="../assets/images/solutions/transforming-rcm2.png" alt="Enhanced Accuracy Icon" width="50">
+                        <h3 class="poppins-medium text-xl" style="color: var(--primary-color)">Enhanced Accuracy</h3>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-item="3">
+                    <div class="timeline-dot"></div>
+                    <div class="card-header">
+                        <img src="../assets/images/solutions/transforming-rcm3.png" alt="Seamless Integration Icon" width="50">
+                        <h3 class="poppins-medium text-xl" style="color: var(--primary-color)">Seamless Integration</h3>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-item="4">
+                    <div class="timeline-dot"></div>
+                    <div class="card-header">
+                        <img src="../assets/images/solutions/transforming-rcm4.png" alt="Rapid Implementation Icon" width="50">
+                        <h3 class="poppins-medium text-xl" style="color: var(--primary-color)">Rapid Implementation</h3>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-item="5">
+                    <div class="timeline-dot"></div>
+                    <div class="card-header">
+                        <img src="../assets/images/solutions/transforming-rcm5.png" alt="Significant ROI Icon" width="50">
+                        <h3 class="poppins-medium text-xl" style="color: var(--primary-color)">Significant ROI</h3>
+                    </div>
+                </div>
             </div>
 
-            <!-- Enterprise-Ready Solution Part -->
-            <div class="flex justify-center">
-                <div class="flex flex-col gap-4">
-                             <h2 class="text-3xl mb-4 text-center">
-                    <span class="poppins-regular text-cyan-500">Enterprise-Ready Solution</span>
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-8 mx-auto px-4 max-w-4xl">
-                    <div
-                        class="group bg-white hover:bg-[#00BCE0] rounded-md hover:shadow-md p-6 transition-colors duration-300">
-                        <div class="flex items-center justify-between">
-                            <h2
-                                class="teko-font text-2xl uppercase group-hover:text-white transition-colors duration-300">
-                                Scalable Architecture
-                            </h2>
-                            <svg width="100" height="100" viewBox="0 0 68 58" xmlns="http://www.w3.org/2000/svg"
-                                class="text-[#00BCE0] group-hover:text-black transition-colors duration-300">
-                                <path
-                                    d="M36.9883 57.3125C36.6784 57.3125 36.4349 57.2188 36.2578 57.0312C36.0807 56.8438 35.9922 56.625 35.9922 56.375V53.875C35.9922 53.7083 35.9258 53.5625 35.793 53.4375C35.6602 53.3125 35.4831 53.25 35.2617 53.25H32.6055C32.3841 53.25 32.207 53.3125 32.0742 53.4375C31.9414 53.5625 31.875 53.7083 31.875 53.875V56.375C31.875 56.625 31.7865 56.8438 31.6094 57.0312C31.4323 57.2188 31.1888 57.3125 30.8789 57.3125C30.6133 57.3125 30.3809 57.2188 30.1816 57.0312C29.9824 56.8438 29.8828 56.625 29.8828 56.375V53.875C29.8828 53.1667 30.1484 52.5625 30.6797 52.0625C31.2109 51.5625 31.8529 51.3125 32.6055 51.3125H35.2617C36.0143 51.3125 36.6562 51.5625 37.1875 52.0625C37.7188 52.5625 37.9844 53.1667 37.9844 53.875V56.375C37.9844 56.625 37.8848 56.8438 37.6855 57.0312C37.4863 57.2188 37.2539 57.3125 36.9883 57.3125ZM43.5625 22.875L48.543 29.1875C49.0742 29.8958 49.3288 30.7083 49.3066 31.625C49.2845 32.5417 48.9635 33.3333 48.3438 34L43.8945 38.75C44.4258 39 44.8685 39.375 45.2227 39.875C45.5768 40.375 45.7539 40.9375 45.7539 41.5625V46.0625C45.7539 46.7292 45.5547 47.3229 45.1562 47.8438C44.7578 48.3646 44.2487 48.7292 43.6289 48.9375L43.2969 56.4375C43.2969 56.6875 43.1973 56.8958 42.998 57.0625C42.7988 57.2292 42.5664 57.3125 42.3008 57.3125C42.0352 57.3125 41.8027 57.2188 41.6035 57.0312C41.4043 56.8438 41.3047 56.6042 41.3047 56.3125L41.5703 49.125H26.4297L26.6953 56.3125C26.6953 56.6042 26.5957 56.8438 26.3965 57.0312C26.1973 57.2188 25.9648 57.3125 25.6992 57.3125C25.4336 57.3125 25.2012 57.2292 25.002 57.0625C24.8027 56.8958 24.7031 56.6875 24.7031 56.4375L24.4375 49C23.7734 48.7917 23.2201 48.4167 22.7773 47.875C22.3346 47.3333 22.1133 46.7292 22.1133 46.0625V41.5625C22.1133 40.9375 22.2904 40.375 22.6445 39.875C22.9987 39.375 23.4414 39 23.9727 38.75L19.5234 34C18.9036 33.3333 18.5827 32.5417 18.5605 31.625C18.5384 30.7083 18.793 29.8958 19.3242 29.1875L31.1445 14.1875C31.4987 13.7292 31.9193 13.3854 32.4062 13.1562C32.8932 12.9271 33.4023 12.8125 33.9336 12.8125C34.4648 12.8125 34.974 12.9271 35.4609 13.1562C35.9479 13.3854 36.3685 13.7292 36.7227 14.1875L40.9727 19.625C41.1497 19.8333 41.2161 20.0625 41.1719 20.3125C41.1276 20.5625 40.9948 20.7708 40.7734 20.9375C40.5521 21.1042 40.3086 21.1667 40.043 21.125C39.7773 21.0833 39.556 20.9583 39.3789 20.75L37.1875 17.9375V25.0625C37.763 25.4792 38.2168 26.0104 38.5488 26.6562C38.8809 27.3021 39.0469 28 39.0469 28.75C39.0469 30.0417 38.5488 31.1562 37.5527 32.0938C36.5566 33.0312 35.3503 33.5 33.9336 33.5C32.5169 33.5 31.3105 33.0312 30.3145 32.0938C29.3184 31.1562 28.8203 30.0417 28.8203 28.75C28.8203 28 28.9974 27.2917 29.3516 26.625C29.7057 25.9583 30.1927 25.3958 30.8125 24.9375V17.8125L20.918 30.3125C20.6523 30.6875 20.5306 31.1042 20.5527 31.5625C20.5749 32.0208 20.7409 32.4167 21.0508 32.75L26.3633 38.5H41.4375L46.8164 32.75C47.1263 32.4167 47.2923 32.0208 47.3145 31.5625C47.3366 31.1042 47.1927 30.6875 46.8828 30.3125L41.9688 24C41.7917 23.7917 41.7253 23.5625 41.7695 23.3125C41.8138 23.0625 41.9466 22.8542 42.168 22.6875C42.3893 22.5208 42.6328 22.4583 42.8984 22.5C43.1641 22.5417 43.3854 22.6667 43.5625 22.875ZM33.9336 14.6875C33.7122 14.6875 33.513 14.7396 33.3359 14.8438C33.1589 14.9479 32.9818 15.0833 32.8047 15.25V25.4375C32.8047 25.6042 32.7604 25.7604 32.6719 25.9062C32.5833 26.0521 32.4727 26.1667 32.3398 26.25C31.8529 26.5 31.4766 26.8438 31.2109 27.2812C30.9453 27.7188 30.8125 28.2083 30.8125 28.75C30.8125 29.5417 31.1224 30.2188 31.7422 30.7812C32.362 31.3438 33.0924 31.625 33.9336 31.625C34.7747 31.625 35.5052 31.3438 36.125 30.7812C36.7448 30.2188 37.0547 29.5417 37.0547 28.75C37.0547 28.25 36.9219 27.7812 36.6562 27.3438C36.3906 26.9062 36.0586 26.5625 35.6602 26.3125C35.4831 26.2292 35.3613 26.1146 35.2949 25.9688C35.2285 25.8229 35.1953 25.6667 35.1953 25.5V15.4375L35.0625 15.3125C34.9297 15.1042 34.7637 14.9479 34.5645 14.8438C34.3652 14.7396 34.1549 14.6875 33.9336 14.6875ZM43.7617 46.0625V41.5625C43.7617 41.2292 43.64 40.9479 43.3965 40.7188C43.153 40.4896 42.8542 40.375 42.5 40.375H25.3672C25.013 40.375 24.7142 40.4896 24.4707 40.7188C24.2272 40.9479 24.1055 41.2292 24.1055 41.5625V46.0625C24.1055 46.3958 24.2272 46.6771 24.4707 46.9062C24.7142 47.1354 25.013 47.25 25.3672 47.25H42.5C42.8542 47.25 43.153 47.1354 43.3965 46.9062C43.64 46.6771 43.7617 46.3958 43.7617 46.0625ZM14.0117 23.1875C14.8529 23.3958 15.5612 23.8333 16.1367 24.5C16.7122 25.1667 17 25.9375 17 26.8125C17 27.8542 16.6126 28.7396 15.8379 29.4688C15.0632 30.1979 14.1224 30.5625 13.0156 30.5625C11.9089 30.5625 10.9681 30.1979 10.1934 29.4688C9.41862 28.7396 9.03125 27.8542 9.03125 26.8125C9.03125 25.9375 9.30794 25.1667 9.86133 24.5C10.4147 23.8333 11.1341 23.3958 12.0195 23.1875C12.0638 21.5208 12.3294 19.8854 12.8164 18.2812C13.3034 16.6771 13.9896 15.1667 14.875 13.75C15.0078 13.5417 15.207 13.3958 15.4727 13.3125C15.7383 13.2292 15.9818 13.25 16.2031 13.375C16.4688 13.5 16.6348 13.6875 16.7012 13.9375C16.7676 14.1875 16.7344 14.4375 16.6016 14.6875C15.8047 15.9792 15.196 17.3438 14.7754 18.7812C14.3548 20.2188 14.1003 21.6875 14.0117 23.1875ZM13.0156 28.6875C13.5469 28.6875 14.0117 28.5 14.4102 28.125C14.8086 27.75 15.0078 27.3125 15.0078 26.8125C15.0078 26.3125 14.8086 25.875 14.4102 25.5C14.0117 25.125 13.5469 24.9375 13.0156 24.9375C12.4401 24.9375 11.9642 25.125 11.5879 25.5C11.2116 25.875 11.0234 26.3125 11.0234 26.8125C11.0234 27.3125 11.2116 27.75 11.5879 28.125C11.9642 28.5 12.4401 28.6875 13.0156 28.6875ZM65.875 0.6875C66.4505 0.6875 66.9486 0.885417 67.3691 1.28125C67.7897 1.67708 68 2.14583 68 2.6875V5.6875C68 6.22917 67.7897 6.69792 67.3691 7.09375C66.9486 7.48958 66.4505 7.6875 65.875 7.6875H62.6875C62.0677 7.6875 61.5586 7.48958 61.1602 7.09375C60.7617 6.69792 60.5625 6.22917 60.5625 5.6875V5.125H43.1641C45.0234 5.91667 46.7057 6.9375 48.2109 8.1875C49.7604 9.4375 51.0996 10.8333 52.2285 12.375C53.3574 13.9167 54.2539 15.6042 54.918 17.4375C55.5378 19.2708 55.8919 21.1875 55.9805 23.1875C56.8659 23.3958 57.5853 23.8333 58.1387 24.5C58.6921 25.1667 58.9688 25.9375 58.9688 26.8125C58.9688 27.8542 58.5814 28.7396 57.8066 29.4688C57.0319 30.1979 56.0911 30.5625 54.9844 30.5625C53.8776 30.5625 52.9368 30.1979 52.1621 29.4688C51.3874 28.7396 51 27.8542 51 26.8125C51 25.9375 51.2878 25.1667 51.8633 24.5C52.4388 23.8333 53.1471 23.3958 53.9883 23.1875C53.8997 20.9792 53.4128 18.8958 52.5273 16.9375C51.6862 14.9792 50.5462 13.2188 49.1074 11.6562C47.6686 10.0938 45.9753 8.77083 44.0273 7.6875C42.0794 6.60417 39.9766 5.85417 37.7188 5.4375V5.6875C37.7188 6.22917 37.5085 6.69792 37.0879 7.09375C36.6673 7.48958 36.1693 7.6875 35.5938 7.6875H32.4062C31.8307 7.6875 31.3327 7.48958 30.9121 7.09375C30.4915 6.69792 30.2812 6.22917 30.2812 5.6875V5.4375C28.112 5.85417 26.0534 6.57292 24.1055 7.59375C22.1576 8.61458 20.4531 9.91667 18.9922 11.5C18.9036 11.625 18.793 11.7188 18.6602 11.7812C18.5273 11.8438 18.3945 11.875 18.2617 11.875C18.1289 11.875 18.0072 11.8542 17.8965 11.8125C17.7858 11.7708 17.6862 11.7083 17.5977 11.625C17.3763 11.4583 17.2546 11.2396 17.2324 10.9688C17.2103 10.6979 17.2878 10.4583 17.4648 10.25C18.4831 9.16667 19.612 8.19792 20.8516 7.34375C22.0911 6.48958 23.4193 5.75 24.8359 5.125H7.4375V5.6875C7.4375 6.22917 7.23828 6.69792 6.83984 7.09375C6.44141 7.48958 5.93229 7.6875 5.3125 7.6875H2.125C1.54948 7.6875 1.05143 7.48958 0.630859 7.09375C0.210286 6.69792 0 6.22917 0 5.6875V2.6875C0 2.14583 0.210286 1.67708 0.630859 1.28125C1.05143 0.885417 1.54948 0.6875 2.125 0.6875H5.3125C5.93229 0.6875 6.44141 0.885417 6.83984 1.28125C7.23828 1.67708 7.4375 2.14583 7.4375 2.6875V3.25H30.2812V2.6875C30.2812 2.14583 30.4915 1.67708 30.9121 1.28125C31.3327 0.885417 31.8307 0.6875 32.4062 0.6875H35.5938C36.1693 0.6875 36.6673 0.885417 37.0879 1.28125C37.5085 1.67708 37.7188 2.14583 37.7188 2.6875V3.25H60.5625V2.6875C60.5625 2.14583 60.7617 1.67708 61.1602 1.28125C61.5586 0.885417 62.0677 0.6875 62.6875 0.6875H65.875ZM5.44531 5.6875V2.6875C5.44531 2.64583 5.43424 2.61458 5.41211 2.59375C5.38997 2.57292 5.35677 2.5625 5.3125 2.5625H2.125C2.08073 2.5625 2.04753 2.57292 2.02539 2.59375C2.00326 2.61458 1.99219 2.64583 1.99219 2.6875V5.6875C1.99219 5.72917 2.00326 5.76042 2.02539 5.78125C2.04753 5.80208 2.08073 5.8125 2.125 5.8125H5.3125C5.35677 5.8125 5.38997 5.80208 5.41211 5.78125C5.43424 5.76042 5.44531 5.72917 5.44531 5.6875ZM56.9766 26.8125C56.9766 26.3125 56.7884 25.875 56.4121 25.5C56.0358 25.125 55.5599 24.9375 54.9844 24.9375C54.4531 24.9375 53.9883 25.125 53.5898 25.5C53.1914 25.875 52.9922 26.3125 52.9922 26.8125C52.9922 27.3125 53.1914 27.75 53.5898 28.125C53.9883 28.5 54.4531 28.6875 54.9844 28.6875C55.5599 28.6875 56.0358 28.5 56.4121 28.125C56.7884 27.75 56.9766 27.3125 56.9766 26.8125ZM35.7266 5.6875V2.6875C35.7266 2.64583 35.7155 2.61458 35.6934 2.59375C35.6712 2.57292 35.638 2.5625 35.5938 2.5625H32.4062C32.362 2.5625 32.3288 2.57292 32.3066 2.59375C32.2845 2.61458 32.2734 2.64583 32.2734 2.6875V5.6875C32.2734 5.72917 32.2845 5.76042 32.3066 5.78125C32.3288 5.80208 32.362 5.8125 32.4062 5.8125H35.5938C35.638 5.8125 35.6712 5.80208 35.6934 5.78125C35.7155 5.76042 35.7266 5.72917 35.7266 5.6875ZM66.0078 5.6875V2.6875C66.0078 2.64583 65.9967 2.61458 65.9746 2.59375C65.9525 2.57292 65.9193 2.5625 65.875 2.5625H62.6875C62.6432 2.5625 62.61 2.57292 62.5879 2.59375C62.5658 2.61458 62.5547 2.64583 62.5547 2.6875V5.6875C62.5547 5.72917 62.5658 5.76042 62.5879 5.78125C62.61 5.80208 62.6432 5.8125 62.6875 5.8125H65.875C65.9193 5.8125 65.9525 5.80208 65.9746 5.78125C65.9967 5.76042 66.0078 5.72917 66.0078 5.6875Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </div>
-                        <p
-                            class="rubik-font text-sm text-[#686A6F] group-hover:text-black transition-colors duration-300">
-                            Process thousands of documents daily with consistent performance
-                        </p>
-                    </div>
-                    <div
-                        class="group bg-white hover:bg-[#00BCE0] rounded-md  hover:shadow-md p-6 transition-colors duration-300">
-                        <div class="flex items-center justify-between">
-                            <h2
-                                class="teko-font text-2xl uppercase group-hover:text-white transition-colors duration-300">
-                                Audit<br>Support
-                            </h2>
-                            <svg width="50" height="50" viewBox="0 0 64 65"
-                                class="text-[#00BCE0] group-hover:text-black transition-colors duration-300" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M59.8125 9.5L64 13.9375V50.3125L59.75 54.5625H40.25V57.25H47.75L50.9375 61.375V64.5H43.25V62.625H49.0625V62L46.8125 59.125H17.1875L14.9375 62V62.625H41.375V64.5H13.0625V61.375L16.25 57.25H23.75V54.5625H4.25L0 50.3125V13.9375L4.1875 9.5H8.375V11.375H5L3.125 13.375H22.6875C22.7292 13.0417 22.8021 12.7083 22.9062 12.375C23.0104 12.0417 23.1042 11.7083 23.1875 11.375H10.25V9.5H23.9375C25.2292 6.83333 27.1458 4.66667 29.6875 3C32.2292 1.33333 35.0833 0.5 38.25 0.5C41.375 0.5 44.2188 1.33333 46.7812 3C49.3438 4.66667 51.2708 6.83333 52.5625 9.5H59.8125ZM59 11.375H53.3125C53.3958 11.7083 53.4792 12.0417 53.5625 12.375C53.6458 12.7083 53.7292 13.0417 53.8125 13.375H60.875L59 11.375ZM32.0625 3.8125C30.6875 4.52083 29.4583 5.41667 28.375 6.5C27.2917 7.58333 26.4167 8.79167 25.75 10.125L27.125 10.75L26.375 12.4375L25 11.875C24.75 12.5833 24.5625 13.3125 24.4375 14.0625C24.3125 14.8125 24.25 15.5833 24.25 16.375C24.25 17.125 24.3125 17.875 24.4375 18.625C24.5625 19.375 24.75 20.1042 25 20.8125L26.375 20.25L27.125 22L25.75 22.5625C26.4167 23.9375 27.2917 25.1667 28.375 26.25C29.4583 27.3333 30.6875 28.2083 32.0625 28.875L32.625 27.5L34.375 28.1875L33.75 29.5625C34.4583 29.8125 35.1875 30 35.9375 30.125C36.6875 30.25 37.4583 30.3125 38.25 30.3125C39.0417 30.3125 39.8125 30.25 40.5625 30.125C41.3125 30 42.0208 29.8125 42.6875 29.5625L42.125 28.1875L43.875 27.5L44.4375 28.875C45.8125 28.2083 47.0417 27.3333 48.125 26.25C49.2083 25.1667 50.0833 23.9375 50.75 22.5625L49.375 22L50.125 20.25L51.5 20.8125C51.75 20.1042 51.9375 19.375 52.0625 18.625C52.1875 17.875 52.25 17.125 52.25 16.375C52.25 15.5833 52.1875 14.8125 52.0625 14.0625C51.9375 13.3125 51.75 12.5833 51.5 11.875L50.125 12.4375L49.375 10.75L50.75 10.125C50.0833 8.79167 49.2083 7.58333 48.125 6.5C47.0417 5.41667 45.8125 4.52083 44.4375 3.8125L43.875 5.1875L42.125 4.5L42.6875 3.125C42.0208 2.875 41.3125 2.6875 40.5625 2.5625C39.8125 2.4375 39.0417 2.375 38.25 2.375C37.4583 2.375 36.6875 2.4375 35.9375 2.5625C35.1875 2.6875 34.4583 2.875 33.75 3.125L34.375 4.5L32.625 5.1875L32.0625 3.8125ZM38.25 32.1875C36.625 32.1875 35.0625 31.9583 33.5625 31.5C32.0625 31.0417 30.6875 30.375 29.4375 29.5H21.75V34.125H54.75V29.5H47.0625C45.8125 30.375 44.4375 31.0417 42.9375 31.5C41.4375 31.9583 39.875 32.1875 38.25 32.1875ZM27.125 27.625C25.6667 26.2083 24.5104 24.5312 23.6562 22.5938C22.8021 20.6562 22.375 18.5833 22.375 16.375C22.375 16.1667 22.3854 15.9688 22.4062 15.7812C22.4271 15.5938 22.4375 15.4167 22.4375 15.25H1.875V48.9375H62.125V15.25H54.0625C54.0625 15.4167 54.0729 15.5938 54.0938 15.7812C54.1146 15.9688 54.125 16.1667 54.125 16.375C54.125 18.5833 53.6979 20.6562 52.8438 22.5938C51.9896 24.5312 50.8333 26.2083 49.375 27.625H56.625V36H19.875V27.625H27.125ZM38.375 57.25V54.5625H25.625V57.25H38.375ZM59 52.6875L60.8125 50.8125H3.1875L5 52.6875H59ZM38.25 21.1875C38.7917 21.1875 39.25 21 39.625 20.625C40 20.25 40.1875 19.7917 40.1875 19.25C40.1875 18.7083 40 18.25 39.625 17.875C39.25 17.5 38.7917 17.3125 38.25 17.3125C37.2083 17.3125 36.3125 16.9375 35.5625 16.1875C34.8125 15.4375 34.4375 14.5208 34.4375 13.4375C34.4375 12.5625 34.7083 11.7812 35.25 11.0938C35.7917 10.4062 36.4792 9.95833 37.3125 9.75V7.0625H39.1875V9.75C40.0208 9.95833 40.7083 10.4062 41.25 11.0938C41.7917 11.7812 42.0625 12.5625 42.0625 13.4375H40.1875C40.1875 12.9375 40 12.4896 39.625 12.0938C39.25 11.6979 38.7917 11.5 38.25 11.5C37.7083 11.5 37.25 11.6979 36.875 12.0938C36.5 12.4896 36.3125 12.9375 36.3125 13.4375C36.3125 13.9792 36.5 14.4479 36.875 14.8438C37.25 15.2396 37.7083 15.4375 38.25 15.4375C39.2917 15.4375 40.1875 15.8021 40.9375 16.5312C41.6875 17.2604 42.0625 18.1667 42.0625 19.25C42.0625 20.125 41.7917 20.9062 41.25 21.5938C40.7083 22.2812 40.0208 22.7292 39.1875 22.9375V25.625H37.3125V22.9375C36.4792 22.7292 35.7917 22.2812 35.25 21.5938C34.7083 20.9062 34.4375 20.125 34.4375 19.25H36.3125C36.3125 19.7917 36.5 20.25 36.875 20.625C37.25 21 37.7083 21.1875 38.25 21.1875ZM13.9375 41.5625V27.625H15.8125V43.4375H6.4375V36.3125H8.3125V41.5625H10.1875V32.875H12.0625V41.5625H13.9375ZM19.875 37.875H52.875V39.75H19.875V37.875ZM54.75 37.875H56.625V39.75H54.75V37.875ZM54.75 41.5625H56.625V43.4375H54.75V41.5625ZM19.875 41.5625H52.875V43.4375H19.875V41.5625ZM14.0625 17.125H15.9375V19H14.0625V17.125ZM17.8125 17.125H19.6875V19H17.8125V17.125ZM12.1875 17.125V19H5.625V25.5625H3.75V17.125H12.1875ZM29.75 15.4375H31.625V17.3125H29.75V15.4375ZM44.875 15.4375H46.75V17.3125H44.875V15.4375Z"
-                                    fill="currentColor" />
-                            </svg>
+            <!-- Timeline Line -->
+            <div class="timeline-line"></div>
 
-                        </div>
-                        <p
-                            class="rubik-font text-sm text-[#686A6F] group-hover:text-black mt-6 transition-colors duration-300">
-                            Maintains detailed audit trails and evidence for coding decisions </p>
+            <!-- Right Column - All Content -->
+            <div class="right-column">
+                <div class="timeline-item" data-content="1">
+                    <div class="content-area">
+                        <p class="poppins-regular text-md text-cyan-600">Reduce claim processing time by up to 80% through intelligent automation</p>
                     </div>
-
-                    <div
-                        class="group bg-white hover:bg-[#00BCE0] rounded-md hover:shadow-md p-6 transition-colors duration-300">
-                        <div class="flex items-center justify-between">
-                            <h2
-                                class="teko-font text-2xl uppercase group-hover:text-white transition-colors duration-300">
-                                Compliance
-                                Focused
-                            </h2>
-                            <svg width="60" height="64" viewBox="0 0 60 64" fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="text-[#00BCE0] group-hover:text-black transition-colors duration-300">
-                                <path
-                                    d="M58 34C58.5417 34 59.0104 34.1979 59.4062 34.5938C59.8021 34.9896 60 35.4583 60 36V38C60 38.5417 59.8021 39.0104 59.4062 39.4062C59.0104 39.8021 58.5417 40 58 40H57V62C57 62.5417 56.8021 63.0104 56.4062 63.4062C56.0104 63.8021 55.5417 64 55 64H5C4.45833 64 3.98958 63.8021 3.59375 63.4062C3.19792 63.0104 3 62.5417 3 62V40H2C1.45833 40 0.989583 39.8021 0.59375 39.4062C0.197917 39.0104 0 38.5417 0 38V36C0 35.4583 0.197917 34.9896 0.59375 34.5938C0.989583 34.1979 1.45833 34 2 34H3V32C3 31.4583 3.19792 30.9896 3.59375 30.5938C3.98958 30.1979 4.45833 30 5 30H17.5L21.6875 26.25C21.7708 26.1667 21.875 26.1042 22 26.0625C22.125 26.0208 22.25 26 22.375 26H37.625C37.75 26 37.875 26.0208 38 26.0625C38.125 26.1042 38.2292 26.1667 38.3125 26.25L42.1875 30H55C55.5417 30 56.0104 30.1979 56.4062 30.5938C56.8021 30.9896 57 31.4583 57 32V34H58ZM3 38V36H2V38H3ZM55 60H40V58H55V39V36H40V34H55V32H41.8125C41.6875 32 41.5625 31.9792 41.4375 31.9375C41.3125 31.8958 41.2083 31.8333 41.125 31.75L37.25 28H22.75L18.5625 31.75C18.4792 31.8333 18.375 31.8958 18.25 31.9375C18.125 31.9792 18 32 17.875 32H5V34H20V36H5V58H20V60H5V62H55V60ZM57 38H58V36H57V38ZM30 34C31.7917 34 33.4792 34.3333 35.0625 35C36.6458 35.7083 38.0208 36.6458 39.1875 37.8125C40.3542 38.9792 41.2917 40.3542 42 41.9375C42.6667 43.5208 43 45.2083 43 47C43 48.7917 42.6667 50.4792 42 52.0625C41.2917 53.6458 40.3542 55.0208 39.1875 56.1875C38.0208 57.3542 36.6458 58.2917 35.0625 59C33.4792 59.6667 31.7917 60 30 60C28.2083 60 26.5208 59.6667 24.9375 59C23.3542 58.2917 21.9792 57.3542 20.8125 56.1875C19.6458 55.0208 18.7083 53.6458 18 52.0625C17.3333 50.4792 17 48.7917 17 47C17 45.2083 17.3333 43.5208 18 41.9375C18.7083 40.3542 19.6458 38.9792 20.8125 37.8125C21.9792 36.6458 23.3542 35.7083 24.9375 35C26.5208 34.3333 28.2083 34 30 34ZM30 58C33.0417 58 35.6354 56.9271 37.7812 54.7812C39.9271 52.6354 41 50.0417 41 47C41 43.9583 39.9271 41.3646 37.7812 39.2188C35.6354 37.0729 33.0417 36 30 36C26.9583 36 24.3646 37.0729 22.2188 39.2188C20.0729 41.3646 19 43.9583 19 47C19 50.0417 20.0729 52.6354 22.2188 54.7812C24.3646 56.9271 26.9583 58 30 58ZM30 38C32.5 38 34.625 38.875 36.375 40.625C38.125 42.375 39 44.5 39 47C39 49.5 38.125 51.625 36.375 53.375C34.625 55.125 32.5 56 30 56C27.5 56 25.375 55.125 23.625 53.375C21.875 51.625 21 49.5 21 47C21 44.5 21.875 42.375 23.625 40.625C25.375 38.875 27.5 38 30 38ZM30 54C31.9167 54 33.5625 53.3125 34.9375 51.9375C36.3125 50.5625 37 48.9167 37 47C37 45.0833 36.3125 43.4375 34.9375 42.0625C33.5625 40.6875 31.9167 40 30 40C28.0833 40 26.4375 40.6875 25.0625 42.0625C23.6875 43.4375 23 45.0833 23 47C23 48.9167 23.6875 50.5625 25.0625 51.9375C26.4375 53.3125 28.0833 54 30 54ZM26 32V30H34V32H26ZM46 29V27H52V29H46ZM5 29V27H8V29H5ZM10 29V27H14V29H10ZM32 46V44H34V46H32ZM48 50V48H50V50H48ZM48 54V52H50V54H48ZM42 0C42.5417 0 43.0104 0.197918 43.4062 0.59375C43.8021 0.989582 44 1.45833 44 2V28H42V2H18V28H16V2C16 1.45833 16.1979 0.989582 16.5938 0.59375C16.9896 0.197918 17.4583 0 18 0H42ZM39.9375 22.625C39.9792 22.75 40 22.8958 40 23.0625C40 23.2292 39.9375 23.3958 39.8125 23.5625C39.7292 23.6875 39.6146 23.7917 39.4688 23.875C39.3229 23.9583 39.1667 24 39 24H21C20.8333 24 20.6667 23.9583 20.5 23.875C20.3333 23.7917 20.2083 23.6667 20.125 23.5C20.0417 23.3333 20 23.1667 20 23C20 22.8333 20.0417 22.6667 20.125 22.5L27.125 10.5C27.2083 10.375 27.3229 10.2604 27.4688 10.1562C27.6146 10.0521 27.7708 10 27.9375 10C28.1042 10 28.2604 10.0312 28.4062 10.0938C28.5521 10.1562 28.6667 10.25 28.75 10.375L32.1875 14.6875L34.4375 13.1875C34.5625 13.1042 34.6979 13.0521 34.8438 13.0312C34.9896 13.0104 35.125 13.0208 35.25 13.0625C35.4167 13.1042 35.5521 13.1667 35.6562 13.25C35.7604 13.3333 35.8542 13.4583 35.9375 13.625L39.9375 22.625ZM22.75 22H37.4375L34.5625 15.5L32.5625 16.8125C32.3542 16.9792 32.1146 17.0417 31.8438 17C31.5729 16.9583 31.375 16.8333 31.25 16.625L28.125 12.75L22.75 22ZM33.5 4C34.4583 4 35.2812 4.34375 35.9688 5.03125C36.6562 5.71875 37 6.54167 37 7.5C37 8.45833 36.6562 9.28125 35.9688 9.96875C35.2812 10.6562 34.4583 11 33.5 11C32.5417 11 31.7188 10.6562 31.0312 9.96875C30.3438 9.28125 30 8.45833 30 7.5C30 6.54167 30.3438 5.71875 31.0312 5.03125C31.7188 4.34375 32.5417 4 33.5 4ZM33.5 9C33.9167 9 34.2708 8.85417 34.5625 8.5625C34.8542 8.27083 35 7.91667 35 7.5C35 7.08333 34.8542 6.72917 34.5625 6.4375C34.2708 6.14583 33.9167 6 33.5 6C33.0833 6 32.7292 6.14583 32.4375 6.4375C32.1458 6.72917 32 7.08333 32 7.5C32 7.91667 32.1458 8.27083 32.4375 8.5625C32.7292 8.85417 33.0833 9 33.5 9ZM20 8V6H26V8H20Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </div>
-                        <p
-                            class="rubik-font text-sm text-[#686A6F] group-hover:text-black mt-6 transition-colors duration-300">
-                            Updated regularly to reflect the latest coding guidelines and regulations </p>
-                    </div>
-                    <div
-                        class="group bg-white hover:bg-[#00BCE0] rounded-md hover:shadow-md p-6 transition-colors duration-300">
-                        <div class="flex items-center justify-between">
-                            <h2
-                                class="teko-font text-2xl uppercase group-hover:text-white transition-colors duration-300">
-                                Secure Processing
-                            </h2>
-                            <svg width="64" height="59" viewBox="0 0 64 59" fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="text-[#00BCE0] group-hover:text-black transition-colors duration-300">
-                                <path
-                                    d="M58 4.5C58.2917 4.5 58.5312 4.59375 58.7188 4.78125C58.9062 4.96875 59 5.20833 59 5.5V30.5C59 30.7917 58.9062 31.0312 58.7188 31.2188C58.5312 31.4062 58.2917 31.5 58 31.5H41C40.7083 31.5 40.4688 31.4062 40.2812 31.2188C40.0938 31.0312 40 30.7917 40 30.5V5.5C40 5.20833 40.0938 4.96875 40.2812 4.78125C40.4688 4.59375 40.7083 4.5 41 4.5H58ZM57 29.5V11.5H42V29.5H57ZM57 9.5V6.5H42V9.5H57ZM44 15.5V13.5H46V15.5H44ZM48 15.5V13.5H55V15.5H48ZM44 19.5V17.5H46V19.5H44ZM48 19.5V17.5H55V19.5H48ZM44 23.5V21.5H46V23.5H44ZM48 23.5V21.5H55V23.5H48ZM44 27.5V25.5H46V27.5H44ZM48 27.5V25.5H55V27.5H48ZM37 14.5C37.2917 14.5 37.5312 14.5938 37.7188 14.7812C37.9062 14.9688 38 15.2083 38 15.5V21.5C38 21.7917 37.9062 22.0312 37.7188 22.2188C37.5312 22.4062 37.2917 22.5 37 22.5H29V25.5H30C30.2917 25.5 30.5312 25.5938 30.7188 25.7812C30.9062 25.9688 31 26.2083 31 26.5V30.5C31 30.7917 30.9062 31.0312 30.7188 31.2188C30.5312 31.4062 30.2917 31.5 30 31.5H26C25.7083 31.5 25.4688 31.4062 25.2812 31.2188C25.0938 31.0312 25 30.7917 25 30.5V29.5H11V30.5C11 30.7917 10.9062 31.0312 10.7188 31.2188C10.5312 31.4062 10.2917 31.5 10 31.5H6C5.70833 31.5 5.46875 31.4062 5.28125 31.2188C5.09375 31.0312 5 30.7917 5 30.5V26.5C5 26.2083 5.09375 25.9688 5.28125 25.7812C5.46875 25.5938 5.70833 25.5 6 25.5H7V10.5H6C5.70833 10.5 5.46875 10.4062 5.28125 10.2188C5.09375 10.0312 5 9.79167 5 9.5V5.5C5 5.20833 5.09375 4.96875 5.28125 4.78125C5.46875 4.59375 5.70833 4.5 6 4.5H10C10.2917 4.5 10.5312 4.59375 10.7188 4.78125C10.9062 4.96875 11 5.20833 11 5.5V6.5H25V5.5C25 5.20833 25.0938 4.96875 25.2812 4.78125C25.4688 4.59375 25.7083 4.5 26 4.5H30C30.2917 4.5 30.5312 4.59375 30.7188 4.78125C30.9062 4.96875 31 5.20833 31 5.5V9.5C31 9.79167 30.9062 10.0312 30.7188 10.2188C30.5312 10.4062 30.2917 10.5 30 10.5H29V14.5H37ZM27 6.5V8.5H29V6.5H27ZM7 6.5V8.5H9V6.5H7ZM9 29.5V27.5H7V29.5H9ZM25 26.5C25 26.2083 25.0938 25.9688 25.2812 25.7812C25.4688 25.5938 25.7083 25.5 26 25.5H27V22.5H15C14.7083 22.5 14.4688 22.4062 14.2812 22.2188C14.0938 22.0312 14 21.7917 14 21.5V15.5C14 15.2083 14.0938 14.9688 14.2812 14.7812C14.4688 14.5938 14.7083 14.5 15 14.5H27V10.5H26C25.7083 10.5 25.4688 10.4062 25.2812 10.2188C25.0938 10.0312 25 9.79167 25 9.5V8.5H11V9.5C11 9.79167 10.9062 10.0312 10.7188 10.2188C10.5312 10.4062 10.2917 10.5 10 10.5H9V25.5H10C10.2917 25.5 10.5312 25.5938 10.7188 25.7812C10.9062 25.9688 11 26.2083 11 26.5V27.5H25V26.5ZM29 29.5V27.5H27V29.5H29ZM36 20.5V16.5H35V17.5H33V16.5H31V18.5H29V16.5H27V17.5H25V16.5H23V18.5H21V16.5H19V17.5H17V16.5H16V20.5H36ZM62 0.5C62.5417 0.5 63.0104 0.697918 63.4062 1.09375C63.8021 1.48958 64 1.95833 64 2.5V41.5C64 42.0417 63.8021 42.5104 63.4062 42.9062C63.0104 43.3021 62.5417 43.5 62 43.5H38.1875L39.8125 52.5H43C43.125 52.5 43.25 52.5208 43.375 52.5625C43.5 52.6042 43.6042 52.6875 43.6875 52.8125L45.6875 54.8125C45.8125 54.8958 45.8958 55 45.9375 55.125C45.9792 55.25 46 55.375 46 55.5V57.5C46 57.7917 45.9062 58.0312 45.7188 58.2188C45.5312 58.4062 45.2917 58.5 45 58.5H19C18.7083 58.5 18.4688 58.4062 18.2812 58.2188C18.0938 58.0312 18 57.7917 18 57.5V55.5C18 55.375 18.0208 55.25 18.0625 55.125C18.1042 55 18.1875 54.8958 18.3125 54.8125L20.3125 52.8125C20.3958 52.6875 20.5 52.6042 20.625 52.5625C20.75 52.5208 20.875 52.5 21 52.5H24.1875L25.8125 43.5H2C1.45833 43.5 0.989583 43.3021 0.59375 42.9062C0.197917 42.5104 0 42.0417 0 41.5V2.5C0 1.95833 0.197917 1.48958 0.59375 1.09375C0.989583 0.697918 1.45833 0.5 2 0.5H62ZM39 54.5H21.4375L20 55.9375V56.5H44V55.9375L42.5625 54.5H39ZM34 49.5H30V47.5H31V43.5H27.8125L26.1875 52.5H37.8125L36.1875 43.5H33V47.5H34V49.5ZM62 41.5V35.5H2V41.5H62ZM62 33.5V2.5H2V33.5H62ZM29 39.5V37.5H35V39.5H29Z"
-                                    fill="currentColor" />
-                            </svg>
-
-                        </div>
-                        <p
-                            class="rubik-font text-sm text-[#686A6F] group-hover:text-black mt-6 transition-colors duration-300">
-                            Enterprise-grade security protecting sensitive patient information </p>
-                    </div>
-
                 </div>
+
+                <div class="timeline-item" data-content="2">
+                    <div class="content-area">
+                        <p class="poppins-regular text-md text-cyan-600">Minimize coding errors and maximize appropriate reimbursement</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-content="3">
+                    <div class="content-area">
+                        <p class="poppins-regular text-md text-cyan-600">Works within your existing RCM systems with minimal disruption</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-content="4">
+                    <div class="content-area">
+                        <p class="poppins-regular text-md text-cyan-600">Quick deployment with no extensive retraining required</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-content="5">
+                    <div class="content-area">
+                        <p class="poppins-regular text-md text-cyan-600">Achieve measurable returns on investment with improved efficiency and reduced operational costs</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Call to Action -->
-    <section id="call-to-action" class="flex gap-16 items-center justify-center">
-        <div>
-            <h1 class="uppercase teko-font text-5xl">Optimize Your Revenue Cycle Today</h1>
+        <!-- Mobile Timeline (visible only on mobile) -->
+        <div class="md:hidden mobile-timeline">
+            <div class="mobile-timeline-item">
+                <div class="mobile-card-header">
+                    <img src="../assets/images/solutions/transforming-rcm1.png" alt="Accelerated Processing Icon" width="40">
+                    <h3 class="poppins-medium text-lg" style="color: var(--primary-color)">Accelerated Processing</h3>
+                </div>
+                <div class="mobile-content-area">
+                    <p class="poppins-regular text-sm text-cyan-600">Reduce claim processing time by up to 80% through intelligent automation</p>
+                </div>
+            </div>
+
+            <div class="mobile-timeline-item">
+                <div class="mobile-card-header">
+                    <img src="../assets/images/solutions/transforming-rcm2.png" alt="Enhanced Accuracy Icon" width="40">
+                    <h3 class="poppins-medium text-lg" style="color: var(--primary-color)">Enhanced Accuracy</h3>
+                </div>
+                <div class="mobile-content-area">
+                    <p class="poppins-regular text-sm text-cyan-600">Minimize coding errors and maximize appropriate reimbursement</p>
+                </div>
+            </div>
+
+            <div class="mobile-timeline-item">
+                <div class="mobile-card-header">
+                    <img src="../assets/images/solutions/transforming-rcm3.png" alt="Seamless Integration Icon" width="40">
+                    <h3 class="poppins-medium text-lg" style="color: var(--primary-color)">Seamless Integration</h3>
+                </div>
+                <div class="mobile-content-area">
+                    <p class="poppins-regular text-sm text-cyan-600">Works within your existing RCM systems with minimal disruption</p>
+                </div>
+            </div>
+
+            <div class="mobile-timeline-item">
+                <div class="mobile-card-header">
+                    <img src="../assets/images/solutions/transforming-rcm4.png" alt="Rapid Implementation Icon" width="40">
+                    <h3 class="poppins-medium text-lg" style="color: var(--primary-color)">Rapid Implementation</h3>
+                </div>
+                <div class="mobile-content-area">
+                    <p class="poppins-regular text-sm text-cyan-600">Quick deployment with no extensive retraining required</p>
+                </div>
+            </div>
+
+            <div class="mobile-timeline-item">
+                <div class="mobile-card-header">
+                    <img src="../assets/images/solutions/transforming-rcm5.png" alt="Significant ROI Icon" width="40">
+                    <h3 class="poppins-medium text-lg" style="color: var(--primary-color)">Significant ROI</h3>
+                </div>
+                <div class="mobile-content-area">
+                    <p class="poppins-regular text-sm text-cyan-600">Achieve measurable returns on investment with improved efficiency and reduced operational costs</p>
+                </div>
+            </div>
         </div>
-        <div class="flex flex-col gap-2 items-center justify-center">
-            <div
-                class="teko-font card rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-lg hover: bg-[#4B4B4B] transition duration-300">
+    </div>
+</section>
+
+<!-- Call to Action -->
+<!-- Call to Action -->
+<section id="call-to-action" class="flex py-6 gap-16 items-center justify-center py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 md:gap-12 lg:gap-16 items-center justify-center text-center">
+        <div class="md:flex-1">
+            <h1 class="uppercase teko-font text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight tracking-wide">
+                Optimize Your Revenue Cycle Today
+            </h1>
+        </div>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <button
+                class="teko-font w-full sm:w-auto min-w-[200px] rounded-md uppercase bg-[linear-gradient(130deg,_rgba(34,36,41,1)_90%,_rgba(75,75,75,1)_87%)] text-white px-6 py-3 text-base sm:text-lg hover:bg-[#4B4B4B] transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 shadow-md hover:shadow-lg">
                 Request a Demo
-            </div>
+            </button>
         </div>
-    </section>
+    </div>
+</section>
     <!-- Footer -->
     <footer class="footer-bg">
         <section id="pre-footer" class="text-white py-6">
@@ -886,30 +927,56 @@
             });
         });
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const leftItems = document.querySelectorAll('.left-column [data-item]');
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Original timeline functionality for desktop
+        const leftItems = document.querySelectorAll('.left-column [data-item]');
 
-            leftItems.forEach((leftItem) => {
-                const itemId = leftItem.getAttribute('data-item');
-                const correspondingRightItem = document.querySelector(`.right-column [data-content="${itemId}"]`);
+        leftItems.forEach((leftItem) => {
+            const itemId = leftItem.getAttribute('data-item');
+            const correspondingRightItem = document.querySelector(`.right-column [data-content="${itemId}"]`);
 
-                if (correspondingRightItem) {
-                    const contentArea = correspondingRightItem.querySelector('.content-area');
+            if (correspondingRightItem) {
+                const contentArea = correspondingRightItem.querySelector('.content-area');
 
-                    leftItem.addEventListener('mouseenter', function () {
-                        contentArea.style.opacity = '1';
-                        contentArea.style.transform = 'translateX(0)';
+                leftItem.addEventListener('mouseenter', function () {
+                    contentArea.style.opacity = '1';
+                    contentArea.style.transform = 'translateX(0)';
+                });
+
+                leftItem.addEventListener('mouseleave', function () {
+                    contentArea.style.opacity = '0';
+                    contentArea.style.transform = 'translateX(20px)';
+                });
+            }
+        });
+
+        // Optional: Add accordion functionality for mobile timeline items
+        const mobileItems = document.querySelectorAll('.mobile-timeline-item');
+        mobileItems.forEach((item, index) => {
+            if (index === 0) {
+                // First item expanded by default
+                item.querySelector('.mobile-content-area').style.display = 'block';
+            } else {
+                item.querySelector('.mobile-content-area').style.display = 'none';
+            }
+
+            item.querySelector('.mobile-card-header').addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    // Close all other items
+                    mobileItems.forEach(i => {
+                        i.querySelector('.mobile-content-area').style.display = 'none';
                     });
-
-                    leftItem.addEventListener('mouseleave', function () {
-                        contentArea.style.opacity = '0';
-                        contentArea.style.transform = 'translateX(20px)';
-                    });
+                    // Open this one
+                    content.style.display = 'block';
                 }
             });
         });
-    </script>
+    });
+</script>
 </body>
 
 </html>

@@ -151,21 +151,23 @@
             </div>
         </div>
     </header>
-
-    <!-- Page Banner -->
-    <section id="solutions-banner" class="bg-cover relative bg-center h-64 flex items-center justify-center">
-        <div class="text-center text-white">
-            <div class="absolute play-icon top-[35%]  left-20">
-                <img src="../assets/images/play-icon.svg" alt="Solutions Banner Play Icon" width="100">
-            </div>
-            <h1 class="text-6xl font-bold">AI-Enabled EMR Solutions</h1>
+            <!-- Page Banner -->
+<section id="solutions-banner" class="bg-cover relative bg-center h-48 md:h-64 flex items-center justify-center">
+    <div class="text-center text-white w-full">
+        <!-- Play Icon - hidden on mobile, visible on md+ screens -->
+        <div class="absolute play-icon top-[35%] left-4 md:left-20 hidden md:block">
+            <img src="../assets/images/play-icon.svg" alt="Solutions Banner Play Icon" class="w-16 md:w-24 lg:w-32">
         </div>
-        <div class="absolute bottom-[-30px] right-[7.3rem] p-4">
-            <a href="tel:+9144283600006" class="no-underline"><img src="../assets/images/call-icon-banner.svg"
-                    alt="Call Icon" width="300"></a> </button>
-        </div>
-        </div>
-    </section>
+        
+            <h1 class="text-4xl md:text-6xl font-bold">AI-Enabled EMR Solutions</h1>    </div>
+    
+    <!-- Call Icon - adjusted for mobile -->
+    <div class="absolute bottom-[-20px] md:bottom-[-30px] right-4 md:right-[7rem] p-2 md:p-4">
+        <a href="tel:+9144283600006" class="no-underline">
+            <img src="../assets/images/call-icon-banner.svg" alt="Call Icon" class="w-40 md:w-64 lg:w-80">
+        </a>
+    </div>
+</section>
 
     <!-- Hero Section -->
 <!-- Desktop/Laptop Version (hidden on mobile) -->
