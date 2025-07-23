@@ -1,703 +1,890 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Algo Health - 21st Century Healthcare at your Fingertips</title>
-        <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
-        <meta name="keywords"
-            content="Algo Health, AI Healthcare Solutions, EMR, Lab Reports, Insurance Claims, Healthcare Technology">
-        <meta name="author" content="Algo Health">
-        <meta name="description"
-            content="Algo Health is revolutionizing healthcare with AI-driven solutions for EMR, lab reports, insurance claims, and more.">
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo Health - 21st Century Healthcare at your Fingertips</title>
+    <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <meta name="keywords"
+        content="Algo Health, AI Healthcare Solutions, EMR, Lab Reports, Insurance Claims, Healthcare Technology">
+    <meta name="author" content="Algo Health">
+    <meta name="description"
+        content="Algo Health is revolutionizing healthcare with AI-driven solutions for EMR, lab reports, insurance claims, and more.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/styles.css">
-    </head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-    <body class="bg-gray-50">
-        <!-- Header -->
-               <!-- Header -->
-<header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="container flex justify-center gap-4 mx-auto px-4 py-4">
-        <!-- Logo -->
-        <div>
-            <a href="/" class="decoration-none"><img src="../assets/images/logo-blk.png" alt="Algohealth Logo"
-                    width="200"></a>
-        </div>
-        
-        <!-- Desktop Navigation (unchanged from your original) -->
-        <div class="flex items-center gap-4 justify-between">
-            <nav class="hidden md:flex space-x-8">
-                <a href="../index.html" class="font-medium text-cyan-600">Home</a>
-                <a href="../index.html#about" class="font-medium hover:text-cyan-600">About Us</a>
-                <div class="relative group">
-                    <a href="../index.html#solutions" class="font-medium hover:text-cyan-600 flex items-center">
-                        Our Solutions
-                        <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </a>
-                    <div
-                        class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <div class="py-2">
-                            <a href="./pages/care-emr.html"
-                                class="block px-4 py-3 text-sm text-cyan-500 transition-colors">
-                                <div class="font-medium">Care AI EMR</div>
-                            </a>
-                            <a href="./pages/ai-driven-reports.html"
-                                class="block px-4 py-3 text-sm bg-gray-50 hover:text-cyan-600 transition-colors">
-                                <div class="font-medium">AI-Driven Intelligent Lab Reports</div>
-                            </a>
-                            <a href="./pages/health-insurance.html"
-                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
-                                <div class="font-medium">Auto adjudication for health insurance claims</div>
-                            </a>
-                            <a href="./pages/ai-emr.html"
-                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
-                                <div class="font-medium">AI-Enabled EMR Solution</div>
-                            </a>
-                            <a href="./pages/codesync.html"
-                                class="block px-4 py-3 text-sm hover:text-cyan-600 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
-                                <div class="font-medium">CodeSync AI</div>
-                            </a>
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container flex justify-center gap-4 mx-auto px-4 py-4">
+            <!-- Logo -->
+            <div>
+                <a href="/" class="decoration-none"><img src="../assets/images/logo-blk.png" alt="Algohealth Logo"
+                        width="200"></a>
+            </div>
+
+            <!-- Desktop Navigation (unchanged from your original) -->
+            <div class="flex items-center gap-4 justify-between">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="font-medium text-cyan-600">Home</a>
+                    <a href="../index.html#about" class="font-medium hover:text-cyan-600">About Us</a>
+                    <div class="relative group">
+                        <a href="../index.html#solutions" class="font-medium hover:text-cyan-600 flex items-center">
+                            Our Solutions
+                            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="./pages/care-emr.html"
+                                    class="block px-4 py-3 text-sm text-cyan-500 transition-colors">
+                                    <div class="font-medium">Care AI EMR</div>
+                                </a>
+                                <a href="./pages/ai-driven-reports.html"
+                                    class="block px-4 py-3 text-sm bg-gray-50 hover:text-cyan-600 transition-colors">
+                                    <div class="font-medium">AI-Driven Intelligent Lab Reports</div>
+                                </a>
+                                <a href="./pages/health-insurance.html"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                    <div class="font-medium">Auto adjudication for health insurance claims</div>
+                                </a>
+                                <a href="./pages/ai-emr.html"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                    <div class="font-medium">AI-Enabled EMR Solution</div>
+                                </a>
+                                <a href="./pages/codesync.html"
+                                    class="block px-4 py-3 text-sm hover:text-cyan-600 hover:bg-gray-50 hover:text-cyan-600 transition-colors">
+                                    <div class="font-medium">CodeSync AI</div>
+                                </a>
+                            </div>
                         </div>
                     </div>
+                    <a href="../index.html#why-algo" class="font-medium hover:text-cyan-600">Why Algo</a>
+                    <a href="../contact.html" class="font-medium hover:text-cyan-600">Contact Us</a>
+                </nav>
+                <div class="flex items-center space-x-4 hidden md:flex">
+                    <button class="bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition"
+                        onclick="window.location.href='../contact.html'">
+                        Book a Demo
+                    </button>
                 </div>
-                <a href="../index.html#why-algo" class="font-medium hover:text-cyan-600">Why Algo</a>
-                <a href="../contact.html" class="font-medium hover:text-cyan-600">Contact Us</a>
-            </nav>
-            <div class="flex items-center space-x-4 hidden md:flex">
-                <button class="bg-cyan-500 text-white px-6 py-2 rounded-full hover:bg-cyan-600 transition" onclick="window.location.href='../contact.html'">
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-cyan-600 focus:outline-none">
+                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (with animations) -->
+        <div id="mobile-menu"
+            class="md:hidden hidden bg-white overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+            <div class="container mx-auto px-4 py-2 space-y-4">
+                <a href="../index.html"
+                    class="block py-3 font-medium hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">Home</a>
+                <a href="../index.html#about"
+                    class="block py-3 font-medium hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">About
+                    Us</a>
+
+                <!-- Mobile Solutions Dropdown -->
+                <div class="relative">
+                    <button id="mobile-solutions-button"
+                        class="w-full flex justify-between items-center py-3 font-medium hover:text-cyan-600 transition-colors">
+                        <span>Our Solutions</span>
+                        <svg id="mobile-solutions-arrow"
+                            class="w-4 h-4 ml-1 transform transition-transform duration-200" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="mobile-solutions-menu" class="pl-4 overflow-hidden transition-all duration-300 max-h-0">
+                        <a href="./pages/care-emr.html"
+                            class="block py-2 text-sm hover:text-cyan-500 transition-transform duration-300 hover:translate-x-2">Care
+                            AI EMR</a>
+                        <a href="./ai-driven-reports.html"
+                            class="block py-2 text-sm hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">AI-Driven
+                            Intelligent Lab Reports</a>
+                        <a href="./pages/health-insurance.html"
+                            class="block py-2 text-sm hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">Auto
+                            adjudication for health insurance claims</a>
+                        <a href="./pages/ai-emr.html"
+                            class="block py-2 text-sm hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">AI-Enabled
+                            EMR Solution</a>
+                        <a href="./pages/codesync.html"
+                            class="block py-2 text-sm hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">CodeSync
+                            AI</a>
+                    </div>
+                </div>
+
+                <a href="../index.html#why-algo"
+                    class="block py-3 font-medium hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">Why
+                    Algo</a>
+                <a href="../contact.html"
+                    class="block py-3 font-medium hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">Contact
+                    Us</a>
+
+                <button
+                    class="w-full bg-cyan-500 text-white px-6 py-3 rounded-full hover:bg-cyan-600 transition-transform duration-300 hover:scale-105 mt-4"
+                    onclick="window.location.href='../contact.html'">
                     Book a Demo
                 </button>
             </div>
         </div>
-        
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-cyan-600 focus:outline-none">
-            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-        </button>
-    </div>
-    
-    <!-- Mobile Menu (with animations) -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white overflow-hidden transition-all duration-500 ease-in-out max-h-0">
-        <div class="container mx-auto px-4 py-2 space-y-4">
-            <a href="../index.html" class="block py-3 font-medium hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">Home</a>
-            <a href="../index.html#about" class="block py-3 font-medium hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">About Us</a>
-            
-            <!-- Mobile Solutions Dropdown -->
-            <div class="relative">
-                <button id="mobile-solutions-button" class="w-full flex justify-between items-center py-3 font-medium hover:text-cyan-600 transition-colors">
-                    <span>Our Solutions</span>
-                    <svg id="mobile-solutions-arrow" class="w-4 h-4 ml-1 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div id="mobile-solutions-menu" class="pl-4 overflow-hidden transition-all duration-300 max-h-0">
-                    <a href="./pages/care-emr.html" class="block py-2 text-sm hover:text-cyan-500 transition-transform duration-300 hover:translate-x-2">Care AI EMR</a>
-                    <a href="./ai-driven-reports.html" class="block py-2 text-sm hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">AI-Driven Intelligent Lab Reports</a>
-                    <a href="./pages/health-insurance.html" class="block py-2 text-sm hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">Auto adjudication for health insurance claims</a>
-                    <a href="./pages/ai-emr.html" class="block py-2 text-sm hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">AI-Enabled EMR Solution</a>
-                    <a href="./pages/codesync.html" class="block py-2 text-sm hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">CodeSync AI</a>
-                </div>
-            </div>
-            
-            <a href="../index.html#why-algo" class="block py-3 font-medium hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">Why Algo</a>
-            <a href="../contact.html" class="block py-3 font-medium hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">Contact Us</a>
-            
-            <button class="w-full bg-cyan-500 text-white px-6 py-3 rounded-full hover:bg-cyan-600 transition-transform duration-300 hover:scale-105 mt-4" onclick="window.location.href='../contact.html'">
-                Book a Demo
-            </button>
-        </div>
-    </div>
-</header>
-        <section id="home" class="hero-bg min-h-screen overflow-hidden flex items-center">
-            <div class="container mx-auto px-4">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6 mx-auto">
-                        <h1 class="text-5xl text-[var(--primary-color)] md:text-6xl poppins-bold leading-tight">
-                            <span class="poppins-semibold">21st</span> CENTURY<br>
-                            Health Care at your<br>
-                            <span class="text-cyan-500">Fingertips</span>
-                        </h1>
-                        <p class="text-lg text-gray-600 max-w-md font-[var(--primary-font)]">
-                            Enhancing diagnostic and therapeutic accuracy through Artificial Intelligence
-                        </p>
-                        <div class="flex space-x-4">
-                            <button class="bg-cyan-500 text-white px-8 py-3 poppins-regular rounded-full hover:bg-cyan-600 transition">
+    </header>
+    <section id="home" class="hero-bg min-h-screen overflow-hidden flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+                <div class="space-y-6 mx-auto">
+                    <h1 class="text-5xl text-[var(--primary-color)] md:text-6xl poppins-bold leading-tight animate__animated animate__fadeInDown"
+                        data-aos-delay="100">
+                        <span class="poppins-semibold">21st</span> CENTURY<br>
+                        Health Care at your<br>
+                        <span class="text-cyan-500">Fingertips</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 max-w-md font-[var(--primary-font)] animate__animated animate__fadeIn"
+                        data-aos-delay="200">
+                        Enhancing diagnostic and therapeutic accuracy through Artificial Intelligence
+                    </p>
+                    <div class="flex space-x-4 animate__animated animate__fadeInUp" data-aos-delay="300">
+                        <button
+                            class="bg-cyan-500 text-white px-8 py-3 poppins-regular rounded-full hover:bg-cyan-600 transition">
                             <a href="./aboutus.html" class="no-underline">Read more &#8594;</a>
-                            </button>
-                            <button class="text-gray-600 hover:text-gray-800 poppins-regular">
+                        </button>
+                        <button class="text-gray-600 hover:text-gray-800 poppins-regular">
                             <a href="./contact.html" class="no-underline">Contact us</a>
-                            </button>
-                        </div>
+                        </button>
                     </div>
-
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 journery-bg">
-    <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Image Section -->
-        <div class="flex justify-center md:justify-end">
-            <img 
-            src="./assets/images/our-journery-image.png" 
-            class="w-full max-w-[60vh] sm:max-w-[60vh] md:max-w-[70vh] lg:max-w-[80vh] h-auto" 
-            alt="our-journery-image"
-            >
-        </div>
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image Section (Slides in from left) -->
+                <div class="flex justify-center md:justify-end" data-aos="fade-left" data-aos-delay="100">
+                    <img src="./assets/images/our-journery-image.png"
+                        class="w-full max-w-[60vh] sm:max-w-[60vh] md:max-w-[70vh] lg:max-w-[80vh] h-auto animate__animated"
+                        alt="our-journery-image">
+                </div>
 
-        <!-- Text Content Section -->
-        <div class="space-y-6 mx-auto max-w-xl">
-            <h2 class="text-2xl sm:text-4xl poppins-bold text-[var(--primary-color)] leading-snug">
-            Our Journey In<br>
-            Revolutionizing Healthcare
-            </h2>
-            <p class="text-[#566593]  font-[var(--primary-font)] text-base sm:text-sm">
-            At Algorithm Health, we are committed to revolutionizing healthcare through innovative
-            technology and compassionate care. Our mission is to provide accessible, accurate, and timely
-            medical solutions that empower individuals and healthcare providers to make informed decisions.
-            <a href="./aboutus.html" class="text-cyan-500 font-[var(--primary-font)] text-sm hover:text-cyan-600 transition">
-                Learn more
-            </a>
-            </p>
+                <!-- Text Content Section (Slides in from right with staggered delays) -->
+                <div class="space-y-6 mx-auto max-w-xl" data-aos="fade-right" data-aos-delay="200">
+                    <h2 class="text-2xl sm:text-4xl poppins-bold text-[var(--primary-color)] leading-snug animate__animated animate__fadeIn"
+                        data-aos-delay="300">
+                        Our Journey In<br>
+                        Revolutionizing Healthcare
+                    </h2>
 
-            <!-- Info Grid -->
-            <div class="space-y-4">
-            <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="flex flex-col gap-2">
-                <div class="flex items-center space-x-2">
-                    <span class="poppins-regular">Incubated By:</span>
-                    <a href="http://respark.iitm.ac.in/" target="_blank" class="text-sm font-semibold text-[#3369FF] no-underline">
-                    IITM RESEARCH PARK
-                    </a>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <span class="poppins-regular">Supported By:</span>
-                    <a href="https://www.meity.gov.in/" target="_blank" class="text-sm font-semibold text-[#3369FF] uppercase no-underline">
-                    MEITY, Govt of India
-                    </a>
-                </div>
-                </div>
-                <div class="flex justify-start md:justify-end">
-                <a href="http://respark.iitm.ac.in/" target="_blank">
-                    <img src="./assets/images/IITM-Research-Park-Logo.png" alt="IITM Research Park Logo" class="w-24 md:w-28">
-                </a>
+                    <p class="text-[#566593] font-[var(--primary-font)] text-base sm:text-sm animate__animated animate__fadeIn"
+                        data-aos-delay="400">
+                        At Algorithm Health, we are committed to revolutionizing healthcare through innovative
+                        technology and compassionate care. Our mission is to provide accessible, accurate, and timely
+                        medical solutions that empower individuals and healthcare providers to make informed decisions.
+                        <a href="./aboutus.html"
+                            class="text-cyan-500 font-[var(--primary-font)] text-sm hover:text-cyan-600 transition animate__animated animate__pulse ">
+                            Learn more
+                        </a>
+                    </p>
+
+                    <!-- Info Grid (Fades in with bounce) -->
+                    <div class="space-y-4 animate__animated animate__fadeInUp" data-aos-delay="500">
+                        <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center space-x-2">
+                                    <span class="poppins-regular">Incubated By:</span>
+                                    <a href="http://respark.iitm.ac.in/" target="_blank"
+                                        class="text-sm font-semibold text-[#3369FF] no-underline hover:underline">
+                                        IITM RESEARCH PARK
+                                    </a>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="poppins-regular">Supported By:</span>
+                                    <a href="https://www.meity.gov.in/" target="_blank"
+                                        class="text-sm font-semibold text-[#3369FF] uppercase no-underline hover:underline">
+                                        MEITY, Govt of India
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex justify-start md:justify-end">
+                                <a href="http://respark.iitm.ac.in/" target="_blank">
+                                    <img src="./assets/images/IITM-Research-Park-Logo.png" alt="IITM Research Park Logo"
+                                        class="w-24 md:w-28 hover:scale-105 transition-transform duration-300">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Logo Section (Pops in) -->
+                    <div class="flex justify-start md:justify-start animate__animated animate__zoomIn"
+                        data-aos-delay="600">
+                        <a href="https://www.hticiitm.org/" target="_blank" class="no-underline">
+                            <img src="./assets/images/htic logo.png" alt="htic logo"
+                                class="w-100 md:w-auto hover:scale-105 transition-transform duration-300">
+                        </a>
+                    </div>
                 </div>
             </div>
-            </div>
-
-            <!-- Logo Section -->
-            <div class="flex justify-start md:justify-start">
-            <a href="https://www.hticiitm.org/" target="_blank" class="no-underline">
-                <img src="./assets/images/htic logo.png" alt="htic logo" class="w-100 md:w-auto">
-            </a>
-            </div>
         </div>
-        </div>
-    </div>
     </section>
 
+    <!-- Trusted By Section -->
+    <section id="trustedby" class="py-16 bg-gray-50 overflow-hidden trusted-by-bg">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h2
+                class="text-6xl font-[626] poppins-bold tracking-tight leading-tight text-center text-[var(--primary-color)] md:text-4xl animate__animated animate__fadeInDown">
+                Trusted by
+            </h2>
 
-        <!-- Trusted By Section -->
-        <section id="trustedby" class="py-8 bg-gray-50 overflow-hidden trusted-by-bg">
-            <div class="container mx-auto px-4 text-center">
-                <h2
-                    class="text-6xl font-[626] poppins-bold tracking-tight leading-tight text-center text-[var(--primary-color)] md:text-4xl">
-                    Trusted by</h2>
-                <div class="relative">
-                    <div class="carousel-container overflow-hidden">
-                        <div class="carousel-track flex items-center gap-12 animate-scroll" onmouseenter="pauseCarousel()"
-                            onmouseleave="resumeCarousel()">
-                            <!-- First set of logos -->
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://www.neubergdiagnostics.com/" target="_blank"
-                                    class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/neuberg-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="Neuberg Diagnostics Logo">
-                                </a>
-                            </div>
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://www.cholamandalam.com/" target="_blank"
-                                    class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/chola-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="Chola MS Logo">
-                                </a>
-                            </div>
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://www.sankaranethralaya.org/" target="_blank"
-                                    class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/sn-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="Sankara Nethralaya Logo">
-                                </a>
-                            </div>
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://www.hbgmc.com/" target="_blank" class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/hbgmc-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="HBGMC Logo">
-                                </a>
-                            </div>
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://verdurercm.com/" target="_blank" class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/verdure-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="Verdure Logo">
-                                </a>
-                            </div>
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://www.drmohans.com/" target="_blank"
-                                    class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/drmohans-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="Dr. Mohans Logo">
-                                </a>
-                            </div>
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://vhschennai.org/" target="_blank" class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/vhs-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="VHS Logo">
-                                </a>
-                            </div>
+            <div class="relative mt-12">
+                <!-- Gradient Fades -->
+                <div
+                    class="absolute left-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-r from-gray-50 to-transparent z-10">
+                </div>
+                <div
+                    class="absolute right-0 top-0 bottom-0 w-24 sm:w-32 bg-gradient-to-l from-gray-50 to-transparent z-10">
+                </div>
 
-                            <!-- Duplicate set for seamless loop -->
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://www.neubergdiagnostics.com/" target="_blank"
-                                    class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/neuberg-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="Neuberg Diagnostics Logo">
+                <!-- Carousel Container -->
+                <div class="carousel-container overflow-hidden">
+                    <div class="carousel-track flex items-center gap-12 animate-scroll" onmouseenter="pauseCarousel()"
+                        onmouseleave="resumeCarousel()">
+
+                        <!-- Client Logos - First Set -->
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center animate__animated animate__zoomIn"
+                            data-aos-delay="100">
+                            <a href="https://www.neubergdiagnostics.com/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/neuberg-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="Neuberg Diagnostics Logo">
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center animate__animated animate__zoomIn"
+                            data-aos-delay="150">
+                            <a href="https://www.cholamandalam.com/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/chola-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="Chola MS Logo">
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center animate__animated animate__zoomIn"
+                            data-aos-delay="200">
+                            <a href="https://www.sankaranethralaya.org/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/sn-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="Sankara Nethralaya Logo">
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center animate__animated animate__zoomIn"
+                            data-aos-delay="250">
+                            <a href="https://www.hbgmc.com/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/hbgmc-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="HBGMC Logo">
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center animate__animated animate__zoomIn"
+                            data-aos-delay="300">
+                            <a href="https://verdurercm.com/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/verdure-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="Verdure Logo">
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center animate__animated animate__zoomIn"
+                            data-aos-delay="350">
+                            <a href="https://www.drmohans.com/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/drmohans-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="Dr. Mohans Logo">
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center animate__animated animate__zoomIn"
+                            data-aos-delay="400">
+                            <a href="https://vhschennai.org/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/vhs-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="VHS Logo">
+                            </a>
+                        </div>
+
+                        <!-- Duplicate Set for Seamless Loop -->
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
+                            <a href="https://www.neubergdiagnostics.com/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/neuberg-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="Neuberg Diagnostics Logo">
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
+                            <a href="https://www.cholamandalam.com/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/chola-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="Chola MS Logo">
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
+                            <a href="https://www.sankaranethralaya.org/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/sn-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="Sankara Nethralaya Logo">
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
+                            <a href="https://www.hbgmc.com/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/hbgmc-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="HBGMC Logo">
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
+                            <a href="https://verdurercm.com/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/verdure-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="Verdure Logo">
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
+                            <a href="https://www.drmohans.com/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/drmohans-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="Dr. Mohans Logo">
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
+                            <a href="https://vhschennai.org/" target="_blank"
+                                class="flex justify-center items-center group">
+                                <img src="./assets/images/clients/vhs-logo.png"
+                                    class="grayscale group-hover:grayscale-0 transition duration-500 max-h-20 max-w-full object-contain hover:scale-110 transform"
+                                    alt="VHS Logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 bg-[#ECF5FB]">
+        <div class="container mx-auto px-4">
+            <!-- Section Header with Animation -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="flex items-center justify-center space-x-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <img src="./assets/images/health-shield-icon.svg" alt="Health Shield Icon"
+                            class="animate__animated animate__pulse ">
+                    </div>
+                    <p
+                        class="text-cyan-500 font-medium text-sm uppercase tracking-wide animate__animated animate__fadeIn">
+                        OUR SOLUTIONS
+                    </p>
+                </div>
+                <h2 class="text-3xl md:text-4xl poppins-bold text-[var(--primary-color)] animate__animated animate__fadeInUp"
+                    data-aos-delay="200">
+                    Cutting-Edge AI Healthcare Solutions
+                </h2>
+            </div>
+
+            <!-- Solutions Cards Grid with Staggered Animations -->
+            <div class="grid md:grid-cols-5 gap-6">
+                <!-- Care AI EMR -->
+                <div class="bg-white hover:bg-cyan-500 text-white solutions-card p-8 rounded-3xl shadow-lg card-hover text-left relative overflow-hidden emr-bg group"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img src="./assets/images/products/care-ai-emr.svg" alt="Care AI EMR"
+                        class="absolute top-0 right-0 hover:absolute overflow-hidden w-32 object-contain hover:transition duration-300 animate__animated animate__zoomIn">
+                    <div class="w-16 h-16 flex items-center justify-center mb-6">
+                        <img src="./assets/images/products/care-ai-emr.svg" alt="Care AI EMR"
+                            class="animate__animated animate__bounceIn">
+                    </div>
+                    <h3
+                        class="text-xl poppins-bold text-[#031B4E] mb-4 group-hover:text-white animate__animated animate__fadeIn">
+                        Care AI EMR
+                    </h3>
+                    <p
+                        class="text-[#566593] poppins-regular text-xs leading-relaxed mb-8 group-hover:text-white animate__animated animate__fadeIn">
+                        It is a long established fact that a reader will be distracted by the readable content.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex absolute bottom-[25px] space-x-1">
+                            <div
+                                class="w-2 h-2 group-hover:bg-white rounded-full bg-cyan-500 animate__animated animate__pulse">
+                            </div>
+                        </div>
+                        <div class="p-2.5 absolute -right-1 bg-[#ecf5fb] -bottom-0.5 rounded-[30px_1px]">
+                            <div
+                                class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center hover:bg-cyan-600 transition cursor-pointer animate__animated animate__rubberBand ">
+                                <a href="./pages/care-emr.html" class="no-underline">
+                                    <i class="fas fa-arrow-right rotate-[320deg] text-white group-hover:text-white"></i>
                                 </a>
                             </div>
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://www.cholamandalam.com/" target="_blank"
-                                    class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/chola-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="Chola MS Logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI-Driven Intelligent Lab Reports -->
+                <div class="bg-white hover:bg-cyan-500 text-white solutions-card p-8 rounded-3xl shadow-lg card-hover text-left relative overflow-hidden lab-bg group"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <img src="./assets/images/products/ai-lab-report.svg" alt="AI Lab Reports"
+                        class="absolute top-0 right-0 opacity-0 group-hover:opacity-20 overflow-hidden w-32 object-contain transition duration-300 animate__animated animate__zoomIn">
+                    <div class="w-16 h-16 flex items-center justify-center mb-6">
+                        <img src="./assets/images/products/ai-lab-report.svg" alt="AI Lab Reports"
+                            class="animate__animated animate__bounceIn">
+                    </div>
+                    <h3
+                        class="text-xl poppins-bold text-[#031B4E] mb-4 group-hover:text-white animate__animated animate__fadeIn">
+                        AI-Driven Intelligent Lab Reports
+                    </h3>
+                    <p
+                        class="text-[#566593] poppins-regular text-xs leading-relaxed mb-8 group-hover:text-white animate__animated animate__fadeIn">
+                        AI- Driven Intelligent Report System for analysis and presentation of Laboratory reports.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex absolute bottom-[25px] space-x-1">
+                            <div
+                                class="w-2 h-2 group-hover:bg-white rounded-full bg-cyan-500 animate__animated animate__pulse">
+                            </div>
+                        </div>
+                        <div class="p-2.5 absolute -right-1 bg-[#ecf5fb] -bottom-0.5 rounded-[30px_1px]">
+                            <div
+                                class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center hover:bg-cyan-600 transition cursor-pointer animate__animated animate__rubberBand ">
+                                <a href="./pages/ai-driven-reports.html">
+                                    <i class="fas fa-arrow-right rotate-[320deg] text-white group-hover:text-white"></i>
                                 </a>
                             </div>
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://www.sankaranethralaya.org/" target="_blank"
-                                    class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/sn-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="Sankara Nethralaya Logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Auto adjudication for health insurance claims -->
+                <div class="bg-white hover:bg-cyan-500 text-white solutions-card p-8 rounded-3xl shadow-lg card-hover text-left relative overflow-hidden insurance-bg group"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <img src="./assets/images/products/ai-insurance.svg" alt="Insurance Claims"
+                        class="absolute top-0 right-0 opacity-0 group-hover:opacity-20 overflow-hidden w-32 object-contain transition duration-300 animate__animated animate__zoomIn">
+                    <div class="w-16 h-16 flex items-center justify-center mb-6">
+                        <img src="./assets/images/products/ai-insurance.svg" alt="Care AI EMR"
+                            class="animate__animated animate__bounceIn">
+                    </div>
+                    <h3
+                        class="text-xl poppins-bold text-[#031B4E] mb-4 group-hover:text-white animate__animated animate__fadeIn">
+                        Auto adjudication for health insurance claims
+                    </h3>
+                    <p
+                        class="text-[#566593] text-xs leading-relaxed mb-8 poppins-regular group-hover:text-white animate__animated animate__fadeIn">
+                        AI Driven health care insurance fraudulent claims detection system.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex absolute bottom-[25px] space-x-1">
+                            <div
+                                class="w-2 h-2 group-hover:bg-white rounded-full bg-cyan-500 animate__animated animate__pulse">
+                            </div>
+                        </div>
+                        <div class="p-2.5 absolute -right-1 bg-[#ecf5fb] -bottom-0.5 rounded-[30px_1px]">
+                            <div
+                                class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center hover:bg-cyan-600 transition cursor-pointer animate__animated animate__rubberBand ">
+                                <a href="./pages/health-insurance.html">
+                                    <i class="fas fa-arrow-right rotate-[320deg] text-white group-hover:text-white"></i>
                                 </a>
                             </div>
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://www.hbgmc.com/" target="_blank" class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/hbgmc-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="HBGMC Logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI-Enabled EMR Solution -->
+                <div class="bg-white hover:bg-cyan-500 text-white solutions-card p-8 rounded-3xl shadow-lg card-hover text-left relative overflow-hidden solution-bg group"
+                    data-aos="fade-up" data-aos-delay="600">
+                    <img src="./assets/images/products/emr-solution.svg" alt="EMR Solution"
+                        class="absolute top-0 right-0 opacity-0 group-hover:opacity-20 overflow-hidden w-32 object-contain transition duration-300 animate__animated animate__zoomIn">
+                    <div class="w-16 h-16 flex items-center justify-center mb-6">
+                        <img src="./assets/images/products/emr-solution.svg" alt="AI EMR Solution"
+                            class="animate__animated animate__bounceIn">
+                    </div>
+                    <h3
+                        class="text-xl poppins-bold text-[#031B4E] mb-4 group-hover:text-white animate__animated animate__fadeIn">
+                        AI-Enabled EMR Solution
+                    </h3>
+                    <p
+                        class="text-[#566593] text-xs leading-relaxed mb-8 poppins-regular group-hover:text-white animate__animated animate__fadeIn">
+                        Enabling conventional EMR Systems to become "Smart EMR" Systems with AI
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex absolute bottom-[25px] space-x-1">
+                            <div
+                                class="w-2 h-2 group-hover:bg-white rounded-full bg-cyan-500 animate__animated animate__pulse">
+                            </div>
+                        </div>
+                        <div class="p-2.5 absolute -right-1 bg-[#ecf5fb] -bottom-0.5 rounded-[30px_1px]">
+                            <div
+                                class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center hover:bg-cyan-600 transition cursor-pointer animate__animated animate__rubberBand ">
+                                <a href="./pages/ai-emr.html">
+                                    <i class="fas fa-arrow-right rotate-[320deg] text-white group-hover:text-white"></i>
                                 </a>
                             </div>
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://verdurercm.com/" target="_blank" class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/verdure-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="Verdure Logo">
-                                </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CodeSync AI -->
+                <div class="bg-white hover:bg-cyan-500 text-white solutions-card p-8 rounded-3xl shadow-lg card-hover text-left relative overflow-hidden codesync-bg group"
+                    data-aos="fade-up" data-aos-delay="700">
+                    <img src="./assets/images/products/code-sync.svg" alt="CodeSync AI"
+                        class="absolute top-0 right-0 opacity-0 group-hover:opacity-20 overflow-hidden w-32 object-contain transition duration-300 animate__animated animate__zoomIn">
+                    <div class="w-16 h-16 flex items-center justify-center mb-6">
+                        <img src="./assets/images/products/code-sync.svg" alt="CodeSync AI"
+                            class="animate__animated animate__bounceIn">
+                    </div>
+                    <h3
+                        class="text-xl poppins-bold text-[#031B4E] mb-4 group-hover:text-white animate__animated animate__fadeIn">
+                        CodeSync AI
+                    </h3>
+                    <p
+                        class="text-[#566593] text-xs leading-relaxed mb-8 poppins-regular group-hover:text-white animate__animated animate__fadeIn">
+                        Solution for revenue cycle Management companies for medical code Extraction.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex absolute bottom-[25px] space-x-1">
+                            <div
+                                class="w-2 h-2 group-hover:bg-white rounded-full bg-cyan-500 animate__animated animate__pulse">
                             </div>
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://www.drmohans.com/" target="_blank"
-                                    class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/drmohans-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="Dr. Mohans Logo">
-                                </a>
-                            </div>
-                            <div class="flex-shrink-0 w-50 h-50 flex items-center justify-center">
-                                <a href="https://vhschennai.org/" target="_blank" class="flex justify-center items-center">
-                                    <img src="./assets/images/clients/vhs-logo.png"
-                                        class="grayscale hover:grayscale-0 transition duration-300 max-h-20 max-w-full object-contain"
-                                        alt="VHS Logo">
+                        </div>
+                        <div class="p-2.5 absolute -right-1 bg-[#ecf5fb] -bottom-0.5 rounded-[30px_1px]">
+                            <div
+                                class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center hover:bg-cyan-600 transition cursor-pointer animate__animated animate__rubberBand ">
+                                <a href="./pages/codesync.html">
+                                    <i class="fas fa-arrow-right rotate-[320deg] text-white group-hover:text-white"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Solutions Section -->
-        <section id="solutions" class="py-20 bg-[#ECF5FB]">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <div class="flex items-center justify-center space-x-2 mb-4">
-                        <div class="w-6 h-6 flex items-center justify-center">
-                            <img src="./assets/images/health-shield-icon.svg" alt="Health Shield Icon">
-                        </div>
-                        <p class="text-cyan-500 font-medium text-sm uppercase tracking-wide">OUR SOLUTIONS</p>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl poppins-bold text-[var(--primary-color)]">Cutting-Edge AI
-                        Healthcare Solutions</h2>
-                </div>
-                <div class="grid md:grid-cols-5 gap-6">
-                    <!-- Care AI EMR -->
-                    <div
-                        class="bg-white hover:bg-cyan-500 text-white solutions-card p-8 rounded-3xl shadow-lg card-hover text-left relative overflow-hidden emr-bg group">
-                        <img src="./assets/images/products/care-ai-emr.svg" alt="Care AI EMR"
-                            class="absolute top-0 right-0 hover:absolute overflow-hidden w-32 object-contain hover:transition duration-300">
-                        <div class="w-16 h-16 flex items-center justify-center mb-6">
-                            <img src="./assets/images/products/care-ai-emr.svg" alt="Care AI EMR">
-                        </div>
-                        <h3 class="text-xl poppins-bold text-[#031B4E] mb-4 group-hover:text-white">Care AI EMR</h3>
-                        <p
-                            class="text-[#566593] poppins-regular text-xs leading-relaxed mb-8 group-hover:text-white">
-                            It is a long established fact that a reader will be distracted by the readable content.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex absolute bottom-[25px] space-x-1">
-                                <div class="w-2 h-2 group-hover:bg-white rounded-full bg-cyan-500"></div>
-                            </div>
-                            <div class="p-2.5 absolute -right-1 bg-[#ecf5fb] -bottom-0.5 rounded-[30px_1px]">
-                                <div
-                                    class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center hover:bg-cyan-600 transition cursor-pointer">
-                                <a href="./pages/care-emr.html" class="no-underline" ><i class="fas fa-arrow-right rotate-[320deg] text-white group-hover:text-white"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- AI-Driven Intelligent Lab Reports -->
-                    <div
-                        class="bg-white hover:bg-cyan-500 text-white solutions-card p-8 rounded-3xl shadow-lg card-hover text-left relative overflow-hidden lab-bg group">
-                        <!-- parent Image -->
-                        <img src="./assets/images/products/ai-lab-report.svg" alt="AI Lab Reports"
-                            class="absolute top-0 right-0 opacity-0 group-hover:opacity-20 overflow-hidden w-32 object-contain transition duration-300">
-
-                        <div class="w-16 h-16 flex items-center justify-center mb-6">
-                            <img src="./assets/images/products/ai-lab-report.svg" alt="AI Lab Reports">
-
-                        </div>
-                        <h3 class="text-xl poppins-bold text-[#031B4E] mb-4 group-hover:text-white">AI-Driven Intelligent Lab
-                            Reports</h3>
-                        <p
-                            class="text-[#566593] poppins-regular text-xs leading-relaxed mb-8 group-hover:text-white">
-                            AI- Driven Intelligent Report System for analysis and presentation of Laboratory reports.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex absolute bottom-[25px] space-x-1">
-                                <div class="w-2 h-2 group-hover:bg-white rounded-full bg-cyan-500"></div>
-                            </div>
-                            <div class="p-2.5 absolute -right-1 bg-[#ecf5fb] -bottom-0.5 rounded-[30px_1px]">
-                                <div
-                                    class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center hover:bg-cyan-600 transition cursor-pointer">
-                                <a href="./pages/ai-driven-reports.html">  <i class="fas fa-arrow-right rotate-[320deg] text-white group-hover:text-white"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Auto adjudication for health insurance claims -->
-                    <div
-                        class="bg-white hover:bg-cyan-500 text-white solutions-card p-8 rounded-3xl shadow-lg card-hover text-left relative overflow-hidden insurance-bg group">
-                        <!-- parent Image -->
-
-                        <img src="./assets/images/products/ai-insurance.svg" alt="Insurance Claims"
-                            class="absolute top-0 right-0 opacity-0 group-hover:opacity-20 overflow-hidden w-32 object-contain transition duration-300">
-                        <div class="w-16 h-16 flex items-center justify-center mb-6">
-                            <img src="./assets/images/products/ai-insurance.svg" alt="Care AI EMR">
-                        </div>
-                        <h3 class="text-xl poppins-bold text-[#031B4E]  mb-4 group-hover:text-white">Auto adjudication for health
-                            insurance claims</h3>
-                        <p
-                            class="text-[#566593]  text-xs leading-relaxed mb-8 poppins-regular group-hover:text-white">
-                            AI Driven health care insurance fraudulent claims detection system.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex absolute bottom-[25px] space-x-1">
-                                <div class="w-2 h-2 group-hover:bg-white rounded-full bg-cyan-500"></div>
-                            </div>
-                            <div class="p-2.5 absolute -right-1 bg-[#ecf5fb] -bottom-0.5 rounded-[30px_1px]">
-                                <div
-                                    class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center hover:bg-cyan-600 transition cursor-pointer">
-                                    <a href="./pages/health-insurance.html">  <i class="fas fa-arrow-right rotate-[320deg] text-white group-hover:text-white"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- AI-Enabled EMR Solution -->
-                    <div
-                        class="bg-white hover:bg-cyan-500 text-white solutions-card p-8 rounded-3xl shadow-lg card-hover text-left relative overflow-hidden solution-bg group">
-                        <!-- parent Image -->
-
-                        <img src="./assets/images/products/emr-solution.svg" alt="EMR Solution"
-                            class="absolute top-0 right-0 opacity-0 group-hover:opacity-20 overflow-hidden w-32 object-contain transition duration-300">
-                        <div class="w-16 h-16 flex items-center justify-center mb-6">
-                            <img src="./assets/images/products/emr-solution.svg" alt="AI EMR Solution">
-                        </div>
-                        <h3 class="text-xl poppins-bold text-[#031B4E] mb-4 group-hover:text-white">AI-Enabled EMR Solution</h3>
-                        <p
-                            class="text-[#566593] text-xs leading-relaxed mb-8 poppins-regular group-hover:text-white">
-                            Enabling conventional EMR Systems to become "Smart EMR" Systems with AI
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex absolute bottom-[25px] space-x-1">
-                                <div class="w-2 h-2 group-hover:bg-white rounded-full bg-cyan-500"></div>
-                            </div>
-                            <div class="p-2.5 absolute -right-1 bg-[#ecf5fb] -bottom-0.5 rounded-[30px_1px]">
-                                <div
-                                    class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center hover:bg-cyan-600 transition cursor-pointer">
-                                    <a href="./pages/ai-emr.html">  <i class="fas fa-arrow-right rotate-[320deg] text-white group-hover:text-white"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CodeSync AI -->
-                    <div
-                        class="bg-white hover:bg-cyan-500 text-white solutions-card p-8 rounded-3xl shadow-lg card-hover text-left relative overflow-hidden codesync-bg group">
-                        <img src="./assets/images/products/code-sync.svg" alt="CodeSync AI"
-                            class="absolute top-0 right-0 opacity-0 group-hover:opacity-20 overflow-hidden w-32 object-contain transition duration-300">
-                        <div class="w-16 h-16 flex items-center justify-center mb-6">
-                            <img src="./assets/images/products/code-sync.svg" alt="CodeSync AI">
-
-                        </div>
-                        <h3 class="text-xl poppins-bold text-[#031B4E] mb-4 group-hover:text-white">CodeSync AI</h3>
-                        <p
-                            class="text-[#566593] text-xs leading-relaxed mb-8 poppins-regular group-hover:text-white">
-                            Solution for revenue cycle Management companies for medical code Extraction.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex absolute bottom-[25px] space-x-1">
-                                <div class="w-2 h-2 group-hover:bg-white rounded-full bg-cyan-500"></div>
-                            </div>
-                            <div class="p-2.5 absolute -right-1 bg-[#ecf5fb] -bottom-0.5 rounded-[30px_1px]">
-                                <div
-                                    class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center hover:bg-cyan-600 transition cursor-pointer">
-                                    <a href="./pages/codesync.html">  <i class="fas fa-arrow-right rotate-[320deg] text-white group-hover:text-white"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
+        </div>
+    </section>
 
     <!-- Why Algohealth -->
+    <!-- Why Algohealth -->
     <section id="why-algo" class="why-algo-bg px-4 py-12 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
-        
-        <!-- Image Section -->
-        <div class="flex justify-center items-center hidden sm:block">
-        <img 
-            src="./assets/images/why-algohealth.svg" 
-            alt="Doctors and Nurses" 
-            class="w-[100%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[100%] h-auto"
-        >
-        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
 
-        <!-- Text Content -->
-        <div>
-        <div class="flex items-center justify-start space-x-2 mb-4">
-            <div class="w-6 h-6 flex items-center justify-center">
-            <img src="./assets/images/why-algo-icon.svg" alt="Health Shield Icon" class="h-full w-full object-contain">
+            <!-- Image Section (Desktop) - Slides in from left -->
+            <div class="flex justify-center items-center hidden sm:block" data-aos="fade-left" data-aos-duration="800">
+                <img src="./assets/images/why-algohealth.svg" alt="Doctors and Nurses"
+                    class="w-[100%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[100%] h-auto animate__animated animate__zoomIn">
             </div>
-            <h2 class="text-cyan-500 text-base sm:text-lg font-semibold">
-            WHY ALGOHEALTH
-            </h2>
-        </div>
 
-        <h1 class="mb-6 text-white text-2xl sm:text-3xl lg:text-4xl font-poppins leading-snug">
-            The Perfect Convergence of <br />
-            Medical Excellence and AI Innovation
-        </h1>
+            <!-- Text Content - Slides in from right -->
+            <div data-aos="fade-right" data-aos-duration="800">
+                <div class="flex items-center justify-start space-x-2 mb-4 animate__animated animate__fadeIn">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <img src="./assets/images/why-algo-icon.svg" alt="Health Shield Icon"
+                            class="h-full w-full object-contain animate__animated animate__pulse animate__infinite">
+                    </div>
+                    <h2 class="text-cyan-500 text-base sm:text-lg font-semibold animate__animated animate__fadeIn">
+                        WHY ALGOHEALTH
+                    </h2>
+                </div>
 
-        <!-- Dynamic Card Sets Container -->
-        <div id="card-sets-container" class="overflow-hidden"></div>
+                <h1
+                    class="mb-6 text-white text-2xl sm:text-3xl lg:text-4xl font-poppins leading-snug animate__animated animate__fadeInUp">
+                    The Perfect Convergence of <br />
+                    Medical Excellence and AI Innovation
+                </h1>
+
+                <!-- Dynamic Card Sets Container -->
+                <div id="card-sets-container" class="overflow-hidden">
+                    <!-- Card 1 -->
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 mb-4 animate__animated animate__fadeInRight"
+                        data-aos="fade-right" data-aos-delay="200">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-cyan-500 bg-opacity-20 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-white">AI-Powered Accuracy</h3>
+                                <p class="mt-1 text-gray-300 text-sm">
+                                    Our algorithms reduce diagnostic errors by 40% compared to traditional methods.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 mb-4 animate__animated animate__fadeInRight"
+                        data-aos="fade-right" data-aos-delay="300">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-cyan-500 bg-opacity-20 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-white">Clinical Validation</h3>
+                                <p class="mt-1 text-gray-300 text-sm">
+                                    All solutions are developed in partnership with leading medical institutions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 animate__animated animate__fadeInRight"
+                        data-aos="fade-right" data-aos-delay="400">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-cyan-500 bg-opacity-20 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-white">Seamless Integration</h3>
+                                <p class="mt-1 text-gray-300 text-sm">
+                                    Works with your existing EMR systems with minimal setup time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Section (Mobile) - Slides up -->
+            <div class="flex justify-center items-center block sm:hidden" data-aos="fade-up" data-aos-duration="800">
+                <img src="./assets/images/why-algohealth.svg" alt="Doctors and Nurses"
+                    class="w-[100%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[100%] h-auto animate__animated animate__zoomIn">
+            </div>
         </div>
-            <!-- Image Section -->
-        <div class="flex justify-center items-center block sm:hidden">
-        <img 
-            src="./assets/images/why-algohealth.svg" 
-            alt="Doctors and Nurses" 
-            class="w-[100%] sm:w-[60%] md:w-[50%] lg:w-[45%] xl:w-[100%] h-auto"
-        >
-        </div>
-    </div>
     </section>
 
 
     <!-- Testimonials -->
     <section id="testimonials" class="bg-[#16284D] mt-[-1px]">
-    <div class="container mx-auto px-4 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        
-        <!-- Image Section -->
-        <div class="flex justify-center items-center hidden sm:block">
-            <img 
-            src="./assets/images/testimonial-doc.svg" 
-            alt="Testimonial Image" 
-            class="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] h-auto"
-            >
-        </div>
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-        <!-- Content Section -->
-        <div class="space-y-6">
-            <!-- Title Section -->
-            <div class="space-y-2">
-            <div class="flex items-center space-x-2">
-                <div class="w-6 h-6 flex items-center justify-center">
-                <img src="./assets/images/why-algo-icon.svg" alt="Health Shield Icon" class="h-full w-full object-contain">
+                <!-- Image Section -->
+                <div class="flex justify-center items-center hidden sm:block" data-aos="fade-left"
+                    data-aos-duration="800">
+                    <img src="./assets/images/testimonial-doc.svg" alt="Testimonial Image"
+                        class="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] h-auto animate__animated animate__zoomIn">
                 </div>
-                <h2 class="text-cyan-500 text-base sm:text-lg font-semibold uppercase">Testimonials</h2>
-            </div>
-            <h1 class="text-white text-2xl sm:text-3xl lg:text-4xl font-poppins">
-                Hear from Our Clients
-            </h1>
-            </div>
 
-            <!-- Carousel Section -->
-            <div class="mt-4 flex flex-col sm:flex-row items-center gap-4">
-            <button id="prevBtn" class="nav-button">
-                <i class="fa-solid fa-arrow-left text-3xl sm:text-4xl text-white"></i>
-            </button>
-
-            <!-- Carousel Container -->
-            <div class="carousel-container w-full sm:w-[80%] md:w-[70%]">
-                <div id="testimonial-carousel"></div>
-            </div>
-
-            <button id="nextBtn" class="nav-button">
-                <i class="fa-solid fa-arrow-right text-3xl sm:text-4xl text-white"></i>
-            </button>
-            </div>
-        </div>
-        </div>
-    </div>
-    </section>
-
-
-
-
-        <!-- Footer -->
-        <footer class="footer-bg">
-            <section id="pre-footer" class="text-white py-6">
-                <div class="container mx-auto px-6 max-w-5xl">
-                    <div class="flex flex-wrap gap-4 justify-between items-center">
-                        <!-- Logo -->
-                        <div>
-                            <a href="#home" class="decoration-none"><img src="./assets/images/ALPLOGO-WHITE.png"
-                                    alt="Algohealth Logo" width="200"></a>
+                <!-- Content Section -->
+                <div class="space-y-6">
+                    <!-- Title Section -->
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-6 h-6 flex items-center justify-center" data-aos="fade-left"
+                                data-aos-duration="800">
+                                <img src="./assets/images/why-algo-icon.svg" alt="Health Shield Icon"
+                                    class="h-full w-full object-contain">
+                            </div>
+                            <h2 class="text-cyan-500 text-base sm:text-lg font-semibold uppercase">Testimonials</h2>
                         </div>
-                        <div>
-                            <p class="text-xl poppins-regular">
-                                Powering Smarter Healthcare, Together
-                            </p>
-                        </div>
-                        <!-- Social Icons -->
-                        <div class="flex ">
-                            <a href="#" target="_blank" class="text-white mx-2">
-                                <i class="fa-brands fa-facebook text-2xl"></i>
-                            </a>
-
-                            <a href="https://www.linkedin.com/company/algorithm-health-ltd" target="_blank"
-                                class="text-white mx-2">
-                                <i class="fa-brands fa-linkedin text-2xl"></i> </a>
-                            <a href="#" target="_blank" class="text-white mx-2">
-                                <i class="fa-brands fa-instagram text-2xl"></i> </a>
-                        </div>
-
+                        <h1 class="text-white text-2xl sm:text-3xl lg:text-4xl font-poppins" data-aos="fade-right"
+                            data-aos-duration="800">
+                            Hear from Our Clients
+                        </h1>
                     </div>
-                    <hr class="border-gray-600 my-4">
+
+                    <!-- Carousel Section -->
+                    <div class="mt-4 flex flex-col sm:flex-row items-center gap-4">
+                        <button id="prevBtn" class="nav-button">
+                            <i class="fa-solid fa-arrow-left text-3xl sm:text-4xl text-white"></i>
+                        </button>
+
+                        <!-- Carousel Container -->
+                        <div class="carousel-container w-full sm:w-[80%] md:w-[70%]" data-aos="fade-right"
+                            data-aos-duration="800">
+                            <div id="testimonial-carousel"></div>
+                        </div>
+
+                        <button id="nextBtn" class="nav-button">
+                            <i class="fa-solid fa-arrow-right text-3xl sm:text-4xl text-white"></i>
+                        </button>
+                    </div>
                 </div>
-
-            </section>
-
-            <!-- Footer Main Content -->
-    <section class="bg-[#16284D] text-white py-8 px-4">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-
-        <!-- Description -->
-        <div class="space-y-4">
-        <p>
-            Algorithm Health serves as your trusted gateway to comprehensive healthcare solutions,
-            delivering an array of services tailored to meet your health needs.
-        </p>
+            </div>
         </div>
-
-        <!-- Quick Links -->
-        <div>
-        <h3 class="text-lg poppins-semi mb-4">Quick Links</h3>
-        <ul class="space-y-2 poppins-regular text-sm">
-            <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
-            <a href="#about" class="hover:text-cyan-500 text-[#8B9CC2]">About Us</a></li>
-            <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
-            <a href="#trustedby" class="hover:text-cyan-500 text-[#8B9CC2]">Trusted By</a></li>
-            <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
-            <a href="#testimonial" class="hover:text-cyan-500 text-[#8B9CC2]">Testimonial</a></li>
-            <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
-            <a href="#why-algo" class="hover:text-cyan-500 text-[#8B9CC2]">Why AlgoHealth</a></li>
-        </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div class="flex flex-col space-y-2">
-        <h3 class="text-lg poppins-semibold mb-4">Get In Touch</h3>
-
-        <p>
-            <i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
-            <a href="./contact.html" class="text-[#8B9CC2]">Contact Us</a>
-        </p>
-
-        <p>
-            <i class="fa-solid fa-phone-volume rotate-[320deg] text-cyan-500"></i> &nbsp;
-            <span class="text-[#8B9CC2]">Call Us</span><br>
-            <span class="font-normal text-white">Phone: </span>
-            <a href="tel:+914428360006" class="text-white font-poppins">+91-44-28360006</a>
-        </p>
-
-        <hr class="border-gray-600 my-4">
-
-        <p>
-            <i class="fa-solid fa-envelope text-cyan-500"></i> &nbsp;
-            <span class="text-[#8B9CC2]">EMAIL</span><br>
-            <a href="mailto:contact@algohealthplus.com" class="text-white">contact@algohealthplus.com</a>
-        </p>
-        </div>
-
-    </div>
     </section>
 
-            <!-- Copyrights Footer -->
-            <section id="post-footer" class="bg-[#001543] text-white py-4">
-                <div class="container mx-auto px-6 text-center">
-                    <p class="text-sm font-lighter">Copyright &copy; <span id="year"></span> <a href=".index.html"
-                            class="text-cyan-500">Algorithm Health</a>. All rights reserved.</p>
+
+
+
+    <!-- Footer -->
+    <footer class="footer-bg">
+        <section id="pre-footer" class="text-white py-6">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="flex flex-wrap gap-4 justify-between items-center">
+                    <!-- Logo -->
+                    <div>
+                        <a href="#home" class="decoration-none"><img src="./assets/images/ALPLOGO-WHITE.png"
+                                alt="Algohealth Logo" width="200"></a>
+                    </div>
+                    <div>
+                        <p class="text-xl poppins-regular">
+                            Powering Smarter Healthcare, Together
+                        </p>
+                    </div>
+                    <!-- Social Icons -->
+                    <div class="flex ">
+                        <a href="#" target="_blank" class="text-white mx-2">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/algorithm-health-ltd" target="_blank"
+                            class="text-white mx-2">
+                            <i class="fa-brands fa-linkedin text-2xl"></i> </a>
+                        <a href="#" target="_blank" class="text-white mx-2">
+                            <i class="fa-brands fa-instagram text-2xl"></i> </a>
+                    </div>
+
+                </div>
+                <hr class="border-gray-600 my-4">
+            </div>
+
+        </section>
+
+        <!-- Footer Main Content -->
+        <section class="bg-[#16284D] text-white py-8 px-4">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+                <!-- Description -->
+                <div class="space-y-4">
+                    <p>
+                        Algorithm Health serves as your trusted gateway to comprehensive healthcare solutions,
+                        delivering an array of services tailored to meet your health needs.
+                    </p>
                 </div>
 
-            </section>
-        </footer>
-        <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
-            class="!fixed bottom-5 end-5 hidden rounded-full bg-[#031B4E] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-[#16284D] hover:shadow-lg focus:bg-[#16284D] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#031B4E] active:shadow-lg"
-            id="backToTopBtn" onclick="scrollToTop()">
-            <span class="[&>svg]:w-4">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-                </svg>
-            </span>
-        </button>
-        <script src="./assets/js/script.js"></script>
-        <script src="./assets/js/menu.js"></script>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg poppins-semi mb-4">Quick Links</h3>
+                    <ul class="space-y-2 poppins-regular text-sm">
+                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
+                            <a href="#about" class="hover:text-cyan-500 text-[#8B9CC2]">About Us</a>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
+                            <a href="#trustedby" class="hover:text-cyan-500 text-[#8B9CC2]">Trusted By</a>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
+                            <a href="#testimonial" class="hover:text-cyan-500 text-[#8B9CC2]">Testimonial</a>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
+                            <a href="#why-algo" class="hover:text-cyan-500 text-[#8B9CC2]">Why AlgoHealth</a>
+                        </li>
+                    </ul>
+                </div>
 
-    </body>
+                <!-- Contact Info -->
+                <div class="flex flex-col space-y-2">
+                    <h3 class="text-lg poppins-semibold mb-4">Get In Touch</h3>
 
-    </html>
+                    <p>
+                        <i class="fa-solid fa-chevron-right text-cyan-500"></i> &nbsp;
+                        <a href="./contact.html" class="text-[#8B9CC2]">Contact Us</a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone-volume rotate-[320deg] text-cyan-500"></i> &nbsp;
+                        <span class="text-[#8B9CC2]">Call Us</span><br>
+                        <span class="font-normal text-white">Phone: </span>
+                        <a href="tel:+914428360006" class="text-white font-poppins">+91-44-28360006</a>
+                    </p>
+
+                    <hr class="border-gray-600 my-4">
+
+                    <p>
+                        <i class="fa-solid fa-envelope text-cyan-500"></i> &nbsp;
+                        <span class="text-[#8B9CC2]">EMAIL</span><br>
+                        <a href="mailto:contact@algohealthplus.com" class="text-white">contact@algohealthplus.com</a>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Copyrights Footer -->
+        <section id="post-footer" class="bg-[#001543] text-white py-4">
+            <div class="container mx-auto px-6 text-center">
+                <p class="text-sm font-lighter">Copyright &copy; <span id="year"></span> <a href=".index.html"
+                        class="text-cyan-500">Algorithm Health</a>. All rights reserved.</p>
+            </div>
+
+        </section>
+    </footer>
+    <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+        class="!fixed bottom-5 end-5 hidden rounded-full bg-[#031B4E] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-[#16284D] hover:shadow-lg focus:bg-[#16284D] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#031B4E] active:shadow-lg"
+        id="backToTopBtn" onclick="scrollToTop()">
+        <span class="[&>svg]:w-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>
+        </span>
+    </button>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/menu.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,       // Animation duration (ms)
+            easing: 'ease-in-out', // Easing type
+            once: true,          // Whether animation should happen only once
+            mirror: false,       // Whether elements animate out while scrolling past
+        });
+    </script>
+</body>
+
+</html>

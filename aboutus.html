@@ -15,6 +15,11 @@
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/styles.css">
+        <!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- AOS (Animate On Scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
     </head>
 
     <body>
@@ -136,82 +141,71 @@
 
 
     <!-- Hero Section -->
-    <section id="about" class="py-20 journery-bg">
+<section id="about" class="py-20 journery-bg">
     <div class="container mx-auto px-4">
-        
         <!-- Small screen layout (Image below Text) -->
         <div class="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center">
-                <!-- Image -->
-        <div class="flex justify-center md:justify-end">
-            <img src="./assets/images/abouts-hero.png"
-                class="w-full max-w-[90vw] sm:max-w-[70vw] md:max-w-[60vh] lg:max-w-[80vh] h-auto"
-                alt="our-journery-image">
-        </div>
-
-        <!-- Text Content -->
-        <div class="mx-auto space-y-4">
-            <!-- Mobile Heading -->
-            <div class="block sm:hidden">
-            <!-- <div class="flex mb-2 items-center justify-start space-x-2">
-                <div class="w-6 h-6 flex items-center justify-center">
-                <img src="./assets/images/health-shield-icon.svg" alt="Health Shield Icon">
-                </div>
-                <h2 class="text-cyan-500 text-sm font-semibold uppercase">About us</h2>
-            </div> -->
-            <h2 class="text-3xl mb-4 font-bold font-poppins text-[var(--primary-color)]">
-                Algorithm Health
-            </h2>
+            <!-- Image (Slides in from left on desktop, up on mobile) -->
+            <div class="flex justify-center md:justify-end" 
+                 data-aos="fade-left"
+                 data-aos-easing="ease-out-cubic"
+                 data-aos-duration="800">
+                <img src="./assets/images/abouts-hero.png"
+                    class="w-full max-w-[90vw] sm:max-w-[70vw] md:max-w-[60vh] lg:max-w-[80vh] h-auto animate__animated animate__zoomIn"
+                    alt="our-journery-image">
             </div>
 
-            <!-- Desktop Heading -->
-            <div class="hidden sm:block">
-            <!-- <div class="flex mb-2 items-center justify-start space-x-2">
-                <div class="w-6 h-6 flex items-center justify-center">
-                <img src="./assets/images/health-shield-icon.svg" alt="Health Shield Icon">
+            <!-- Text Content (Slides in from right) -->
+            <div class="mx-auto space-y-4" data-aos="fade-right" data-aos-delay="200">
+                <!-- Mobile Heading -->
+                <div class="block sm:hidden animate__animated animate__fadeInDown">
+                    <h2 class="text-3xl mb-4 font-bold font-poppins text-[var(--primary-color)]">
+                        Algorithm Health
+                    </h2>
                 </div>
-                <h2 class="text-cyan-500 text-sm font-semibold uppercase">About us</h2>
-            </div> -->
-            <h2 class="text-4xl mb-4 poppins-bold text-[var(--primary-color)]">
-                Algorithm Health
-            </h2>
+
+                <!-- Desktop Heading -->
+                <div class="hidden sm:block animate__animated animate__fadeInDown">
+                    <h2 class="text-4xl mb-4 poppins-bold text-[var(--primary-color)]">
+                        Algorithm Health
+                    </h2>
+                </div>
+
+                <!-- Paragraphs (Staggered fade up) -->
+                <p class="text-gray-600 text-sm poppins-medium leading-relaxed animate__animated animate__fadeInUp" 
+                   data-aos-delay="300">
+                    Algorithm Health was founded with the mission of enhancing diagnostic accuracy and treatment
+                    precision in healthcare through innovative technology solutions.
+                </p>
+                <p class="text-gray-600 text-sm poppins-medium leading-relaxed animate__animated animate__fadeInUp" 
+                   data-aos-delay="400">
+                    Leveraging a sophisticated combination of artificial intelligence and advanced rule engines,
+                    Algorithm Health has developed a unique model of "guided AI" designed to significantly improve
+                    medical diagnostic accuracy while minimizing clinical errors. Our comprehensive system goes
+                    beyond analysis of traditional laboratory testing by incorporating patient symptoms, medical
+                    history, and clinical context to enable more accurate and holistic diagnostic interpretations.
+                </p>
             </div>
-
-            <!-- Paragraphs -->
-            <p class="text-gray-600 text-sm poppins-medium leading-relaxed">
-            Algorithm Health was founded with the mission of enhancing diagnostic accuracy and treatment
-            precision in healthcare through innovative technology solutions.
-            </p>
-            <p class="text-gray-600 text-sm poppins-medium leading-relaxed">
-            Leveraging a sophisticated combination of artificial intelligence and advanced rule engines,
-            Algorithm Health has developed a unique model of "guided AI" designed to significantly improve
-            medical diagnostic accuracy while minimizing clinical errors. Our comprehensive system goes
-            beyond analysis of traditional laboratory testing by incorporating patient symptoms, medical
-            history, and clinical context to enable more accurate and holistic diagnostic interpretations.
-            </p>
-        </div>
-
-
-        
         </div>
     </div>
-    </section>
+</section>
 <!-- Vision and Mission -->
 <section id="vision" class="py-8 md:py-15 bg-[linear-gradient(to_bottom,_#ffffff,_#edf6fb)] px-4 sm:px-6 lg:px-8">
-    <div class="container mx-auto px-4 lg:px-40">
-        <div class="flex mb-2 items-center justify-start space-x-2 px-4 sm:px-8 lg:px-20">
+    <div class="container mx-auto px-4 lg:px-40" data-aos="fade-up" data-aos-duration="800">
+        <div class="flex mb-2 items-center justify-start space-x-2 px-4 sm:px-8 lg:px-20 animate__animated animate__fadeIn">
             <div class="w-6 h-6 flex items-center justify-center">
                 <img src="./assets/images/health-shield-icon.svg" alt="Health Shield Icon">
             </div>
             <h2 class="text-cyan-500 text-sm font-semibold uppercase">Vision and Mission</h2>
         </div>
-        <h2 class="text-3xl md:text-4xl mb-6 md:mb-8 poppins-bold px-4 sm:px-8 lg:px-20 font-[626] text-[var(--primary-color)]">
+        <h2 class="text-3xl md:text-4xl mb-6 md:mb-8 poppins-bold px-4 sm:px-8 lg:px-20 font-[626] text-[var(--primary-color)] animate__animated animate__fadeInDown">
             Inspirational Health <br>
             Our Vision and Mission </h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-12">
             <div class="space-y-8 md:space-y-16 lg:col-span-3">
-                <div class="card mx-auto lg:ml-20 flex flex-col sm:flex-row items-center gap-4 bg-white shadow-sm hover:shadow-md rounded-2xl p-4 sm:p-6">
-                    <div class="sm:w-24 flex-shrink-0">
+                <div class="card mx-auto lg:ml-20 flex flex-col sm:flex-row items-center gap-4 bg-white shadow-sm hover:shadow-md rounded-2xl p-4 sm:p-6"  data-aos="fade-right" data-aos-delay="200">
+                    <div class="sm:w-24 flex-shrink-0 animate__animated animate__bounceIn">
                         <img src="./assets/images/vision-icon.svg" alt="Vision Icon" class="w-16 sm:w-16 md:w-16">
                     </div>
                     <div>
@@ -223,7 +217,7 @@
                     </div>
                 </div>
 
-                <div class="card flex flex-col sm:flex-row items-center gap-4 bg-white shadow-sm hover:shadow-md rounded-2xl p-4 sm:p-6">
+                <div class="card flex flex-col sm:flex-row items-center gap-4 bg-white shadow-sm hover:shadow-md rounded-2xl p-4 sm:p-6" data-aos="fade-left" data-aos-delay="300">
                     <div class="sm:w-16 flex-shrink-0">
                         <img src="./assets/images/mission-icon.svg" alt="Mission Icon" class="w-16 sm:w-16 md:w-16">
                     </div>
@@ -243,35 +237,35 @@
 
         <!-- Our Story -->
 
-    <section id="our-story" class="p-4 md:p-8 lg:p-20">
-        <div class="card p-4 md:p-6 bg-[linear-gradient(90deg,_rgba(236,245,251,1)_60%,_rgba(195,241,249,1)_100%)] shadow-sm rounded-2xl">
-            <div class="flex mb-2 items-center justify-start space-x-2">
-                <div class="w-6 h-6 flex items-center justify-center">
-                    <img src="./assets/images/health-shield-icon.svg" alt="Health Shield Icon" class="w-full h-auto">
-                </div>
-                <h2 class="text-cyan-500 text-xs md:text-sm font-semibold uppercase">Our Story</h2>
+<section id="our-story" class="p-4 md:p-8 lg:p-20" data-aos="fade-up">
+    <div class="card p-4 md:p-6 bg-[linear-gradient(90deg,_rgba(236,245,251,1)_60%,_rgba(195,241,249,1)_100%)] shadow-sm rounded-2xl animate__animated animate__fadeIn">
+        <div class="flex mb-2 items-center justify-start space-x-2" data-aos="fade-right" data-aos-delay="100">
+            <div class="w-6 h-6 flex items-center justify-center">
+                <img src="./assets/images/health-shield-icon.svg" alt="Health Shield Icon" class="w-full h-auto">
             </div>
-            <h2 class="text-2xl sm:text-3xl md:text-4xl mb-4 font-bold font-poppins font-[626] text-[var(--primary-color)]">
-                Our Story</h2>
-            <p class="poppins-regular text-[#566593] text-xs sm:text-sm mb-4">
-                The company was founded by <span class="italic"><a href="https://g.co/kgs/dddP5cm" target="_blank"
-                        rel="noopener noreferrer" class="no-underline">Dr. Sumanth C Raman</a></span>, who brings over
-                <span class="font-semibold"> 25 years of specialized experience in healthcare IT and holds an M.D. in
-                    Internal Medicine</span>. Our <span class="font-semibold"> co-founders are accomplished data
-                    scientists with extensive expertise in machine learning, application development, and database
-                    management.</span>
-            </p>
-            <p class="poppins-regular text-[#566593] text-xs sm:text-sm mb-4">
-                Algorithm Health is proudly <span class="font-semibold"> incubated by the <a href="http://hticiitm.org/"
-                        target="_blank" rel="noopener noreferrer" class="no-underline">Healthcare Technology Innovation
-                        Centre</a> at <a href="https://respark.iitm.ac.in/" target="_blank" rel="noopener noreferrer"
-                        class="no-underline">IIT Madras Research Park</a></span> and is <span class="font-semibold">
-                    supported by the <a href="https://www.meity.gov.in/" target="_blank" rel="noopener noreferrer"
-                        class="no-underline">Ministry of Electronics and Information Technology (MEITY) , Government of
-                        India</a></span>, positioning us at the forefront of healthcare technology innovation.
-            </p>
+            <h2 class="text-cyan-500 text-xs md:text-sm font-semibold uppercase">Our Story</h2>
         </div>
-    </section>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl mb-4 font-bold font-poppins font-[626] text-[var(--primary-color)]" data-aos="fade-up" data-aos-delay="150">
+            Our Story</h2>
+        <p class="poppins-regular text-[#566593] text-xs sm:text-sm mb-4" data-aos="fade-up" data-aos-delay="200">
+            The company was founded by <span class="italic"><a href="https://g.co/kgs/dddP5cm" target="_blank"
+                    rel="noopener noreferrer" class="no-underline">Dr. Sumanth C Raman</a></span>, who brings over
+            <span class="font-semibold"> 25 years of specialized experience in healthcare IT and holds an M.D. in
+                Internal Medicine</span>. Our <span class="font-semibold"> co-founders are accomplished data
+                scientists with extensive expertise in machine learning, application development, and database
+                management.</span>
+        </p>
+        <p class="poppins-regular text-[#566593] text-xs sm:text-sm mb-4" data-aos="fade-up" data-aos-delay="250">
+            Algorithm Health is proudly <span class="font-semibold"> incubated by the <a href="http://hticiitm.org/"
+                    target="_blank" rel="noopener noreferrer" class="no-underline">Healthcare Technology Innovation
+                    Centre</a> at <a href="https://respark.iitm.ac.in/" target="_blank" rel="noopener noreferrer"
+                    class="no-underline">IIT Madras Research Park</a></span> and is <span class="font-semibold">
+                supported by the <a href="https://www.meity.gov.in/" target="_blank" rel="noopener noreferrer"
+                    class="no-underline">Ministry of Electronics and Information Technology (MEITY) , Government of
+                    India</a></span>, positioning us at the forefront of healthcare technology innovation.
+        </p>
+    </div>
+</section>
 
         <!-- Our Team -->
 
@@ -458,7 +452,15 @@
         </button>
         <script src="./assets/js/script.js"></script>
         <script src="./assets/js/menu.js"></script>
-
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,       // Animation duration (ms)
+    easing: 'ease-in-out', // Easing type
+    once: true,          // Whether animation should happen only once
+    mirror: false,       // Whether elements animate out while scrolling past
+  });
+</script>
     </body>
 
     </html>
