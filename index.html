@@ -124,9 +124,28 @@
             <div class="container mx-auto px-4 py-2 space-y-4">
                 <a href="../index.html"
                     class="block py-3 font-medium hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">Home</a>
-                <a href="../index.html#about"
-                    class="block py-3 font-medium hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">About
-                    Us</a>
+                <div class="relative">
+                    <button id="mobile-solutions-button"
+                        class="w-full flex justify-between items-center py-3 font-medium hover:text-cyan-600 transition-colors">
+                        <span>About us</span>
+                        <svg id="mobile-solutions-arrow"
+                            class="w-4 h-4 ml-1 transform transition-transform duration-200" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="mobile-solutions-menu" class="pl-4 overflow-hidden transition-all duration-300 max-h-0">
+                        <a href=".aboutus.html#vision"
+                            class="block py-2 text-sm hover:text-cyan-500 transition-transform duration-300 hover:translate-x-2">Care
+                            Vision & Mission</a>
+                        <a href=".aboutus.html#our-story"
+                            class="block py-2 text-sm hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">AI-Driven
+                            Our Story</a>
+                        <a href=".aboutus.html#our-team"
+                            class="block py-2 text-sm hover:text-cyan-600 transition-transform duration-300 hover:translate-x-2">Auto
+                            Our Team</a>
+                    </div>
+                </div>
 
                 <!-- Mobile Solutions Dropdown -->
                 <div class="relative">
@@ -220,7 +239,7 @@
                         Revolutionizing Healthcare
                     </h2>
 
-                    <p class="text-[#566593] font-[var(--primary-font)] text-base sm:text-sm animate__animated animate__fadeIn"
+                    <p class="text-[#566593] poppins-regular text-base sm:text-sm animate__animated animate__fadeIn"
                         data-aos-delay="400">
                         At Algorithm Health, we are committed to revolutionizing healthcare through innovative
                         technology and compassionate care. Our mission is to provide accessible, accurate, and timely
@@ -470,7 +489,7 @@
                         Care AI EMR
                     </h3>
                     <p
-                        class="text-[#566593] poppins-regular text-xs leading-relaxed mb-8 group-hover:text-white animate__animated animate__fadeIn">
+                        class="text-[#566593]  poppins-light text-sm leading-relaxed mb-8 group-hover:text-white animate__animated animate__fadeIn">
                         It is a long established fact that a reader will be distracted by the readable content.
                     </p>
                     <div class="flex items-center justify-between">
@@ -504,7 +523,7 @@
                         AI-Driven Intelligent Lab Reports
                     </h3>
                     <p
-                        class="text-[#566593] poppins-regular text-xs leading-relaxed mb-8 group-hover:text-white animate__animated animate__fadeIn">
+                        class="text-[#566593] poppins-light text-sm  leading-relaxed mb-8 group-hover:text-white animate__animated animate__fadeIn">
                         AI- Driven Intelligent Report System for analysis and presentation of Laboratory reports.
                     </p>
                     <div class="flex items-center justify-between">
@@ -538,7 +557,7 @@
                         Auto adjudication for health insurance claims
                     </h3>
                     <p
-                        class="text-[#566593] text-xs leading-relaxed mb-8 poppins-regular group-hover:text-white animate__animated animate__fadeIn">
+                        class="text-[#566593] poppins-light text-sm leading-relaxed mb-8 group-hover:text-white animate__animated animate__fadeIn">
                         AI Driven health care insurance fraudulent claims detection system.
                     </p>
                     <div class="flex items-center justify-between">
@@ -572,7 +591,7 @@
                         AI-Enabled EMR Solution
                     </h3>
                     <p
-                        class="text-[#566593] text-xs leading-relaxed mb-8 poppins-regular group-hover:text-white animate__animated animate__fadeIn">
+                        class="text-[#566593] poppins-light text-sm leading-relaxed mb-8 group-hover:text-white animate__animated animate__fadeIn">
                         Enabling conventional EMR Systems to become "Smart EMR" Systems with AI
                     </p>
                     <div class="flex items-center justify-between">
@@ -606,7 +625,7 @@
                         CodeSync AI
                     </h3>
                     <p
-                        class="text-[#566593] text-xs leading-relaxed mb-8 poppins-regular group-hover:text-white animate__animated animate__fadeIn">
+                        class="text-[#566593] poppins-light text-sm leading-relaxed mb-8 group-hover:text-white animate__animated animate__fadeIn">
                         Solution for revenue cycle Management companies for medical code Extraction.
                     </p>
                     <div class="flex items-center justify-between">
@@ -629,7 +648,6 @@
         </div>
     </section>
 
-    <!-- Why Algohealth -->
     <!-- Why Algohealth -->
     <section id="why-algo" class="why-algo-bg px-4 py-12 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
