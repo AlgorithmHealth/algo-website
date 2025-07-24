@@ -25,7 +25,6 @@
 
 <body class="bg-gray-50">
     <!-- Header -->
-    <!-- Header --> 
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container flex justify-center gap-4 mx-auto px-4 py-4">
             <!-- Logo -->
@@ -37,8 +36,34 @@
             <!-- Desktop Navigation (unchanged from your original) -->
             <div class="flex items-center gap-4 justify-between">
                 <nav class="hidden md:flex space-x-8">
-                    <a href="../index.html" class="font-medium text-cyan-600">Home</a>
-                    <a href="../index.html#about" class="font-medium hover:text-cyan-600">About Us</a>
+                    <a href="../index.html" class="font-medium text-cyan-500">Home</a>
+                    <div class="relative group">
+                        <a href="./aboutus.html"
+                            class="font-medium text-gray-700 hover:text-cyan-600  flex items-center">About Us
+                            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-200"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="aboutus.html#vision"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-500 transition-colors">
+                                    <div class="font-medium">Vision & Mission</div>
+                                </a>
+                                <a href="aboutus.html#our-story"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-500 transition-colors">
+                                    <div class="font-medium">Our Story</div>
+                                </a>
+                                <a href="aboutus.html#our-team"
+                                    class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-cyan-500 transition-colors">
+                                    <div class="font-medium">Our Team</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="relative group">
                         <a href="../index.html#solutions" class="font-medium hover:text-cyan-600 flex items-center">
                             Our Solutions
