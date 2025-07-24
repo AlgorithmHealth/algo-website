@@ -15,6 +15,11 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
+                <!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- AOS (Animate On Scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
 </head>
 
 
@@ -200,12 +205,13 @@
 </section>
 
     <!-- Hero Section -->
+<!-- AI Lab Hero Section -->
 <section id="ai-lab-hero-section">
     <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-8 md:py-12">
         <div class="flex flex-col lg:flex-row items-start justify-between gap-6 md:gap-8">
             <!-- Text Content -->
-            <div class="order-2 lg:order-1 mt-0 lg:mt-20 w-full lg:w-1/2">
-                <div>
+            <div class="order-2 lg:order-1 mt-0 lg:mt-20 w-full lg:w-1/2" data-aos="fade-right">
+                <div data-aos="fade-up" data-aos-delay="100">
                     <h2 class="text-2xl md:text-3xl text-[var(--primary-color)] mb-4 poppins-semibold">
                         Revolutionizing Claims Processing with 
                         <span class="block md:inline">AI-Powered Automation</span>
@@ -220,7 +226,7 @@
             </div>
             
             <!-- Image -->
-            <div class="order-1 lg:order-2 flex items-center justify-center w-full lg:w-1/2">
+            <div class="order-1 lg:order-2 flex items-center justify-center w-full lg:w-1/2" data-aos="fade-left" data-aos-delay="150">
                 <img src="../assets/images/solutions/health-insurance-hero.png" 
                      alt="AI Driven Reports"
                      class="h-auto w-full max-w-md lg:!w-[60rem]">
@@ -229,20 +235,19 @@
     </div>
 </section>
 
-    <!-- Intelligent Document Analysis Section -->
-
+<!-- Intelligent Document Analysis Section -->
 <section id="whole-bg">
     <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-8 md:py-12">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             <!-- Image Column - Order changes for mobile -->
-            <div class="order-1 lg:order-1 flex items-center justify-center">
+            <div class="order-1 lg:order-1 flex items-center justify-center" data-aos="fade-right">
                 <img src="../assets/images/solutions/document-analysis.png" 
                      alt="Intelligent Document Analysis"
                      class="h-auto w-full max-w-md lg:w-[60rem]">
             </div>
 
             <!-- Content Column -->
-            <div class="order-2 lg:order-2 flex flex-col justify-center">
+            <div class="order-2 lg:order-2 flex flex-col justify-center" data-aos="fade-left" data-aos-delay="100">
                 <h2 class="text-xl md:text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">
                     Intelligent Document Analysis
                 </h2>
@@ -254,7 +259,7 @@
                 <div class="shadow-sm border border-gray-200 overflow-hidden">
 
                     <!-- First Accordion Item - Expanded -->
-                    <div class="border-b my-2 shadow-md border-gray-200">
+                    <div class="border-b my-2 shadow-md border-gray-200" data-aos="fade-up" data-aos-delay="150">
                         <button class="w-full px-4 md:px-6 py-3 md:py-4 text-left bg-[#ECF5FB] hover:bg-[#ECF5FB] transition-colors duration-200 flex items-center justify-between group"
                                 onclick="toggleMedicalAccordion(this)">
                             <span class="text-base md:text-lg poppins-medium text-[var(--primary-color)] text-gray-800 active-tab-title">
@@ -274,7 +279,7 @@
                     </div>
 
                     <!-- Second Accordion Item -->
-                    <div class="border-b border-gray-200">
+                    <div class="border-b border-gray-200" data-aos="fade-up" data-aos-delay="200">
                         <button class="w-full px-4 md:px-6 py-3 md:py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group"
                                 onclick="toggleMedicalAccordion(this)">
                             <span class="text-base md:text-lg font-medium text-[var(--primary-color)]">
@@ -294,7 +299,7 @@
                     </div>
 
                     <!-- Third Accordion Item -->
-                    <div class="border-b border-gray-200">
+                    <div class="border-b border-gray-200" data-aos="fade-up" data-aos-delay="250">
                         <button class="w-full px-4 md:px-6 py-3 md:py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group"
                                 onclick="toggleMedicalAccordion(this)">
                             <span class="text-base md:text-lg font-medium text-[var(--primary-color)]">
@@ -314,7 +319,7 @@
                     </div>
 
                     <!-- Fourth Accordion Item -->
-                    <div>
+                    <div data-aos="fade-up" data-aos-delay="300">
                         <button class="w-full px-4 md:px-6 py-3 md:py-4 text-left hover:bg-gray-50 transition-colors duration-200 flex items-center justify-between group"
                                 onclick="toggleMedicalAccordion(this)">
                             <span class="text-base md:text-lg font-medium text-[var(--primary-color)]">
@@ -343,7 +348,7 @@
     <div class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-20">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-2">
             <!-- Title Column -->
-            <div class="lg:col-span-2 flex items-center justify-center lg:justify-start">
+            <div class="lg:col-span-2 flex items-center justify-center lg:justify-start" data-aos="fade-right">
                 <h2 class="text-xl md:text-2xl text-[var(--primary-color)] hover:text-cyan-500 active:text-cyan-500 poppins-semibold mb-4 lg:mb-0">
                     Advanced Fraud <br class="hidden lg:block"> Detection Capabilities
                 </h2>
@@ -355,7 +360,7 @@
                 <div class="flex overflow-x-auto pb-4 lg:pb-0 lg:overflow-visible gap-3 md:gap-4 lg:items-center lg:justify-center">
                     <!-- Tab Button 1-->
                     <div class="tab-button active rounded-lg shadow-md p-4 md:p-6 active:text-cyan-500 bg-white w-56 md:w-52 h-28 md:h-32 flex-shrink-0 flex items-center justify-center"
-                        data-tab-target="panel-1">
+                        data-tab-target="panel-1" data-aos="fade-up" data-aos-delay="100">
                         <p class="text-sm md:text-base text-center text-[var(--primary-color)] poppins-medium">
                             Unnecessary Medical Procedures
                         </p>
@@ -363,7 +368,7 @@
 
                     <!-- Tab Button 2-->
                     <div class="tab-button rounded-lg shadow-md p-4 md:p-6 bg-white w-56 md:w-52 h-28 md:h-32 flex-shrink-0 flex items-center justify-center"
-                        data-tab-target="panel-2">
+                        data-tab-target="panel-2" data-aos="fade-up" data-aos-delay="150">
                         <p class="text-sm md:text-base text-center active:text-cyan-500 text-[var(--primary-color)] poppins-medium">
                             Medication Abuse Detection
                         </p>
@@ -371,7 +376,7 @@
 
                     <!-- Tab Button 3-->
                     <div class="tab-button rounded-lg shadow-md p-4 md:p-6 bg-white w-56 md:w-52 h-28 md:h-32 flex-shrink-0 flex items-center justify-center"
-                        data-tab-target="panel-3">
+                        data-tab-target="panel-3" data-aos="fade-up" data-aos-delay="200">
                         <p class="text-sm md:text-base text-center active:text-cyan-500 hover:text-cyan-500 text-[var(--primary-color)] poppins-medium">
                             Length of Stay Optimization
                         </p>
@@ -379,7 +384,7 @@
 
                     <!-- Tab Button 4 -->
                     <div class="tab-button rounded-lg shadow-md p-4 md:p-6 bg-white w-56 md:w-52 h-28 md:h-32 flex-shrink-0 flex items-center justify-center"
-                        data-tab-target="panel-4">
+                        data-tab-target="panel-4" data-aos="fade-up" data-aos-delay="250">
                         <p class="text-sm md:text-base text-center active:text-cyan-500 hover:text-cyan-500 text-[var(--primary-color)] poppins-medium">
                             Medical Inconsistency Detection
                         </p>
@@ -390,28 +395,28 @@
                 <div class="tab-panels-container mt-4 md:mt-5">
                     <!-- Panel 1 -->
                     <div id="panel-1"
-                        class="tab-panel active border shadow-md bg-white rounded-xl border-cyan-500 p-3 md:p-4">
+                        class="tab-panel active border shadow-md bg-white rounded-xl border-cyan-500 p-3 md:p-4" data-aos="fade-up" data-aos-delay="100">
                         <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular text-sm md:text-base">
                             Flags tests and treatments that don't align with patient diagnosis or standard care requirements.
                         </p>
                     </div>
 
                     <!-- Panel 2-->
-                    <div id="panel-2" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-3 md:p-4">
+                    <div id="panel-2" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-3 md:p-4" data-aos="fade-up" data-aos-delay="150">
                         <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular text-sm md:text-base">
                             Identifies when prescribed quantities exceed normal usage patterns for specific medical conditions.
                         </p>
                     </div>
 
                     <!-- Panel 3 -->
-                    <div id="panel-3" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-3 md:p-4">
+                    <div id="panel-3" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-3 md:p-4" data-aos="fade-up" data-aos-delay="200">
                         <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular text-sm md:text-base">
                             Assesses whether hospitalization duration matches standard recovery times for given diagnoses.
                         </p>
                     </div>
 
                     <!-- Panel 4 -->
-                    <div id="panel-4" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-3 md:p-4">
+                    <div id="panel-4" class="tab-panel border shadow-md bg-white rounded-xl border-cyan-500 p-3 md:p-4" data-aos="fade-up" data-aos-delay="250">
                         <p class="text-cyan-500 hover:text-[var(--primary-color)] text-center poppins-regular text-sm md:text-base">
                             Cross-references all documents to identify discrepancies in diagnoses, treatments, or billed services.
                         </p>
@@ -422,304 +427,299 @@
     </div>
 </section>
 
-    <!-- Benefits for Health Insurers Section -->
+<!-- Benefits for Health Insurers Section -->
+<section id="whole-bg">
+    <div class="container mx-auto md:px-20 p-6 py-12">
+        <div class="grid md:grid-cols-5 grid-cols-1 gap-8">
+            <div class="col-span-2 flex items-center justify-center" data-aos="fade-right">
+                <h2
+                    class="text-2xl hover:text-cyan-500 active:text-cyan-500 text-[var(--primary-color)] mb-4 poppins-semibold">
+                    Benefits for <br>
+                    Health Insurers
+                </h2>
+            </div>
+            <div class="col-span-3 rounded-lg text-white bg-gradient-to-b from-[#A1DBE6] to-[#A5BEF3] p-6" data-aos="fade-left" data-aos-delay="100">
+                <div class="benefits-carousel-wrapper">
+                    <div class="benefits-carousel-track">
+                        <!-- First set of items -->
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="150">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/cost-reduction-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Dramatic
+                                    Cost
+                                    Reduction</h3>
+                                <p class="poppins-medium text-sm">
+                                    Prevent fraudulent and inflated claims from resulting in unnecessary payouts,
+                                    saving
+                                    millions annually
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/automated-processing-speed-icon.png"
+                                    alt="Automated Processing Speed Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Automated Processing Speed</h3>
+                                <p class="poppins-medium text-sm">
+                                    Process claims 10x faster than manual review, dramatically reducing operational
+                                    bottlenecks
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="250">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/enhanced-accuracy-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Enhanced Accuracy</h3>
+                                <p class="poppins-medium text-sm">
+                                    AI-powered analysis eliminates human error and ensures consistent adjudication
+                                    standards
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/fraud-prevention-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Fraud
+                                    Prevention</h3>
+                                <p class="poppins-medium text-sm">
+                                    Prevent fraudulent and inflated claims from resulting in unnecessary payouts,
+                                    saving
+                                    millions annually
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="350">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/operational-efficeinecy-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Operational Efficiency</h3>
+                                <p class="poppins-medium text-sm">
+                                    Reduce manual review workload by up to 80%, allowing staff to focus on complex
+                                    cases
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/regulatory-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Regulatory Compliance</h3>
+                                <p class="poppins-medium text-sm">
+                                    Ensure all claims meet industry standards and regulatory requirements
+                                    automatically
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="450">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/real-time_analytics-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Real-Time Analytics</h3>
+                                <p class="poppins-medium text-sm">
+                                    Access comprehensive dashboards and reporting for immediate insights into claims
+                                    patterns
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="500">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/scalable-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Scalable Solution</h3>
+                                <p class="poppins-medium text-sm">
+                                    Handle increased claim volumes without proportional increases in staffing costs
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="550">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/risk-management-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Risk Management</h3>
+                                <p class="poppins-medium text-sm">
+                                    Identify high-risk providers and patterns to inform network management decisions
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="600">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/best-customer-experience_icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Customer Satisfaction</h3>
+                                <p class="poppins-medium text-sm">
+                                    Faster claim processing leads to improved policyholder experience and retention
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="650">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/audit-trail-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Audit Trail Transparency</h3>
+                                <p class="poppins-medium text-sm">
+                                    Complete documentation of adjudication decisions for regulatory and internal
+                                    auditing
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="700">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/custom-rule-engine.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Customizable Rules
+                                    Engine</h3>
+                                <p class="poppins-medium text-sm">
+                                    Adapt adjudication criteria to specific business policies and market
+                                    requirements
+                                </p>
+                            </div>
+                        </div>
 
-    <section id="whole-bg">
-        <div class="container mx-auto md:px-20 p-6 py-12">
-            <div class="grid md:grid-cols-5 grid-cols-1 gap-8">
-                <div class="col-span-2 flex items-center justify-center">
-                    <h2
-                        class="text-2xl hover:text-cyan-500 active:text-cyan-500 text-[var(--primary-color)] mb-4 poppins-semibold">
-                        Benefits for <br>
-                        Health Insurers
-                    </h2>
-                </div>
-                <div class="col-span-3 rounded-lg text-white bg-gradient-to-b from-[#A1DBE6] to-[#A5BEF3] p-6">
-                    <div class="benefits-carousel-wrapper">
-                        <div class="benefits-carousel-track">
-                            <!-- First set of items -->
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/cost-reduction-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Dramatic
-                                        Cost
-                                        Reduction</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Prevent fraudulent and inflated claims from resulting in unnecessary payouts,
-                                        saving
-                                        millions annually
-                                    </p>
-                                </div>
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="750">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/cost-reduction-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Dramatic
+                                    Cost
+                                    Reduction</h3>
+                                <p class="poppins-medium text-sm">
+                                    Prevent fraudulent and inflated claims from resulting in unnecessary payouts,
+                                    saving
+                                    millions annually
+                                </p>
                             </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/automated-processing-speed-icon.png"
-                                        alt="Automated Processing Speed Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Automated Processing Speed</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Process claims 10x faster than manual review, dramatically reducing operational
-                                        bottlenecks
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="800">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/automated-processing-speed-icon.png"
+                                    alt="Automated Processing Speed Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Automated Processing Speed</h3>
+                                <p class="poppins-medium text-sm">
+                                    Process claims 10x faster than manual review, dramatically reducing operational
+                                    bottlenecks
+                                </p>
                             </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/enhanced-accuracy-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Enhanced Accuracy</h3>
-                                    <p class="poppins-medium text-sm">
-                                        AI-powered analysis eliminates human error and ensures consistent adjudication
-                                        standards
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="850">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/enhanced-accuracy-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Enhanced Accuracy</h3>
+                                <p class="poppins-medium text-sm">
+                                    AI-powered analysis eliminates human error and ensures consistent adjudication
+                                    standards
+                                </p>
                             </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/fraud-prevention-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Fraud
-                                        Prevention</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Prevent fraudulent and inflated claims from resulting in unnecessary payouts,
-                                        saving
-                                        millions annually
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="900">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/fraud-prevention-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Fraud
+                                    Prevention</h3>
+                                <p class="poppins-medium text-sm">
+                                    Prevent fraudulent and inflated claims from resulting in unnecessary payouts,
+                                    saving
+                                    millions annually
+                                </p>
                             </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/operational-efficeinecy-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Operational Efficiency</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Reduce manual review workload by up to 80%, allowing staff to focus on complex
-                                        cases
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="950">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/operational-efficeinecy-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Operational Efficiency</h3>
+                                <p class="poppins-medium text-sm">
+                                    Reduce manual review workload by up to 80%, allowing staff to focus on complex
+                                    cases
+                                </p>
                             </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/regulatory-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Regulatory Compliance</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Ensure all claims meet industry standards and regulatory requirements
-                                        automatically
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="1000">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/regulatory-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Regulatory Compliance</h3>
+                                <p class="poppins-medium text-sm">
+                                    Ensure all claims meet industry standards and regulatory requirements
+                                    automatically
+                                </p>
                             </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/real-time_analytics-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Real-Time Analytics</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Access comprehensive dashboards and reporting for immediate insights into claims
-                                        patterns
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="1050">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/real-time_analytics-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Real-Time Analytics</h3>
+                                <p class="poppins-medium text-sm">
+                                    Access comprehensive dashboards and reporting for immediate insights into claims
+                                    patterns
+                                </p>
                             </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/scalable-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Scalable Solution</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Handle increased claim volumes without proportional increases in staffing costs
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="1100">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/scalable-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Scalable Solution</h3>
+                                <p class="poppins-medium text-sm">
+                                    Handle increased claim volumes without proportional increases in staffing costs
+                                </p>
                             </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/risk-management-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Risk Management</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Identify high-risk providers and patterns to inform network management decisions
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="1150">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/risk-management-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Risk Management</h3>
+                                <p class="poppins-medium text-sm">
+                                    Identify high-risk providers and patterns to inform network management decisions
+                                </p>
                             </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/best-customer-experience_icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Customer Satisfaction</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Faster claim processing leads to improved policyholder experience and retention
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="1200">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/best-customer-experience_icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Customer Satisfaction</h3>
+                                <p class="poppins-medium text-sm">
+                                    Faster claim processing leads to improved policyholder experience and retention
+                                </p>
                             </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/audit-trail-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Audit Trail Transparency</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Complete documentation of adjudication decisions for regulatory and internal
-                                        auditing
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="1250">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/audit-trail-icon.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Audit Trail Transparency</h3>
+                                <p class="poppins-medium text-sm">
+                                    Complete documentation of adjudication decisions for regulatory and internal
+                                    auditing
+                                </p>
                             </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/custom-rule-engine.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Customizable Rules
-                                        Engine</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Adapt adjudication criteria to specific business policies and market
-                                        requirements
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Duplicate set for seamless loop -->
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/cost-reduction-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Dramatic
-                                        Cost
-                                        Reduction</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Prevent fraudulent and inflated claims from resulting in unnecessary payouts,
-                                        saving
-                                        millions annually
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/automated-processing-speed-icon.png"
-                                        alt="Automated Processing Speed Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Automated Processing Speed</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Process claims 10x faster than manual review, dramatically reducing operational
-                                        bottlenecks
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/enhanced-accuracy-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Enhanced Accuracy</h3>
-                                    <p class="poppins-medium text-sm">
-                                        AI-powered analysis eliminates human error and ensures consistent adjudication
-                                        standards
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/fraud-prevention-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Fraud
-                                        Prevention</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Prevent fraudulent and inflated claims from resulting in unnecessary payouts,
-                                        saving
-                                        millions annually
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/operational-efficeinecy-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Operational Efficiency</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Reduce manual review workload by up to 80%, allowing staff to focus on complex
-                                        cases
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/regulatory-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Regulatory Compliance</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Ensure all claims meet industry standards and regulatory requirements
-                                        automatically
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/real-time_analytics-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Real-Time Analytics</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Access comprehensive dashboards and reporting for immediate insights into claims
-                                        patterns
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/scalable-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Scalable Solution</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Handle increased claim volumes without proportional increases in staffing costs
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/risk-management-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Risk Management</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Identify high-risk providers and patterns to inform network management decisions
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/best-customer-experience_icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Customer Satisfaction</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Faster claim processing leads to improved policyholder experience and retention
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/audit-trail-icon.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Audit Trail Transparency</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Complete documentation of adjudication decisions for regulatory and internal
-                                        auditing
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="benefits-carousel-item">
-                                <div class="flex text-center items-center flex-col justify-center gap-4">
-                                    <img src="../assets/images/solutions/custom-rule-engine.png"
-                                        alt="Cost Reduction Chart Icon" width="50" height="50">
-                                    <h3 class="poppins-semibold">Customizable Rules
-                                        Engine</h3>
-                                    <p class="poppins-medium text-sm">
-                                        Adapt adjudication criteria to specific business policies and market
-                                        requirements
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="benefits-carousel-item" data-aos="fade-up" data-aos-delay="1300">
+                            <div class="flex text-center items-center flex-col justify-center gap-4">
+                                <img src="../assets/images/solutions/custom-rule-engine.png"
+                                    alt="Cost Reduction Chart Icon" width="50" height="50">
+                                <h3 class="poppins-semibold">Customizable Rules
+                                    Engine</h3>
+                                <p class="poppins-medium text-sm">
+                                    Adapt adjudication criteria to specific business policies and market
+                                    requirements
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-        </div>
-        </div>
-
-    </section>
+    </div>
+</section>
 
 
     <!-- Call to Action -->
@@ -949,7 +949,15 @@
         });
     </script>
     <script src="../assets/js/menu.js"></script>
-
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,       // Animation duration (ms)
+    easing: 'ease-in-out', // Easing type
+    once: true,          // Whether animation should happen only once
+    mirror: false,       // Whether elements animate out while scrolling past
+  });
+</script>
 </body>
 
 </html>

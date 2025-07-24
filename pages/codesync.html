@@ -15,6 +15,11 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
+                    <!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- AOS (Animate On Scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
 </head>
 
 <body>
@@ -516,7 +521,7 @@
     </div>
 </section>
 
-    <!-- Hero Section -->
+ <!-- Hero Section -->
 <section id="codesync-hero" class="bg-white relative">
     <!-- Gradient Overlay covering top 50% -->
     <div class="absolute inset-0 h-1/2 w-full bg-[linear-gradient(to_right,_#C9F6FF_0%,_#FFFFFF_100%)] z-0"></div>
@@ -524,7 +529,7 @@
     <div class="relative z-10 container mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12">
         <div class="flex flex-col lg:flex-row justify-center gap-6 md:gap-8">
             <!-- Image - order changes for mobile -->
-            <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+            <div class="order-2 lg:order-1 flex justify-center lg:justify-start" data-aos="fade-right">
                 <img src="../assets/images/solutions/codesyc-hero.png" 
                      alt="Doctor in Hightech Lab" 
                      class="w-full max-w-md lg:max-w-none lg:w-[500px] h-auto">
@@ -533,7 +538,7 @@
             <!-- Content - order changes for mobile -->
             <div class="order-1 lg:order-2 flex flex-col justify-end items-center lg:items-start max-w-2xl gap-4 md:gap-6">
                 <!-- content 1 -->
-                <div class="p-4 md:p-0 rounded-lg shadow-sm md:shadow-none md:bg-none">
+                <div class="p-4 md:p-0 rounded-lg shadow-sm md:shadow-none md:bg-none" data-aos="fade-left" data-aos-delay="100">
                     <h2 class="poppins-semibold text-[var(--primary-color)] text-lg md:text-xl">
                         Automated Medical Code Extraction & Mapping
                     </h2>
@@ -544,7 +549,7 @@
                 </div>
 
                 <!-- content 2 -->
-                <div class="bg-white p-4 md:p-0 rounded-lg shadow-sm md:shadow-none mt-2 md:mt-4">
+                <div class="bg-white p-4 md:p-0 rounded-lg shadow-sm md:shadow-none mt-2 md:mt-4" data-aos="fade-left" data-aos-delay="150">
                     <h2 class="poppins-semibold text-[var(--primary-color)] text-lg md:text-xl">
                         Precision Coding for Maximum Reimbursement
                     </h2>
@@ -559,26 +564,26 @@
         </div>
     </div>
 </section>
-    <!-- Dual-Direction Intelligence Section -->
 
+<!-- Dual-Direction Intelligence Section -->
 <section id="whole-bg">
     <div class="container mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12">
-        <h2 class="text-2xl md:text-3xl text-center hover:text-cyan-500 active:text-cyan-500 text-[var(--primary-color)] mb-4 md:mb-6 poppins-semibold">
+        <h2 class="text-2xl md:text-3xl text-center hover:text-cyan-500 active:text-cyan-500 text-[var(--primary-color)] mb-4 md:mb-6 poppins-semibold" data-aos="fade-up">
             Dual-Direction Intelligence
         </h2>
         <div class="max-w-2xl mx-auto">
             <!-- Tab Navigation -->
             <div class="flex flex-col sm:flex-row bg-white items-stretch sm:items-center space-y-2 sm:space-y-0 sm:space-x-2 mb-6 md:mb-8 teko-font overflow-hidden rounded-md">
                 <button class="tab-button px-4 py-3 sm:px-6 sm:py-4 text-lg sm:text-xl md:text-2xl uppercase tracking-wider transition-all duration-300 tab-active text-white"
-                    data-tab="extraction">
+                    data-tab="extraction" data-aos="fade-up" data-aos-delay="100">
                     Document-to-Code
                 </button>
                 <button class="tab-button px-4 py-3 sm:px-6 sm:py-4 text-lg sm:text-xl md:text-2xl uppercase tracking-wider transition-all duration-300 tab-inactive sm:border-l border-gray-200"
-                    data-tab="mapping">
+                    data-tab="mapping" data-aos="fade-up" data-aos-delay="150">
                     Code-to-Clinical
                 </button>
                 <button class="tab-button px-4 py-3 sm:px-6 sm:py-4 text-lg sm:text-xl md:text-2xl uppercase tracking-wider transition-all duration-300 tab-inactive sm:border-l border-gray-200"
-                    data-tab="learning">
+                    data-tab="learning" data-aos="fade-up" data-aos-delay="200">
                     Continuous Learning
                 </button>
             </div>
@@ -586,7 +591,7 @@
             <!-- Tab Content -->
             <div class="p-4 sm:p-6 md:p-8">
                 <!-- Document Extraction Tab -->
-                <div id="extraction-content" class="tab-content">
+                <div id="extraction-content" class="tab-content" data-aos="fade-up" data-aos-delay="250">
                     <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                         <div class="flex-shrink-0">
                             <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 rounded-lg flex items-center justify-center">
@@ -603,7 +608,7 @@
                 </div>
 
                 <!-- Code Mapping Tab -->
-                <div id="mapping-content" class="tab-content hidden">
+                <div id="mapping-content" class="tab-content hidden" data-aos="fade-up" data-aos-delay="250">
                     <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                         <div class="flex-shrink-0">
                             <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 rounded-lg flex items-center justify-center">
@@ -620,7 +625,7 @@
                 </div>
 
                 <!-- Continuous Learning Tab -->
-                <div id="learning-content" class="tab-content hidden">
+                <div id="learning-content" class="tab-content hidden" data-aos="fade-up" data-aos-delay="250">
                     <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                         <div class="flex-shrink-0">
                             <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 rounded-lg flex items-center justify-center">
@@ -640,14 +645,10 @@
     </div>
 </section>
 
-    <!--  Transforming RCM Operations -->
-
-
-    <!-- How It Works Section -->
-
-    <section id="transform-rcm" class="py-16">
+<!-- Transforming RCM Operations Section -->
+<section id="transform-rcm" class="py-16">
     <div class="container mx-auto px-8">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-up">
             <h2 class="text-4xl mb-4">
                 <span class="poppins-semibold" style="color: var(--primary-color)">Transforming </span>
                 <span class="poppins-regular text-cyan-500">RCM Operations</span>
@@ -658,7 +659,7 @@
         <div class="timeline-container hidden md:block" id="timeline">
             <!-- Left Column - All Headings -->
             <div class="left-column">
-                <div class="timeline-item" data-item="1">
+                <div class="timeline-item" data-item="1" data-aos="fade-right" data-aos-delay="100">
                     <div class="timeline-dot"></div>
                     <div class="card-header">
                         <img src="../assets/images/solutions/transforming-rcm1.png" alt="Accelerated Processing Icon" width="50">
@@ -666,7 +667,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item" data-item="2">
+                <div class="timeline-item" data-item="2" data-aos="fade-right" data-aos-delay="150">
                     <div class="timeline-dot"></div>
                     <div class="card-header">
                         <img src="../assets/images/solutions/transforming-rcm2.png" alt="Enhanced Accuracy Icon" width="50">
@@ -674,7 +675,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item" data-item="3">
+                <div class="timeline-item" data-item="3" data-aos="fade-right" data-aos-delay="200">
                     <div class="timeline-dot"></div>
                     <div class="card-header">
                         <img src="../assets/images/solutions/transforming-rcm3.png" alt="Seamless Integration Icon" width="50">
@@ -682,7 +683,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item" data-item="4">
+                <div class="timeline-item" data-item="4" data-aos="fade-right" data-aos-delay="250">
                     <div class="timeline-dot"></div>
                     <div class="card-header">
                         <img src="../assets/images/solutions/transforming-rcm4.png" alt="Rapid Implementation Icon" width="50">
@@ -690,7 +691,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-item" data-item="5">
+                <div class="timeline-item" data-item="5" data-aos="fade-right" data-aos-delay="300">
                     <div class="timeline-dot"></div>
                     <div class="card-header">
                         <img src="../assets/images/solutions/transforming-rcm5.png" alt="Significant ROI Icon" width="50">
@@ -704,31 +705,31 @@
 
             <!-- Right Column - All Content -->
             <div class="right-column">
-                <div class="timeline-item" data-content="1">
+                <div class="timeline-item" data-content="1" data-aos="fade-left" data-aos-delay="100">
                     <div class="content-area">
                         <p class="poppins-regular text-md text-cyan-600">Reduce claim processing time by up to 80% through intelligent automation</p>
                     </div>
                 </div>
 
-                <div class="timeline-item" data-content="2">
+                <div class="timeline-item" data-content="2" data-aos="fade-left" data-aos-delay="150">
                     <div class="content-area">
                         <p class="poppins-regular text-md text-cyan-600">Minimize coding errors and maximize appropriate reimbursement</p>
                     </div>
                 </div>
 
-                <div class="timeline-item" data-content="3">
+                <div class="timeline-item" data-content="3" data-aos="fade-left" data-aos-delay="200">
                     <div class="content-area">
                         <p class="poppins-regular text-md text-cyan-600">Works within your existing RCM systems with minimal disruption</p>
                     </div>
                 </div>
 
-                <div class="timeline-item" data-content="4">
+                <div class="timeline-item" data-content="4" data-aos="fade-left" data-aos-delay="250">
                     <div class="content-area">
                         <p class="poppins-regular text-md text-cyan-600">Quick deployment with no extensive retraining required</p>
                     </div>
                 </div>
 
-                <div class="timeline-item" data-content="5">
+                <div class="timeline-item" data-content="5" data-aos="fade-left" data-aos-delay="300">
                     <div class="content-area">
                         <p class="poppins-regular text-md text-cyan-600">Achieve measurable returns on investment with improved efficiency and reduced operational costs</p>
                     </div>
@@ -738,7 +739,7 @@
 
         <!-- Mobile Timeline (visible only on mobile) -->
         <div class="md:hidden mobile-timeline">
-            <div class="mobile-timeline-item">
+            <div class="mobile-timeline-item" data-aos="fade-up" data-aos-delay="100">
                 <div class="mobile-card-header">
                     <img src="../assets/images/solutions/transforming-rcm1.png" alt="Accelerated Processing Icon" width="40">
                     <h3 class="poppins-medium text-lg" style="color: var(--primary-color)">Accelerated Processing</h3>
@@ -748,7 +749,7 @@
                 </div>
             </div>
 
-            <div class="mobile-timeline-item">
+            <div class="mobile-timeline-item" data-aos="fade-up" data-aos-delay="150">
                 <div class="mobile-card-header">
                     <img src="../assets/images/solutions/transforming-rcm2.png" alt="Enhanced Accuracy Icon" width="40">
                     <h3 class="poppins-medium text-lg" style="color: var(--primary-color)">Enhanced Accuracy</h3>
@@ -758,7 +759,7 @@
                 </div>
             </div>
 
-            <div class="mobile-timeline-item">
+            <div class="mobile-timeline-item" data-aos="fade-up" data-aos-delay="200">
                 <div class="mobile-card-header">
                     <img src="../assets/images/solutions/transforming-rcm3.png" alt="Seamless Integration Icon" width="40">
                     <h3 class="poppins-medium text-lg" style="color: var(--primary-color)">Seamless Integration</h3>
@@ -768,7 +769,7 @@
                 </div>
             </div>
 
-            <div class="mobile-timeline-item">
+            <div class="mobile-timeline-item" data-aos="fade-up" data-aos-delay="250">
                 <div class="mobile-card-header">
                     <img src="../assets/images/solutions/transforming-rcm4.png" alt="Rapid Implementation Icon" width="40">
                     <h3 class="poppins-medium text-lg" style="color: var(--primary-color)">Rapid Implementation</h3>
@@ -778,7 +779,7 @@
                 </div>
             </div>
 
-            <div class="mobile-timeline-item">
+            <div class="mobile-timeline-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="mobile-card-header">
                     <img src="../assets/images/solutions/transforming-rcm5.png" alt="Significant ROI Icon" width="40">
                     <h3 class="poppins-medium text-lg" style="color: var(--primary-color)">Significant ROI</h3>
@@ -1016,6 +1017,15 @@
     });
 </script>
 <script src="../assets/js/menu.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,       // Animation duration (ms)
+    easing: 'ease-in-out', // Easing type
+    once: true,          // Whether animation should happen only once
+    mirror: false,       // Whether elements animate out while scrolling past
+  });
+</script>
 </body>
 
 </html>
