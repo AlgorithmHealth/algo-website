@@ -15,6 +15,11 @@
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="../assets/css/styles.css">
+                <!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- AOS (Animate On Scroll) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
     </head>
 
     <body>
@@ -140,33 +145,34 @@
         <!-- Hero Section -->
 <!-- Desktop/Laptop Version (hidden on mobile) -->
 <section id="whole-bg" class="hidden md:block">
-    <!-- Your original code exactly as provided -->
-    <div class="container mx-auto p-16 flex items-end gap-4">
-        <img src="../assets/images/solutions/care-ai-hero.png" class="relative" alt="Doctors" width="500">
-        <div class="absolute top-[100%] left-[25%]">
+    <!-- First Container -->
+    <div class="container mx-auto p-16 flex items-end gap-4" data-aos="fade-up">
+        <img src="../assets/images/solutions/care-ai-hero.png" class="relative animate__animated animate__fadeInLeft" alt="Doctors" width="500">
+        <div class="absolute top-[40%] left-[25%]" data-aos="fade-up" data-aos-delay="100">
             <h2 class="text-lg font-semibold font-poppins text-[#031B4E]">The Next Generation of Intelligent Healthcare Solutions</h2>
             <p class="text-sm font-medium text-[#274760] mb-8">Transform your healthcare delivery with Algorithm Health's comprehensive Native AI Electronic Medical Record <br>system - designed from the ground up with artificial intelligence at its core.</p>
         </div>
-        <div class="">
+        <div class="" data-aos="fade-up" data-aos-delay="150">
             <h2 class="text-lg font-semibold font-poppins text-[var(--primary-color)]">Redefining Patient Care with Intelligent Technology</h2>
             <p class="text-sm font-medium text-[#274760] mb-8">Care AI EMR doesn't just store medical records—it actively enhances clinical decision-making, automates routine tasks, and creates personalized care pathways that align with best practice protocols. Our system represents the future of healthcare information management.</p>
         </div>
     </div>
 
-        <div class="container mx-auto px-20 py-12">
+    <!-- Second Container -->
+    <div class="container mx-auto px-20 py-12">
         <div class="flex items-start justify-between gap-8">
             <div class="flex items-start gap-4">
-                <div class="mt-20">
-                    <div>
+                <div class="mt-20" data-aos="fade-right">
+                    <div data-aos="fade-up" data-aos-delay="100">
                         <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Seamless Ambient Listening & Real-Time Transcription</h2>
                         <p class="text-sm text-justify text-[var(--primary-color)] poppins-medium mb-6">Our advanced Ambient Listening and Transcription feature seamlessly captures the natural conversation between doctors and patients — no interruptions, no extra steps. As the consultation unfolds, the system intelligently listens in the background, identifies the medical components of the dialogue, and instantly transcribes them into the Electronic Medical Record (EMR) in real time.</p>
                     </div>
-                    <div>
+                    <div data-aos="fade-up" data-aos-delay="150">
                         <h2 class="text-2xl text-[var(--primary-color)] mb-4 poppins-semibold">Multilingual Support</h2>
                         <p class="text-sm text-justify text-[var(--primary-color)] poppins-medium mb-6">Built with robust multilingual support, the system works effortlessly across most major languages — and can even handle multi-language conversations where patients and doctors switch between languages. This powerful tool reduces documentation burden, saves time, and ensures clinical accuracy, allowing healthcare providers to focus more on patient care and less on typing.</p>
                     </div>
                 </div>
-                <div>
+                <div data-aos="fade-left" data-aos-delay="200">
                     <img src="../assets/images/solutions/voice-ai.png" alt="AI Transcription" class="h-auto !w-[80rem]">
                 </div>
             </div>
@@ -175,15 +181,15 @@
 
     <!-- Comprehensive AI -->
     <div class="container mx-auto px-4 py-8 sm:p-8 md:p-12 lg:p-16 gap-4">
-        <h2 class="text-xl sm:text-2xl font-semibold font-poppins text-[var(--primary-color)]">Comprehensive AI-Powered Capabilities</h2>
+        <h2 class="text-xl sm:text-2xl font-semibold font-poppins text-[var(--primary-color)]" data-aos="fade-up">Comprehensive AI-Powered Capabilities</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 mt-6 gap-6 md:gap-8 lg:gap-10">
             <!-- Left Column -->
             <div class="flex flex-col gap-6">
-                <div class="w-full max-w-md mx-auto">
+                <div class="w-full max-w-md mx-auto" data-aos="zoom-in">
                     <img src="../assets/images/solutions/comprehensive-ai.png" alt="Comprehensive AI Vector" class="w-full h-auto" loading="lazy">
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="flex flex-col sm:flex-row items-start gap-4" data-aos="fade-right" data-aos-delay="100">
                     <img src="../assets/images/solutions/inteligent-diagnostics.png" alt="Intelligent Diagnostics Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
                     <div>
                         <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Intelligent Diagnostics</h3>
@@ -191,7 +197,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="flex flex-col sm:flex-row items-start gap-4" data-aos="fade-right" data-aos-delay="150">
                     <img src="../assets/images/solutions/automate-care-icon.png" alt="Automated Care Pathways Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
                     <div>
                         <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Automated Care Pathways</h3>
@@ -202,7 +208,7 @@
             
             <!-- Right Column -->
             <div class="flex flex-col gap-6">
-                <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="flex flex-col sm:flex-row items-start gap-4" data-aos="fade-left" data-aos-delay="100">
                     <img src="../assets/images/solutions/smart-doc-icon.png" alt="Smart Documentation Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
                     <div>
                         <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Smart Documentation</h3>
@@ -210,7 +216,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="flex flex-col sm:flex-row items-start gap-4" data-aos="fade-left" data-aos-delay="150">
                     <img src="../assets/images/solutions/multilingual-icon.png" alt="Multilingual Patient Communication Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
                     <div>
                         <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Multilingual Patient Communication</h3>
@@ -218,7 +224,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="flex flex-col sm:flex-row items-start gap-4" data-aos="fade-left" data-aos-delay="200">
                     <img src="../assets/images/solutions/predictive-analysis-icon.png" alt="Predictive Analytics Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
                     <div>
                         <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Predictive Analytics</h3>
@@ -226,7 +232,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="flex flex-col sm:flex-row items-start gap-4" data-aos="fade-left" data-aos-delay="250">
                     <img src="../assets/images/solutions/enhanced-triage-icon.png" alt="Enhanced Triage Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
                     <div>
                         <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Enhanced Triage</h3>
@@ -234,7 +240,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6" data-aos="fade-left" data-aos-delay="300">
                     <img src="../assets/images/solutions/comprehensive-patient-view-icon.png" alt="Comprehensive Patient View Vector Icon" class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
                     <div>
                         <h3 class="text-cyan-500 text-lg sm:text-xl font-poppins">Comprehensive Patient View</h3>
@@ -288,7 +294,6 @@
             </div>
         </div>
     </div>
-</section>
 
     
 
@@ -345,13 +350,13 @@
     </div>
 </section>
 
-        <!-- Elevating Healthcare -->
+   <!-- Elevating Healthcare -->
 <section>
     <div class="container mx-auto px-4 py-16 sm:px-8 md:px-12 lg:px-16 gap-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             <!-- Left Column - Features -->
             <div class="flex flex-col gap-6 order-2 lg:order-1">
-                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6" data-aos="fade-right" data-aos-delay="100">
                     <img src="../assets/images/solutions/streamlined-icon.png" 
                          alt="Streamlined Workflows Icon" 
                          class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
@@ -361,7 +366,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6" data-aos="fade-right" data-aos-delay="150">
                     <img src="../assets/images/solutions/provider-capacity.svg" 
                          alt="Provider Capacity Icon" 
                          class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
@@ -371,7 +376,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6" data-aos="fade-right" data-aos-delay="200">
                     <img src="../assets/images/solutions/enhanced-primary-care-icon.png" 
                          alt="Primary Care Icon" 
                          class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
@@ -381,7 +386,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6" data-aos="fade-right" data-aos-delay="250">
                     <img src="../assets/images/solutions/simplified-insurance-icon.png" 
                          alt="Insurance Processing Icon" 
                          class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
@@ -391,7 +396,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6" data-aos="fade-right" data-aos-delay="300">
                     <img src="../assets/images/solutions/improved-care-iconn.png" 
                          alt="Care Coordination Icon" 
                          class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
@@ -404,10 +409,10 @@
             
             <!-- Right Column - Heading and Image -->
             <div class="flex flex-col items-center justify-center gap-6 order-1 lg:order-2">
-                <h2 class="text-xl sm:text-2xl font-semibold font-poppins text-[var(--primary-color)] text-center lg:text-left w-full">
+                <h2 class="text-xl sm:text-2xl font-semibold font-poppins text-[var(--primary-color)] text-center lg:text-left w-full" data-aos="fade-up">
                     Elevating Healthcare Delivery
                 </h2>
-                <div class="w-full max-w-lg mx-auto">
+                <div class="w-full max-w-lg mx-auto" data-aos="zoom-in" data-aos-delay="100">
                     <img src="../assets/images/solutions/elevating-health.svg" 
                          alt="Healthcare Delivery Illustration" 
                          class="w-full h-auto" loading="lazy">
@@ -420,13 +425,13 @@
 <!-- Enterprise Integration Section -->
 <section id="whole-bg">
     <div class="container mx-auto px-4 py-16 sm:px-8 md:px-12 lg:px-16 gap-6">
-        <h2 class="text-xl sm:text-2xl font-semibold font-poppins text-[var(--primary-color)] text-center lg:text-left">
+        <h2 class="text-xl sm:text-2xl font-semibold font-poppins text-[var(--primary-color)] text-center lg:text-left" data-aos="fade-up">
             Enterprise-Ready Integration
         </h2>
         
         <div class="grid grid-cols-1 lg:grid-cols-2 mt-6 gap-8 lg:gap-12">
             <!-- Left Column - Image -->
-            <div class="order-2 lg:order-1 flex items-center">
+            <div class="order-2 lg:order-1 flex items-center" data-aos="fade-right" data-aos-delay="100">
                 <div class="w-full max-w-lg mx-auto">
                     <img src="../assets/images/solutions/enterprise-ready-intergration.svg" 
                          alt="Enterprise Integration Illustration" 
@@ -436,7 +441,7 @@
             
             <!-- Right Column - Features -->
             <div class="flex flex-col gap-6 justify-center order-1 lg:order-2">
-                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6" data-aos="fade-left" data-aos-delay="100">
                     <img src="../assets/images/solutions/fhir-icon.svg" 
                          alt="FHIR Compliant Icon" 
                          class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
@@ -446,7 +451,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6" data-aos="fade-left" data-aos-delay="150">
                     <img src="../assets/images/solutions/his-compatible-cion.svg" 
                          alt="HIS Compatible Icon" 
                          class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
@@ -456,7 +461,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6" data-aos="fade-left" data-aos-delay="200">
                     <img src="../assets/images/solutions/privacy-focused.svg" 
                          alt="Privacy Focused Icon" 
                          class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
@@ -466,7 +471,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6" data-aos="fade-left" data-aos-delay="250">
                     <img src="../assets/images/solutions/end-to-end-encryption.svg" 
                          alt="Encryption Icon" 
                          class="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">
@@ -588,7 +593,15 @@
         </button>
         <script src="../assets/js/script.js"></script>
         <script src="../assets/js/menu.js"></script>
-
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,       // Animation duration (ms)
+    easing: 'ease-in-out', // Easing type
+    once: true,          // Whether animation should happen only once
+    mirror: false,       // Whether elements animate out while scrolling past
+  });
+</script>
     </body>
 
     </html>
