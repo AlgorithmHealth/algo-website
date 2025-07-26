@@ -490,3 +490,17 @@ body {
     .rotate-180 {
         transform: rotate(180deg);
     }
+
+@media (max-width: 768px) {
+    .hero-bg {
+        background: url('../images/Hero-bg.png');
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+    }
+
+    body {
+        overflow-x: hidden;
+    };
+
+}
