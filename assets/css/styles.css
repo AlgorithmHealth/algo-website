@@ -439,6 +439,36 @@ body {
             animation-play-state: paused;
         }
 
+        @keyframes scrollLogos {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLogos 40s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-container img {
+  transition: all 0.5s ease;
+  filter: grayscale(90%);
+}
+
+.carousel-container img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+
 #ai-emr-hero-section {
     background-image: url('../images/solutions/bg-shape-vector2.svg');
     background-size: contain;

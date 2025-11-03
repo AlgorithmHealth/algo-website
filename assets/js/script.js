@@ -466,3 +466,34 @@
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+
+  const logos = [
+  { src: './assets/images/clients/neuberg-logo.png', alt: 'Neuberg Diagnostics Logo', link: 'https://www.neubergdiagnostics.com/' },
+  { src: './assets/images/clients/chola-logo.png', alt: 'Chola MS Logo', link: 'https://www.cholamandalam.com/' },
+  { src: './assets/images/clients/sn-logo.png', alt: 'Sankara Nethralaya Logo', link: 'https://www.sankaranethralaya.org/' },
+  { src: './assets/images/clients/hbgmc-logo.png', alt: 'HBGMC Logo', link: 'https://www.hbgmc.com/' },
+  { src: './assets/images/clients/verdure-logo.png', alt: 'Verdure Logo', link: 'https://verdurercm.com/' },
+  { src: './assets/images/clients/drmohans-logo.png', alt: 'Dr. Mohans Logo', link: 'https://www.drmohans.com/' },
+  { src: './assets/images/clients/vhs-logo.png', alt: 'VHS Logo', link: 'https://vhschennai.org/' },
+  { src: './assets/images/clients/orthobiologix-clinic-logo.png', alt: 'Orthobiologix Clinic Logo', link: 'https://orthobiologixclinic.com/' }
+];
+
+// Create and duplicate the logos for seamless loop
+const track = document.getElementById('logoTrack');
+const allLogos = [...logos, ...logos]; // duplicate set
+
+allLogos.forEach(({ src, alt, link }) => {
+  const a = document.createElement('a');
+  a.href = link;
+  a.target = '_blank';
+  a.className = 'flex justify-center items-center group w-40 h-20 flex-shrink-0';
+
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = alt;
+  img.className = 'max-h-20 max-w-full object-contain transition duration-500 grayscale group-hover:grayscale-0 hover:scale-110';
+
+  a.appendChild(img);
+  track.appendChild(a);
+});
